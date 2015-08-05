@@ -1,0 +1,51 @@
+///////////////
+// Hero Unit //
+///////////////
+
+.hero-unit {
+  font-size: 1.3em;
+  background: @palette-gray-dark;
+  color: @palette-white;
+  padding: 160px 0 132px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 12px rgba( 0, 0, 0, 0.6 );
+
+  .section-header {
+    font-weight: 700;
+
+    + p {
+      margin-top: -40px;
+      font-size: 1.3em;
+      font-weight: 500;
+    }
+  }
+
+  @media screen and ( max-width: @breakpoint-tablet ){
+    .section-header + p {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and ( max-width: @breakpoint-mobile ){
+    padding-top: 100px;
+    padding-bottom: 90px;
+
+    .section-header {
+      font-size: 1.2em;
+    }
+
+    .section-header + p {
+      font-size: 1em;
+    }
+
+    .submit-wrapper {
+      margin-top: 12px;
+    }
+  }
+
+  .outro-header {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-top: 90px
+  }
+}
