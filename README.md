@@ -9,6 +9,5 @@ __setup__
 npm link
 -- cd into lunchroom
 npm install
-npm link cater
 gulp
 ```
