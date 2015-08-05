@@ -6,6 +6,9 @@
 @import (less) "../node_modules/normalize-css/normalize.css";
 @import "../node_modules/grunt-contrib-lesselements/elements.less";
 
+@import "../node_modules/bootstrap/less/variables.less";
+@import "../node_modules/bootstrap/less/mixins.less";
+
 @import "../node_modules/cater/less/variables.less";
 @import "./variables.less";
 @import "../node_modules/cater/less/mixins.less";
@@ -18,6 +21,7 @@
 @import "../node_modules/diet-tags/index.less";
 
 // Components
+@import "../node_modules/bootstrap/less/modals.less";
 @import "../node_modules/cater/less/components/check-points.less";
 @import "../node_modules/cater/less/components/panel.less";
 @import "../node_modules/cater/less/components/collapsible.less";
@@ -118,4 +122,10 @@
 
 #restaurants .logo-list {
   margin-top: 80px;
+}
+
+.contact-us-form {
+  [name="message"] {
+    height: 132px;
+  }
 }
