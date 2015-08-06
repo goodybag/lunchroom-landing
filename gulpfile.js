@@ -51,7 +51,7 @@ gulp.task( 'watch', function(){
 });
 
 gulp.task( 'server', function( done ){
-  server = require('./server').listen( config.http.port, function( error ){
+  server = require('./server').listen( (process.env.PORT && parseInt(process.env.PORT)) || config.http.port, function( error ){
     if ( error ) return done( error );
 
     gulp.util.log( 'Server started on port ' + gulp.util.colors.blue( config.http.port ) );

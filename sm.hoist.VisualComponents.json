@@ -1,0 +1,31 @@
+{
+    "boot": {
+        "config": "lunchroom-landing/0"
+    },
+    "config": {
+	    "sm.hoist.VisualComponents/0": {
+	    	"viewer": {
+	    		"port": 8082
+    		},
+	    	"source": {
+	    		"server": {
+	    			"cwd": "{{__DIRNAME__}}",
+	    			"run": "{{__DIRNAME__}}/node_modules/.bin/gulp",
+	    			"host": "localhost:8081",
+	    			"wait": "2",
+	    			"env": {
+	    				"PORT": 8081
+	    			}
+	    		}
+	    	},
+	    	"components": {
+	    		"Landing": {
+	    			"source": "/landing"
+    			}
+	    	},
+	    	"target": {
+	    		"path": "{{__DIRNAME__}}/.sm.hoisted"
+	    	}
+	    }
+	}
+}

@@ -1,5 +1,5 @@
 {
-  "name": "lunchroom",
+  "name": "lunchroom-landing",
   "version": "1.0.0",
   "description": "Get yo' food on, yo'",
   "main": "index.js",
@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "gulp build",
     "start": "node app.js",
-    "postinstall": "npm link cater"
+    "postinstall": "npm link cater",
+    "build": "sm.hoist.visualcomponents sm.hoist.VisualComponents.json --build",
+    "build-show": "sm.hoist.visualcomponents sm.hoist.VisualComponents.json --spin"
   },
   "author": "John Fawcett, Preston Pham",
   "license": "ISC",
@@ -40,7 +42,8 @@
     "normalize-css": "^2.3.1",
     "stdm": "0.0.4",
     "usd": "^1.0.1",
-    "vinyl-transform": "^1.0.0"
+    "vinyl-transform": "^1.0.0",
+    "sm.hoist.visualcomponents": "0.1.x"
   },
   "jshint": {
     "laxcomma": true,
