@@ -12,3 +12,13 @@ npm install
 npm link cater
 gulp
 ```
+
+__build__
+
+```
+# Build
+npm run-script build
+
+# Preview
+npm run-script build-show
+```
