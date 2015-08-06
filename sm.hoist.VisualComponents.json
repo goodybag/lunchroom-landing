@@ -3,7 +3,7 @@
         "config": "lunchroom-landing/0"
     },
     "config": {
-	    "sm.hoist.VisualComponents/0": {
+	    "sm.hoist.visualcomponents/0": {
 	    	"viewer": {
 	    		"port": 8082
     		},
