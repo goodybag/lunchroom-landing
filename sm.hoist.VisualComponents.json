@@ -10,11 +10,12 @@
 	    	"source": {
 	    		"server": {
 	    			"cwd": "{{__DIRNAME__}}",
+	    			"runInterpreter": "node",
 	    			"run": "{{__DIRNAME__}}/node_modules/.bin/gulp",
-	    			"host": "localhost:8081",
+	    			"host": "localhost:8083",
 	    			"wait": "2",
 	    			"env": {
-	    				"PORT": 8081
+	    				"PORT": 8083
 	    			}
 	    		}
 	    	},
