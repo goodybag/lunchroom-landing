@@ -1,7 +1,4 @@
 {
-    "boot": {
-        "config": "lunchroom-landing/0"
-    },
     "config": {
 	    "sm.hoist.visualcomponents/0": {
 	    	"viewer": {
