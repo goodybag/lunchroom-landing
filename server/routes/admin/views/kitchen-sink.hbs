@@ -104,4 +104,43 @@
     </fieldset>
   </div>
 </section>
+
+<section class="page-section" id="section-order-reviewer">
+  <div class="container">
+    <div class="order-reviewer">
+      <h3 class="order-reviewer-header">Today's order
+        <a href="#" class="order-reviewer-item-add-link">Add items</a>
+      </h3>
+
+      <div class="order-reviewer-items">
+        {{#each order.items}}
+          <div class="order-reviewer-item">
+            <div class="order-reviewer-item-col">
+              <img src="{{this.coverPhotoUrl}}" alt="{{this.name}}">
+            </div>
+            <div class="order-reviewer-item-col">
+              <div class="order-reviewer-item-description">
+                <h4 class="order-reviewer-item-title">{{this.name}}</h4>
+              </div>
+              <ul class="order-reviewer-item-actions">
+                <li><a href="#">edit</a></li>
+                <li><a href="#">remove</a></li>
+              </ul>
+            </div>
+            {{!-- TODO: Figure out how to display Options --}}
+            {{!-- <div class="order-reviewer-item-col">
+              <strong>Options:</strong>
+            </div> --}}
+            <div class="order-reviewer-item-col">
+              <strong>Quantity:</strong> {{this.quantity}}
+            </div>
+            <div class="order-reviewer-item-col order-item-reviewer">
+              ${{dollars this.price}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
 {{/extend}}

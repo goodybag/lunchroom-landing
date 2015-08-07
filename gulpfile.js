@@ -58,7 +58,6 @@ gulp.task( 'watch', function(){
 
 gulp.task( 'server', function( done ){
   var port = (process.env.PORT && parseInt(process.env.PORT)) || config.http.port;
-  console.log("Server port:", port);
   server = require('./server').listen( port, function( error ){
     if ( error ) return done( error );
 
