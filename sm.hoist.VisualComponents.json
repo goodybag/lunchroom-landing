@@ -1,7 +1,4 @@
 {
-    "boot": {
-        "config": "lunchroom-landing/0"
-    },
     "config": {
 	    "sm.hoist.visualcomponents/0": {
 	    	"viewer": {
@@ -10,20 +7,22 @@
 	    	"source": {
 	    		"server": {
 	    			"cwd": "{{__DIRNAME__}}",
+	    			"runInterpreter": "node",
 	    			"run": "{{__DIRNAME__}}/node_modules/.bin/gulp",
-	    			"host": "localhost:8081",
+	    			"host": "localhost:8083",
 	    			"wait": "2",
 	    			"env": {
-	    				"PORT": 8081
+	    				"PORT": 8083
 	    			}
 	    		}
 	    	},
-	    	"components": {
+	    	"pages": {
 	    		"Landing": {
 	    			"source": "/landing"
     			}
 	    	},
 	    	"target": {
+	    		"id": "lunchroom-landing~0",
 	    		"path": "{{__DIRNAME__}}/.sm.hoisted"
 	    	}
 	    }
