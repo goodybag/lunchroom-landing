@@ -51,6 +51,6 @@ app.get('/kitchen-sink'
             ]
   })
 , m.view('routes/admin/views/kitchen-sink', {
-    layout: 'views/layout'
+    layout: 'routes/admin/views/kitchen-sink-layout'
   })
 );
