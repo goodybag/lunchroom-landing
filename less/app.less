@@ -13,6 +13,8 @@
 @import "./variables.less";
 @import "./mixins.less";
 
+@import "./themes.less";
+
 // Components
 @import "../node_modules/bootstrap/less/modals.less";
 @import "../node_modules/cater/less/components/navbar.less";
@@ -22,6 +24,7 @@
 @import "../node_modules/cater/less/components/tile.less";
 @import "../node_modules/cater/less/buttons.less";
 
+@import "./components/navbar.less";
 @import "./components/container.less";
 @import "./components/forms.less";
 @import "../node_modules/cater/less/components/input-groups.less";
@@ -32,6 +35,7 @@
 @import "./components/modules.less";
 @import "./components/panel.less";
 @import "./components/checkout-info.less";
+@import "./components/lunchroom-header.less";
 
 html {
   background-color:     @body-bg-color;
@@ -55,3 +59,4 @@ html, body {
 }
 
 #components > .diet-tags( '/dist/img', @diet-tags-size );
+#components > #lunchroom-header > .init();
