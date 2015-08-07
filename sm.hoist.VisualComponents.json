@@ -16,12 +16,13 @@
 	    			}
 	    		}
 	    	},
-	    	"components": {
+	    	"pages": {
 	    		"Landing": {
 	    			"source": "/landing"
     			}
 	    	},
 	    	"target": {
+	    		"id": "lunchroom-landing~0",
 	    		"path": "{{__DIRNAME__}}/.sm.hoisted"
 	    	}
 	    }
