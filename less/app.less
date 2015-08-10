@@ -42,6 +42,7 @@
 @import "./components/lunchroom-header.less";
 @import "./components/order-reviewer.less";
 @import "./components/order-summary.less";
+@import "./components/item-modal.less";
 
 html {
   background-color:     @body-bg-color;
@@ -71,6 +72,7 @@ html, body {
 #components > #lunchroom-header > .init();
 #components > #order-reviewer > .init( @mobile-breakpoint: @breakpoint-mobile );
 #components > #order-summary > .init();
+#components > #item-modal > .init();
 
 .order-summary-wrapper {
   width: 320px;
@@ -84,4 +86,11 @@ html, body {
 
 .btn-place-order {
   margin-top: 24px;
+}
+
+// Prevent margin collapsing
+@media screen and ( max-width: @breakpoint-tablet ){
+  .form-group {
+    margin: inherit;
+  }
 }
