@@ -19,10 +19,13 @@
 @import "../node_modules/bootstrap/less/modals.less";
 @import "../node_modules/cater/less/components/navbar.less";
 @import "../node_modules/cater/less/components/panel.less";
-
 @import "../node_modules/cater/less/components/nav.less";
 @import "../node_modules/cater/less/components/tile.less";
-@import "../node_modules/cater/less/buttons.less";
+@import "../node_modules/cater/less/components/popover.less";
+@import "../node_modules/cater/less/components/footer.less";
+@import "../node_modules/cater/less/components/gb-dropdown.less";
+
+@import "../node_modules/gb-icon-font/index.less";
 
 @import "./components/anchors.less";
 @import "./components/navbar.less";
@@ -38,6 +41,7 @@
 @import "./components/checkout-info.less";
 @import "./components/lunchroom-header.less";
 @import "./components/order-reviewer.less";
+@import "./components/order-summary.less";
 
 html {
   background-color:     @body-bg-color;
@@ -60,7 +64,24 @@ html, body {
   padding: 0;
 }
 
+#gb-icon-font > .init( @path: '/dist/font/gb-icon-font' );
+
 #components > .diet-tags( '/dist/img', @diet-tags-size );
 #components > #anchors > .init();
 #components > #lunchroom-header > .init();
-#components > #order-reviewer > .init();
+#components > #order-reviewer > .init( @mobile-breakpoint: @breakpoint-mobile );
+#components > #order-summary > .init();
+
+.order-summary-wrapper {
+  width: 320px;
+  float: right;
+  text-align: right;
+
+  @media screen and ( max-width: @breakpoint-mobile ){
+    width: 100%;
+  }
+}
+
+.btn-place-order {
+  margin-top: 24px;
+}

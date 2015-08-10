@@ -85,6 +85,11 @@ gulp.task( 'fonts', function(){
     .pipe( gulp.dest('./public/dist/font/avenir') );
 });
 
+gulp.task( 'icon-font', function(){
+  return gulp.src('./node_modules/gb-icon-font/font/*')
+    .pipe( gulp.dest('./public/dist/font/gb-icon-font') );
+});
+
 gulp.task( 'less-modules', function(){
   return gulp.src('./node_modules/diet-tags/img/*')
     .pipe( gulp.dest('./public/dist/img') );
@@ -92,7 +97,7 @@ gulp.task( 'less-modules', function(){
 
 gulp.task( 'build', [
   'lint', 'less', 'less-landing', 'less-kitchen-sink', 'less-modules'
-, 'fonts', 'alias-modules'
+, 'fonts', 'icon-font', 'alias-modules'
 , 'compile-frontend-js', 'create-tables'
 ]);
 

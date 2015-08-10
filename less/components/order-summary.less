@@ -1,0 +1,42 @@
+///////////////////
+// Order Summary //
+///////////////////
+
+#components { #order-summary {
+  
+.init(){
+  .order-summary {
+    display: table;
+    width: 100%; 
+
+    .order-summary-item {
+      display: table-row;
+    }
+
+    .order-summary-col {
+      display: table-cell;
+      vertical-align: middle;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      text-align: right;
+    }
+
+    .order-summary-item-total .order-summary-col {
+      padding-top: 20px;
+
+      &.order-summary-key {
+        font-weight: 700;
+      }
+    }
+
+    .order-summary-key {
+      padding-right: 8px;
+    }
+
+    .order-summary-value {
+      padding-left: 8px;
+    }
+  }
+}
+
+}}
