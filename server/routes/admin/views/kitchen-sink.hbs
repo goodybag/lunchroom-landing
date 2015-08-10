@@ -31,7 +31,7 @@
     <div class="tiles item-tiles">
       {{#each items}}
         <div class="tile item-tile">
-          <div class="tile-cover" style="background-image: url('{{coverPhotoUrl}}?cache=true&fit=scale');">
+          <div class="tile-cover" style="background-image: url('{{coverPhotoUrl}}');">
           </div>
           <div class="tile-info">
             <h3 class="tile-title">{{name}}</h3>
@@ -115,17 +115,19 @@
       <div class="order-reviewer-items">
         {{#each order.items}}
           <div class="order-reviewer-item">
-            <div class="order-reviewer-item-col">
+            <div class="order-reviewer-item-col photo-col">
               <img src="{{this.coverPhotoUrl}}" alt="{{this.name}}">
             </div>
-            <div class="order-reviewer-item-col">
-              <div class="order-reviewer-item-description">
-                <h4 class="order-reviewer-item-title">{{this.name}}</h4>
+            <div class="order-reviewer-item-col item-desc">
+              <div class="order-reviewer-item-description-wrapper">
+                <div class="order-reviewer-item-description">
+                  <h4 class="order-reviewer-item-title">{{this.name}}</h4>
+                </div>
+                <ul class="order-reviewer-item-actions">
+                  <li class="action"><a href="#">edit</a></li>
+                  <li class="action"><a href="#">remove</a></li>
+                </ul>
               </div>
-              <ul class="order-reviewer-item-actions">
-                <li><a href="#">edit</a></li>
-                <li><a href="#">remove</a></li>
-              </ul>
             </div>
             {{!-- TODO: Figure out how to display Options --}}
             {{!-- <div class="order-reviewer-item-col">
@@ -134,7 +136,7 @@
             <div class="order-reviewer-item-col">
               <strong>Quantity:</strong> {{this.quantity}}
             </div>
-            <div class="order-reviewer-item-col order-item-reviewer">
+            <div class="order-reviewer-item-col price-col">
               ${{dollars this.price}}
             </div>
           </div>
