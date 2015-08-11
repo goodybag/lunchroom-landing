@@ -1,0 +1,29 @@
+////////////////
+// Menu Share //
+////////////////
+
+#components { #menu-share {
+  .init( @width: 480px ){
+    .menu-share {
+      width: @width;
+
+      .menu-share-title {
+        font-size: 20px;
+        margin: 0 0 10px;
+      }
+
+      .menu-share-input {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      @media screen and ( max-width: @width ){
+        width: 100%;
+
+        .menu-share-input {
+          width: 80%;
+        }
+      }
+    }
+  }
+}}
