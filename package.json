@@ -8,8 +8,8 @@
     "prestart": "gulp build",
     "start": "node app.js",
     "postinstall": "if [ ! -e node_modules/cater ]; then npm link cater; fi",
-    "build": "sm.hoist.visualcomponents sm.hoist.VisualComponents.json --build",
-    "build-show": "sm.hoist.visualcomponents sm.hoist.VisualComponents.json --spin"
+    "build": "gulp build ; node_modules/sm.hoist.visualcomponents/sm.hoist sm.hoist.VisualComponents.json --build",
+    "build-show": "node_modules/sm.hoist.visualcomponents/sm.hoist sm.hoist.VisualComponents.json --spin"
   },
   "author": "John Fawcett, Preston Pham",
   "license": "ISC",
