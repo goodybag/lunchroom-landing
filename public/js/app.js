@@ -1,6 +1,6 @@
 window.$ = window.jQuery = require('jquery');
 
-require('cater/public/js/lib/jquery.popover');
+require('jquery-popover');
 require('bootstrap/js/modal');
 require('bootstrap/js/dropdown');
 require('utils');
