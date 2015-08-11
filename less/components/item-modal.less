@@ -1,0 +1,83 @@
+#components { #item-modal {
+
+.init( @width: 780px ){
+  .item-modal {
+    .modal-dialog {
+      // Override bootstrap
+      @media ( min-width: 768px ){
+        width: inherit;
+      }
+
+      @media ( min-width: @width ) {
+        width: @width;
+      }
+    }
+
+    .modal-content {
+      display: table;
+      display: flex;
+      width: 100%;
+      border-radius: 0;
+    }
+
+    .modal-photo-wrapper,
+    .modal-main-content {
+      float: left;
+    }
+
+    .modal-photo-wrapper {
+      width: 55.12%;
+      line-height: 0;
+
+      .modal-photo {
+        max-width: 100%;
+      }
+    }
+
+    .modal-main-content {
+      display: flex;
+      flex-direction: column;
+      width: 44.88%;
+      padding: 0 28px 12px;
+    }
+
+    .modal-main-content-body {
+      flex: 1;
+    }
+
+    .item-modal-title {
+      font-size: 28px;
+
+      .item-modal-price {
+        float: right;
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 3px;
+      }
+    }
+
+    .item-modal-actions {
+
+    }
+
+    .item-modal-quantity-label {
+      display: inline-block;
+    }
+
+    .item-modal-quantity-input {
+      display: inline-block;
+      width: 52px;
+    }
+
+    .item-modal-save-btn {
+      width: 100%;
+      font-size: 16px;
+      font-weight: 700;
+      padding-top: 19px;
+      padding-bottom: 19px;
+      margin-top: 18px; 
+    }
+  }
+}
+
+}}

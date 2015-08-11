@@ -3,17 +3,41 @@
 ///////////////////
 
 .checkout-info {
-  padding: 20px 0;
+  padding: 20px 50px;
   border: solid 1px @palette-gray;
 
-  .user-info {
-    #grid > .column(3);
-    #grid > .col-width( @size: 2, @prop: margin-left );
-    #grid > .col-width( @size: 1, @prop: margin-right );
+  @media screen and ( max-width: @breakpoint-tablet ){
+    padding-left: 2%;
+    padding-right: 2%;
   }
 
+  .user-info { #grid > .column-percent(50%); }
+  .payment-info { #grid > .column-percent(48%); }
+
+  .user-info,
   .payment-info {
-    #grid .column(4);
+
+    // Override
+    &:first-child {
+      padding-right: 180px;
+    }
+
+    > .section-title + .form-group {
+      margin-top: 0;
+    }
+
+    @media screen and ( max-width: @breakpoint-tablet ){
+      &, &:first-child {
+        padding: 0;
+      }
+    }
+  }
+
+  .checkout-info-note {
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 30px;
+    opacity: 0.9;
   }
 
   .form-group {

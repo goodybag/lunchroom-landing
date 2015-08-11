@@ -38,4 +38,28 @@
     , @palette-white
     );
   }
+
+  &.btn-dropdown {
+    border-bottom-width: 1px;
+    padding-right: 48px;
+
+    [class*="gb-icon-"],
+    .gb-icon-caret-down {
+      position: absolute;
+      // TODO: generalize positioning
+      right: 17px;
+      top: 15px;
+
+      font-size: 12px;
+    }
+  }
+
+  &.btn-place-order {
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 52px;
+    padding-right: 52px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
 }

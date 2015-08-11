@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/kitchen-sink.css">
+    {{{block "css"}}}
+  </head>
+  <body class="page {{{block "page"}}}">
+    <header class="navbar collapsed">
+      <div class="container">
+        <a href="/">
+          <img src="https://d3bqck8kwfkhx5.cloudfront.net/img/logo.png" alt="Goodybag.com" class="navbar-logo">
+        </a>
+      </div>
+    </header>
+
+    {{{block "body"}}}
+
+    <script src="/dist/app.js"></script>
+    {{{block "scripts"}}}
+  </body>
+</html>

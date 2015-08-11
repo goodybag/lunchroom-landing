@@ -1,0 +1,60 @@
+////////////
+// Themes //
+////////////
+//
+// Usage:
+//    .something {
+//      #themes > .get('neon-purple');
+//      .background();
+//    }
+// 
+// Properties:
+//    @primary
+//    @secondary
+//    @tertiary
+//    @text-color
+//    @background
+// 
+// Mixins:
+//    .background()
+//    .color()
+
+@import "./variables.less";
+@import "../node_modules/cater/less/variables.less";
+
+#themes {
+  .get( @theme ) when ( @theme = 'default' ){ #themes > #default(); }
+  .get( @theme ) when ( @theme = 'dark' ){ #themes > #dark(); }
+
+  .standard( @text-color, @background ){
+    .color(){
+      color: @text-color;
+    }
+
+    .background(){
+      background: @background;
+    }
+  }
+  
+  #default {
+    @primary:       @brand-primary;
+    @secondary:     @brand-secondary;
+    @tertiary:      @brand-tertiary;
+    @text-color:    @color-primary-text;
+    @background:    @palette-white;
+    @border-color:  @palette-gray;
+
+    #themes > .standard( @text-color, @background );
+  }
+  
+  #dark {
+    @primary:       @brand-primary;
+    @secondary:     @brand-secondary;
+    @tertiary:      @brand-tertiary;
+    @text-color:    @palette-white;
+    @background:    @palette-gray-dark;
+    @border-color:  @text-color;
+
+    #themes > .standard( @text-color, @background );
+  }
+}

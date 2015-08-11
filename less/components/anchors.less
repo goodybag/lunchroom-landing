@@ -1,0 +1,19 @@
+/////////////
+// Anchors //
+/////////////
+
+@import "../themes.less";
+
+#components { #anchors {
+  .init(){
+    a {
+      #themes > .get('default');
+      color: @text-color;
+      text-decoration: underline;
+
+      &:hover {
+        color: lighten( @text-color, 15% );
+      }
+    }
+  }
+}}
