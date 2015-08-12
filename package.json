@@ -8,8 +8,8 @@
     "prestart": "gulp build",
     "start": "node app.js",
     "postinstall": "if [ ! -e node_modules/cater ]; then npm link cater; fi",
-    "build": "sm.hoist.visualcomponents sm.hoist.VisualComponents.json --build",
-    "build-show": "sm.hoist.visualcomponents sm.hoist.VisualComponents.json --spin"
+    "build": "gulp build ; node_modules/sm.hoist.visualcomponents/sm.hoist sm.hoist.VisualComponents.json --build",
+    "build-show": "node_modules/sm.hoist.visualcomponents/sm.hoist sm.hoist.VisualComponents.json --spin"
   },
   "author": "John Fawcett, Preston Pham",
   "license": "ISC",
@@ -35,7 +35,7 @@
     "gulp-util": "^3.0.3",
     "handlebars": "^3.0.0",
     "hbs": "^2.8.0",
-    "jquery": "^2.1.3",
+    "jquery": "^1.11.3",
     "jquery-popover": "0.0.4",
     "less-buttons": "git://github.com/goodybag/less-buttons",
     "lodash": "^3.2.0",
