@@ -3,9 +3,11 @@ var config = require('../../../config');
 var m = require('../../middleware');
 var inlineCss = require('inline-css');
 
-require('../../../lib/partials-registrar')(
-  __dirname + '/views/partials/', 'email_'
+var registerPartials = require('../../../lib/partials-registrar').bind(
+  null, __dirname + '/views/partials/', 'email_'
 );
+
+registerPartials();
 
 /**
  * Given a view in this routers ./views dir, render the view
@@ -42,5 +44,10 @@ var renderEmail = function( view ){
     });
   };
 };
+
+app.use( function( req, res, next ){
+  registerPartials();
+  return next();
+});
 
 app.get( '/menu', renderEmail('menu') );
