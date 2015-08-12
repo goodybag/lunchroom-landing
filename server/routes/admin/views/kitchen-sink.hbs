@@ -1,5 +1,6 @@
 {{#extend "body"}}
-<section class="page-section" id="section-lunchroom-header">
+
+<section class="page-section" id="section-lunchroom-header" component:id="navbar">
   <div class="lunchroom-header">
     <div class="container">
       <div class="tabs">
@@ -52,7 +53,7 @@
   </div>
 </section>
 
-<section class="page-section" id="section-item-tiles">
+<section class="page-section" id="section-item-tiles" component:id="share">
   <div class="container">
     <div class="panel-wrapper" style="max-width: 620px">
       <div class="panel panel-dark panel-share-link">
@@ -67,7 +68,7 @@
   </div>
 </section>
 
-<section class="page-section" id="section-checkout-info">
+<section class="page-section" id="section-checkout-info" component:id="checkout-form">
   <div class="container">
     <fieldset class="checkout-info form-vertical">
       <div class="user-info">
@@ -113,7 +114,7 @@
   </div>
 </section>
 
-<section class="page-section" id="section-order-reviewer">
+<section class="page-section" id="section-order-reviewer" component:id="checkout-items">
   <div class="container">
     <div class="order-reviewer">
       <h3 class="order-reviewer-header">Today's order
@@ -154,7 +155,7 @@
   </div>
 </section>
 
-<section class="page-section" id="section-order-summary">
+<section class="page-section" id="section-order-summary" component:id="checkout-summary">
   <div class="container">
     <div class="order-summary-wrapper">
       <div class="order-summary">
@@ -180,7 +181,7 @@
   </div>
 </section>
 
-<section class="page-section" id="section-order-success">
+<section class="page-section" id="section-order-success" component:id="order-success">
   <div class="container order-success">
     <img src="/img/success.png" alt="" class="success-img">
     <p class="order-success-note">Your order is placed and will be <strong>delivered today between 12:00-12:30pm</strong>.</p>
@@ -194,7 +195,7 @@
   </div>
 </section>
 
-<div class="modal item-modal fade" id="item-modal">
+<div class="modal item-modal fade" id="item-modal" component:id="menu-item-popup">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-photo-wrapper">
@@ -222,7 +223,7 @@
   </div>
 </div>
 
-<footer class="footer">
+<footer class="footer" component:id="footer">
   <ul class="nav footer-nav">
     <li><a href="#" data-toggle="modal" data-target="#contact-us-modal">Contact Us</a></li>
     <li><a href="https://www.goodybag.com/legal">Terms of service</a></li>

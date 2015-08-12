@@ -19,6 +19,9 @@
 	    	"pages": {
 	    		"Landing": {
 	    			"source": "/landing"
+    			},
+	    		"AppComponents": {
+	    			"source": "/admin/kitchen-sink"
     			}
 	    	},
 	    	"target": {
