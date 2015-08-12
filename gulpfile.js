@@ -43,6 +43,12 @@ gulp.task( 'less-kitchen-sink', function(){
     .pipe( gulp.dest('public/dist') );
 });
 
+gulp.task( 'less-emails', function(){
+  return gulp.src('less/emails.less')
+    .pipe( require('gulp-less')() )
+    .pipe( gulp.dest('public/dist') );
+});
+
 gulp.task( 'lint', function(){
   return gulp.src( scripts.lint )
     .pipe( require('gulp-jshint')( pkg.jshint || {} ) )
@@ -53,6 +59,11 @@ gulp.task( 'watch', function(){
   gulp.watch( scripts.lint, ['lint'] );
   gulp.watch( scripts.public, [ 'alias-modules', 'compile-frontend-js'] );
   gulp.watch( ['less/*.less', 'less/**/*.less'], ['less', 'less-landing', 'less-kitchen-sink'] );
+  gulp.watch( ['less/components/*.less'], ['less', 'less-landing', 'less-kitchen-sink', 'less-emails'] );
+  gulp.watch( ['less/app.less'], ['less', 'less-kitchen-sink'] );
+  gulp.watch( ['less/landing-page.less'], ['less-landing'] );
+  gulp.watch( ['less/kitchen-sink.less'], ['less-kitchen-sink'] );
+  gulp.watch( ['less/emails.less'], ['less-emails'] );
   gulp.watch( ['server/*.js', 'server/**/*.js', 'server/**/**/*.js'], [ 'stop-server', 'server'] );
 });
 
@@ -96,7 +107,7 @@ gulp.task( 'less-modules', function(){
 });
 
 gulp.task( 'build', [
-  'lint', 'less', 'less-landing', 'less-kitchen-sink', 'less-modules'
+  'lint', 'less', 'less-landing', 'less-kitchen-sink', 'less-emails', 'less-modules'
 , 'fonts', 'icon-font', 'alias-modules'
 , 'compile-frontend-js', 'create-tables'
 ]);

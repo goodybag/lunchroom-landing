@@ -27,4 +27,5 @@ server.get('/landing', m.view('views/landing-1', {
 }));
 
 server.use( '/', require('./routes/lunchrooms') );
+server.use( '/emails', require('./routes/emails') );
 server.use( '/admin', require('./routes/admin') );
