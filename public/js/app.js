@@ -6,5 +6,5 @@ require('bootstrap/js/dropdown');
 require('utils');
 
 $(function(){
-  $('[data-role="popover"]').gb_popover();
+  $('[data-role="popover"]').popover();
 });
