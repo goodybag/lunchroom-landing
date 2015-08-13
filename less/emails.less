@@ -1,5 +1,42 @@
 @import (less) "https://cdnjs.cloudflare.com/ajax/libs/zurb-ink/1.0.5/ink.css";
 
+@font-avenir-url: "https://www.goodybag.com/dist/font/avenir";
+@import "../node_modules/font-avenir/font.less";
+
 @import "./themes.less";
 
 @import "./components/email-header.less";
+@import "./components/email-footer.less";
+@import "./components/email-item.less";
+@import "./components/email-menu-intro.less";
+
+#themes > .get('default');
+
+html, body {
+  .color();
+  font-family: @font-family;
+}
+
+td {
+  padding-bottom: 0;
+}
+
+.columns > tr > td,
+.columns > tbody > tr > td {
+  padding-bottom: 10px;
+}
+
+.primary-header {
+  .color();
+  font-size: 28px;
+}
+
+p {
+  font-size: 12px;
+  .color();
+}
+
+// For clients that actuall support fonts (iOS/Apple Mail)
+* {
+  font-family: @font-family;
+}

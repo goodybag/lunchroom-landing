@@ -1,0 +1,31 @@
+<a href="#" class="email-item"><table>
+    <tr>
+      <td class="email-item-photo-wrapper">
+        <img class="email-item-photo" src="{{coverPhotoUrl}}" alt="{{name}}">
+      </td>
+    </tr>
+    <tr>
+      <td class="email-item-description-wrapper">
+        <table class="width: 100%">
+          <tr>
+            <td colspan="2">
+              <div class="email-item-name">{{name}}</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-bottom: 0!important">
+              <div class="email-item-price">${{dollars price}}</div>
+            </td>
+            <td style="padding-bottom: 0!important">
+              {{!-- TODO: Figure out a cross-browser solution --}}
+              {{!-- <ul class="diet-tags">
+                {{#each dietTags}}
+                  <li class="diet-tag diet-tag-{{this}}"></li>
+                {{/each}}
+              </ul> --}}
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table></a>
