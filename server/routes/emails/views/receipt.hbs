@@ -1,0 +1,46 @@
+{{#extend "body"}}
+<table>
+  <tr>
+    <td colspan="3" style="padding-top: 22px"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="width: 180px">
+      <h2 class="email-order-receipt-header">Order Receipt</h2>
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+<table class="container">
+  <tr>
+    <td>
+      <h1 class="primary-header" style="padding-top:16px; padding-bottom: 12px">Lunch is ordered!</h1>
+      <p>Thanks for ordering with Goodybag. You will receive another email when your order arrives.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      {{> email_order_details}}
+    </td>
+  </tr>
+</table>
+
+<table class="container">
+  <tr><td style="padding-top:32px"></td></tr>
+  <tr>
+    <td>
+      {{> email_items_table}}
+    </td>
+  </tr>
+  <tr><td style="padding-top:42px"></td></tr>
+</table>
+
+<table class="container">
+  <tr>
+    <td>
+      {{> email_footer}}
+    </td>
+  </tr>
+</table>
+{{/extend}}

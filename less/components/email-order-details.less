@@ -1,0 +1,38 @@
+/////////////////////////
+// Email Order Details //
+/////////////////////////
+
+@import "../themes.less";
+
+.email-order-details {
+  #themes > .get('default');
+  width: 100%;
+
+  td {
+    font-weight: 300;
+    font-family: @font-family;
+  }
+
+  .key, .value {
+    text-align: left;
+    padding-top: 4px;
+    .color();
+  }
+
+  .key {
+    width: 98px;
+    padding-right: 12px;
+  }
+
+  .value {
+    font-weight: 500;
+  }
+
+  .delivery-row td {
+    padding-top: 28px;
+  }
+
+  .address {
+    font-weight: 300;
+  }
+}

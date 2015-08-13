@@ -1,0 +1,35 @@
+<!--<ItemsTable>-->
+<table class="email-items-table" cellpadding="0" cellspacing="0" style="width: 100%; margin-left: auto; margin-right: auto; background: #ffffff; border: solid #ccccc0 1px;">
+  <tr>
+    <th style="padding-top: 5px; padding-bottom: 5px; padding-left: 12px; padding-right: 12px; text-align: left; font-weight: 500">Item</th>
+    <th style="padding-top: 5px; padding-bottom: 5px; padding-left: 12px; padding-right: 12px; text-align: left; font-weight: 500">Quantity</th>
+    <th style="padding-top: 5px; padding-bottom: 5px; padding-left: 12px; padding-right: 12px; text-align: right; font-weight: 500">Price</th>
+  </tr>
+  {{#each order.items}}
+    <tr class="line-item-row">
+      <td style="{{#isOdd @index}}background: #f1f1f1;{{/isOdd}} font-size: 14px; padding-top: 10px; padding-bottom: 10px; padding-left: 12px; padding-right: 12px; text-align: left; width: 66%">{{name}}</td>
+      <td style="{{#isOdd @index}}background: #f1f1f1;{{/isOdd}} font-size: 14px; padding-top: 10px; padding-bottom: 10px; padding-left: 12px; padding-right: 12px; text-align: left;"><span style="font-size: 10px">x</span>{{quantity}}</td>
+      <td style="{{#isOdd @index}}background: #f1f1f1;{{/isOdd}} font-size: 14px; padding-top: 10px; padding-bottom: 10px; padding-left: 12px; padding-right: 12px; text-align: right;">{{dollars price}}</td>
+    </tr>
+  {{/each}}
+  <tr class="subtotal-row">
+    <td colspan="2" style="padding-top: 26px; padding-bottom: 6px; padding-left: 12px; padding-right: 0; text-align: right;">Subtotal:</td>
+    <td style="padding-top: 26px; padding-bottom: 6px; padding-left: 12px; padding-right: 12px; text-align: right;">$14.83</td>
+  </tr>
+
+  <tr>
+    <td colspan="2" style="padding-top: 6px; padding-bottom: 6px; padding-left: 12px; padding-right: 0; text-align: right;">Goodybag Fee:</td>
+    <td style="padding-top: 6px; padding-bottom: 6px; padding-left: 12px; padding-right: 12px; text-align: right;">$2.99</td>
+  </tr>
+
+  <tr>
+    <td colspan="2" style="padding-top: 6px; padding-bottom: 6px; padding-left: 12px; padding-right: 0; text-align: right;">Tax:</td>
+    <td style="padding-top: 6px; padding-bottom: 6px; padding-left: 12px; padding-right: 12px; text-align: right;">$2.37</td>
+  </tr>
+
+  <tr>
+    <td colspan="2" style=" font-size: 14px; padding-top: 10px; padding-bottom: 10px; padding-left: 12px; padding-right: 0; text-align: right; font-weight: bolder;">Total:</td>
+    <td style=" font-size: 14px; padding-top: 10px; padding-bottom: 10px; padding-left: 12px; padding-right: 12px; text-align: right;">$17.63</td>
+  </tr>
+</table>
+<!--</ItemsTable>-->
