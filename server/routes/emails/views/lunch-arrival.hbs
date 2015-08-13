@@ -1,3 +1,19 @@
 {{#extend "body"}}
-<h1>Lunch Arrival</h1>
+<table>
+  <tr><td style="padding-top:32px"></td></tr>
+  <tr>
+    <td class="center">
+      <center>
+        <h1 class="primary-header" style="text-align: center">Your Lunch is here!</h1>
+        <div style="padding-top:40px;"></div>
+        <img class="center" src="https://d3bqck8kwfkhx5.cloudfront.net/img/lunch-arrived-1.png">
+        <div style="padding-top:40px;"></div>
+        <p style="text-align: center;">Your food has arrived and is waiting for you at the following location:</p>
+        <p style="font-weight: 700; text-align: center;">{{location}}</p>
+      </center>
+    </td>
+  </tr>
+  <tr><td style="padding-top:42px"></td></tr>
+</table>
+{{> email_footer}}
 {{/extend}}

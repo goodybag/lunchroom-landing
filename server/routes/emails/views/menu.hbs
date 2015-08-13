@@ -1,43 +1,56 @@
 {{#extend "body"}}
-{{> email_header}}
+<table class="container email-menu-intro">
+  <tr>
+    <td class="center main-content-wrapper">
+      <center>
+        <h1 class="email-menu-intro-header primary-header">Today's lunch menu</h1>
+        <div style="padding-bottom: 20px;">
+          {{> email_button url='#' text='Order Now'}}
+        </div>
+        <p class="email-menu-intro-paragraph"><strong>New menus every day!</strong> Today's menu is from <strong>Dos Batos</strong>. This is where some restaurant promotional description text would go.</p>
+        <p class="email-menu-intro-paragraph email-menu-intro-place-orders-by">Place your order by 10 AM for lunch today.</p>
+      </center>
+    </td>
+    <td class="expander"></td>
+  </tr>
+</table>
+
 <table class="container">
   <tr>
     <td>
-
+      {{#each itemRows}}
       <table class="row">
         <tr>
-          <td class="wrapper">
-
-            <table class="eight columns">
+          {{#each this}}
+          <td class="wrapper{{#if @index}} last{{/if}}">
+            <table class="six columns">
               <tr>
                 <td>
-
-                  Eight Columns
-
+                  {{> email_item}}
                 </td>
                 <td class="expander"></td>
               </tr>
             </table>
-
           </td>
-          <td class="wrapper last">
-
-            <table class="four columns">
-              <tr>
-                <td>
-
-                  Four Columns
-
-                </td>
-                <td class="expander"></td>
-              </tr>
-            </table>
-
-          </td>
+          {{/each}}
         </tr>
       </table>
-
+      {{/each}}
     </td>
   </tr>
 </table>
+<table class="container">
+  <tr>
+    <td>
+      <center>
+        <div style="padding-top: 30px; padding-bottom: 30px">
+          {{> email_button url='#' text='Order Now'}}
+        </div>
+        <p class="outro-paragraph" style="text-align: center">Maybe some more text down here if we want to expand on what Goodybag is or add some personality. SOme paragraph about the food here. Maybe two or three sentences introducing the restaurant or it's food or both. Dos Batos is home of the first wood fired tacos in Austin. They a are the most popular on Goodybag.</p>
+      </center>
+    </td>
+  </tr>
+</table>
+
+{{> email_footer_subscription}}
 {{/extend}}

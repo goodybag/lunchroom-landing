@@ -1,7 +1,8 @@
 var app = module.exports = require('express').Router();
+var inlineCss = require('inline-css');
 var config = require('../../../config');
 var m = require('../../middleware');
-var inlineCss = require('inline-css');
+var data = require('../../data/dummy');
 
 var registerPartials = require('../../../lib/partials-registrar').bind(
   null, __dirname + '/views/partials/', 'email_'
@@ -50,4 +51,25 @@ app.use( function( req, res, next ){
   return next();
 });
 
-app.get( '/menu', renderEmail('menu') );
+app.get( '/menu'
+, m.locals({
+    items: data.items
+  , itemRows: data.items.reduce( function( curr, item, i ){
+                if ( i % 2 === 0 ){
+                  curr.push([ item ]);
+                } else {
+                  curr[ curr.length - 1 ].push( item );
+                }
+
+                return curr;
+              }, [] )
+  })
+, renderEmail('menu')
+);
+
+app.get( '/lunch-arrival'
+, m.locals({
+    location: '1st Floor Waiting Area'
+  })
+, renderEmail('lunch-arrival')
+);

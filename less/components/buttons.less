@@ -11,6 +11,12 @@
   #components > .btn-size( @btn-base-height, 18px, 1px, 1px, @font-size-base );
   border-radius: @border-radius-base;
 
+  &.disabled,
+  &[disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
   &.btn-small {
     #components > .btn-size( @btn-small-height, 22px, 1px, 1px, @font-size-small );
   }
