@@ -2,23 +2,26 @@
     "config": {
 	    "sm.hoist.visualcomponents/0": {
 	    	"viewer": {
-	    		"port": 8082
+	    		"port": 3012
     		},
 	    	"source": {
 	    		"server": {
 	    			"cwd": "{{__DIRNAME__}}",
 	    			"runInterpreter": "node",
 	    			"run": "{{__DIRNAME__}}/node_modules/.bin/gulp",
-	    			"host": "localhost:8083",
+	    			"host": "localhost:3011",
 	    			"wait": "2",
 	    			"env": {
-	    				"PORT": 8083
+	    				"PORT": 3011
 	    			}
 	    		}
 	    	},
 	    	"pages": {
 	    		"Landing": {
 	    			"source": "/landing"
+    			},
+	    		"AppComponents": {
+	    			"source": "/admin/kitchen-sink"
     			}
 	    	},
 	    	"target": {

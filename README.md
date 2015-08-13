@@ -21,4 +21,5 @@ npm run-script build
 
 # Preview
 npm run-script build-show
+open http://localhost:3012/
 ```

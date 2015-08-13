@@ -72,7 +72,7 @@ gulp.task( 'server', function( done ){
   server = require('./server').listen( port, function( error ){
     if ( error ) return done( error );
 
-    gulp.util.log( 'Server started on port ' + gulp.util.colors.blue( config.http.port ) );
+    gulp.util.log( 'Server started on port ' + gulp.util.colors.blue( port ) );
 
     done();
   });

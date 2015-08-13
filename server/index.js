@@ -12,6 +12,7 @@ require('../lib/register-helpers')( hbs.handlebars );
 server.set( 'view engine', 'hbs' );
 server.set( 'views', __dirname );
 
+server.use( require('morgan')('combined') );
 server.use( require('body-parser').json() );
 server.use( require('body-parser').urlencoded({ extended: true }) );
 
