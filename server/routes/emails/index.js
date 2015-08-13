@@ -66,3 +66,10 @@ app.get( '/menu'
   })
 , renderEmail('menu')
 );
+
+app.get( '/lunch-arrival'
+, m.locals({
+    location: '1st Floor Waiting Area'
+  })
+, renderEmail('lunch-arrival')
+);
