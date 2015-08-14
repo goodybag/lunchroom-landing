@@ -1,7 +1,7 @@
 {{#extend "page"}}page-menu{{/extend}}
 
 {{#extend "body"}}
-<div class="lunchroom-header">
+<div class="lunchroom-header" component:id="navbar">
   <div class="container">
     <div class="tabs" component:section="tabs">
       <a component:section="tabs" component:view="active" class="active" href="#"><span component:prop="tabDay">Mon</span><small component:prop="tabDate">Jan 26</small></a>
@@ -26,7 +26,7 @@
   </div>
 </div>
 
-<div class="container items-container">
+<div class="container items-container" component:id="menu">
   <div class="tiles item-tiles" component:section="items">
     {{#each items}}
       <div class="tile item-tile" component:section="items" component:view="default">

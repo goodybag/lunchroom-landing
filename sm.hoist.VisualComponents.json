@@ -22,6 +22,27 @@
     			},
 	    		"AppComponents": {
 	    			"source": "/admin/kitchen-sink"
+    			},
+	    		"AppMenu": {
+	    			"source": "/pages/menu"
+    			},
+	    		"AppLogin": {
+	    			"source": "/pages/login"
+    			},
+	    		"AppRegister": {
+	    			"source": "/pages/register"
+    			},
+	    		"AppCheckout": {
+	    			"source": "/pages/checkout"
+    			},
+	    		"EmailMenu": {
+	    			"source": "/emails/menu"
+    			},
+	    		"EmailLunchArrival": {
+	    			"source": "/emails/lunch-arrival"
+    			},
+	    		"EmailReceipt": {
+	    			"source": "/emails/receipt"
     			}
 	    	},
 	    	"target": {

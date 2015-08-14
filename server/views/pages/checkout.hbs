@@ -26,7 +26,7 @@
   </div>
 </div>
 
-<div class="container page-nav-container">
+<div class="container page-nav-container" component:id="checkout-navbar">
   <ul class="page-nav">
     <li class="page-nav-item">
       <a href="/pages/menu" class="page-nav-item-link">&lt; Back to menu</a>
@@ -34,7 +34,7 @@
   </ul>
 </div>
 
-<div class="container checkout-info-container">
+<div class="container checkout-info-container" component:id="checkout-form">
   <fieldset class="checkout-info form-vertical">
     <div class="user-info">
       <h3 class="section-title">Your Info</h3>
@@ -78,8 +78,8 @@
   </fieldset>
 </div>
 
-<div class="container order-reviewer-container">
-  <div class="order-reviewer" component:id="checkout-items">
+<div class="container order-reviewer-container" component:id="checkout-items">
+  <div class="order-reviewer">
     <h3 class="order-reviewer-header">Today's order
       <a href="#" class="order-reviewer-item-add-link" component:elm="addItemsLink">Add items</a>
     </h3>
@@ -116,8 +116,8 @@
   </div>
 </div>
 
-<div class="container order-summary-container">
-  <div class="order-summary-wrapper" component:id="checkout-summary">
+<div class="container order-summary-container" component:id="checkout-summary">
+  <div class="order-summary-wrapper">
     <div class="order-summary">
       <div class="order-summary-item">
         <div class="order-summary-col order-summary-key">Subtotal</div>
