@@ -79,9 +79,13 @@
   </div>
 </section>
 
-<section class="page-section" id="section-checkout-info" component:id="checkout-form">
+<section class="page-section" id="section-checkout-info">
   <div class="container">
-    <fieldset class="checkout-info form-vertical">
+    <h2 class="section-header">Checkout Form (new user)</h2>
+    <fieldset
+      class="checkout-info form-vertical"
+      component:id="checkout-form"
+      copmonent:view="default">
       <div class="user-info">
         <h3 class="section-title">Your Info</h3>
         <div class="form-group">
@@ -118,6 +122,70 @@
               <input type="text" class="form-control" placeholder="MM" name="card_expiration_month" component:elm="card[expire-month]">
               /
               <input type="text" class="form-control" placeholder="YY" name="card_expiration_year" component:elm="card[expire-year]">
+            </div>
+          </div>
+      </div>
+    </fieldset>
+  </div>
+</section>
+
+<section class="page-section" id="section-checkout-info">
+  <div class="container">
+    <h2 class="section-header">Checkout Form (existing user)</h2>
+    <fieldset
+      class="checkout-info form-vertical"
+      component:id="checkout-form"
+      copmonent:view="existing-user">
+      <div class="user-info">
+        <h3 class="section-title">Your Info</h3>
+        <div class="form-group">
+          <label for="">Name</label>
+          <input value="Jane Doe" type="text" class="form-control" component:elm="info[name]">
+        </div>
+        <div class="form-group">
+          <label for="">Email</label>
+          <input value="jane.doe@missingpeeps.com" type="email" class="form-control" component:elm="info[email]">
+        </div>
+        <div class="form-group">
+          <label for="">Phone Number</label>
+          <input value="(123) 456-7890" type="tel" class="form-control" component:elm="info[phone]">
+        </div>
+        <p class="checkout-info-note">We'll email/text you when your meal has arrived!</p>
+      </div>
+      <div class="payment-info">
+        <h3 class="section-title">Payment Info</h3>
+          <div class="form-group form-group-cc-selction">
+            <label for="">Select a card</label>
+            <select name="payment_method_id" class="form-control">
+              <option value="1">* 1234 Exp. 07/17</option>
+               <option value="2">* 5678 Exp. 11/19</option> 
+            </select>
+          </div>
+          <h4 class="form-group-header">Or, add a new card</h4>
+          <div class="form-group form-group-member-name">
+            <label for="">Name on card</label>
+            <input type="text" class="form-control" name="card_member_name" component:elm="card[name]">
+          </div>
+          <div class="inline-form-group-list">
+            <div class="form-group form-group-card-number">
+              <label for="">Card number</label>
+              <input type="text" class="form-control" name="card_number" component:elm="card[number]">
+            </div>
+            <div class="form-group form-group-card-cvv">
+              <label for="">CVV</label>
+              <input type="text" class="form-control" name="card_cvv" component:elm="card[cvc]">
+            </div>
+            <div class="form-group form-group-expiration">
+              <label for="">Expiration date</label>
+              <input type="text" class="form-control" placeholder="MM" name="card_expiration_month" component:elm="card[expire-month]">
+              /
+              <input type="text" class="form-control" placeholder="YY" name="card_expiration_year" component:elm="card[expire-year]">
+            </div>
+            <div class="form-group form-group">
+              <label>
+                <input type="checkbox" name="save_card" checked>
+                Save card?
+              </label>
             </div>
           </div>
       </div>
