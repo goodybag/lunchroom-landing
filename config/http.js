@@ -3,7 +3,7 @@
  */
 
 module.exports = {
-  port:     3010
+  port:     (process.env.PORT && parseInt(process.env.PORT)) || 3010
 , host:     'localhost'
 , protocol: 'http'
 
