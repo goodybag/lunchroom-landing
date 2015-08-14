@@ -73,3 +73,10 @@ app.get( '/lunch-arrival'
   })
 , renderEmail('lunch-arrival')
 );
+
+app.get( '/receipt'
+, m.locals({
+    order: data.order
+  })
+, renderEmail('receipt')
+);

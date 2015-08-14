@@ -1,0 +1,28 @@
+///////////////////////
+// Email Items Table //
+///////////////////////
+
+@import "../themes.less";
+
+.email-items-table {
+  #themes > .get('default');
+
+  border-radius: 1px;
+  border-color: @border-color;
+
+  th {
+    border-bottom: solid 1px @border-color;
+    font-family: @font-family;
+  }
+
+  td {
+    font-family: @font-family;
+  }
+
+  .line-item-row,
+  .subtotal-row {
+    td {
+      border-top: solid 1px @border-color;
+    }
+  }
+}
