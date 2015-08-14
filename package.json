@@ -38,6 +38,7 @@
     "inline-css": "^1.0.5",
     "jquery": "^1.11.3",
     "jquery-popover": "0.0.4",
+    "jquery.payment": "^1.3.0",
     "less-buttons": "git://github.com/goodybag/less-buttons",
     "lodash": "^3.2.0",
     "loglog": "^0.2.2",
