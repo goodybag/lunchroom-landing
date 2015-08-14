@@ -48,6 +48,7 @@
 @import "./components/page-nav.less";
 
 html {
+  display:              flex;
   background-color:     @body-bg-color;
   font-family:          @font-family-base;
   font-size:            @font-size-base;
@@ -56,6 +57,12 @@ html {
   color:                @color-primary-text;
   height:               100%;
   .font-smoothing;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 * {
@@ -80,7 +87,11 @@ html, body {
 #components > #menu-share > .init();
 #components > #page-nav > .init();
 
+// Component Overrides
+///////////////////////
+
 .footer {
+  flex: 1;
   margin-top: 50px;
 }
 
@@ -154,5 +165,11 @@ html, body {
 
   .order-summary-container {
     margin-top: 20px;
+  }
+}
+
+.page-order-submitted {
+  .order-success {
+    margin-top: 70px;
   }
 }
