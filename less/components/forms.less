@@ -14,3 +14,18 @@
     }
   }
 }
+
+.form-group.error .error-msg {
+  display: block;
+  color: @palette-red;
+}
+
+.error-group {
+  color: @palette-red;
+
+  .error {
+    ~ .error {
+      margin-top: 6px;
+    }
+  }
+}
