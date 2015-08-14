@@ -114,9 +114,19 @@ gulp.task( 'less-modules', function(){
     .pipe( gulp.dest('./public/dist/img') );
 });
 
+gulp.task( 'copy-flags', function(){
+  return gulp.src('./node_modules/intl-tel-input/build/img/*')
+    .pipe( gulp.dest('./public/dist/img') );
+});
+
+gulp.task( 'copy-tel-input-utils', function(){
+  return gulp.src('./node_modules/intl-tel-input/lib/libphonenumber/build/utils.js')
+    .pipe( gulp.dest('./public/dist') );
+});
+
 gulp.task( 'build', [
   'lint', 'less', 'less-landing', 'less-kitchen-sink', 'less-emails', 'less-modules'
-, 'fonts', 'icon-font', 'alias-modules'
+, 'copy-tel-input-utils', 'copy-flags', 'fonts', 'icon-font', 'alias-modules'
 , 'compile-frontend-js-lib', 'compile-frontend-js-app', 'create-tables'
 ]);
 
