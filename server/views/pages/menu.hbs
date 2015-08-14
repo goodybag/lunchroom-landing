@@ -1,0 +1,81 @@
+{{#extend "page"}}page-menu{{/extend}}
+
+{{#extend "body"}}
+<div class="lunchroom-header">
+  <div class="container">
+    <div class="tabs" component:section="tabs">
+      <a component:section="tabs" component:view="active" class="active" href="#"><span component:prop="tabDay">Mon</span><small component:prop="tabDate">Jan 26</small></a>
+      <a component:section="tabs" component:view="default" href="#"><span component:prop="tabDay">Tues</span><small component:prop="tabDate">Jan 27</small></a>
+      <a href="#"><span component:prop="tabDay">Weds</span><small component:prop="tabDate">Jan 28</small></a>
+      <a href="#"><span component:prop="tabDay">Thurs</span><small component:prop="tabDate">Jan 29</small></a>
+      <a href="#"><span component:prop="tabDay">Fri</span><small component:prop="tabDate">Jan 30</small></a>
+    </div>
+    <div class="module">
+      Delivery to: <small component:prop="deliverTo">Bazaarvoice</small>
+    </div>
+    <div class="module">
+      Delivery Time: <small component:prop="deliveryTime">12:00-12:30 PM</small>
+    </div>
+    <div class="module">
+      Time left to order:
+      <small class="text-important" component:prop="timeLeftToOrder">1 hr 26min</small>
+    </div>
+    <div class="module module-right module-unpadded">
+      <a component:elm="checkoutButton" class="btn btn-primary" href="checkout">Checkout (<span component:prop="cartItemCount">1</span>)</a>
+    </div>
+  </div>
+</div>
+
+<div class="container items-container">
+  <div class="tiles item-tiles" component:section="items">
+    {{#each items}}
+      <div class="tile item-tile" component:section="items" component:view="default">
+        <div class="tile-cover" style="background-image: url('{{coverPhotoUrl}}');" component:prop="photoUrl" component:prop-target="style/background-image">
+        </div>
+        <div class="tile-info">
+          <h3 class="tile-title" component:prop="title">{{name}}</h3>
+          <ul class="diet-tags">
+            {{#each dietTags}}
+              <li class="diet-tag diet-tag-{{this}}"></li>
+            {{/each}}
+          </ul>
+          <div class="item-price" component:prop="price">${{dollars price}}</div>
+          <button
+            class="btn btn-default btn-add"
+            data-toggle="modal"
+            data-target="#item-modal"
+            component:elm="addButton">Add</button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+<div class="modal item-modal fade" id="item-modal" component:id="menu-item-popup">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-photo-wrapper">
+        <img class="modal-photo" src="https://www.filepicker.io/api/file/SZoK9zUvTPWXzmK81aGg/convert?w=430&h=400&fit=crop">
+      </div>
+      <div class="modal-main-content">
+        <div class="modal-main-content-body">
+          <h3 class="item-modal-title">Fajita Torta
+            <span class="item-modal-price">$12.00</span>
+          </h3>
+          <p class="item-modal-description">Mexican sandwich with top sirloin steak, bell peppers, mushrooms, and onions. Topped with queso, avocado, tomatoes, and Mexican mayo dressing.</p>
+          <ul class="diet-tags">
+            <li class="diet-tag diet-tag-spicy"></li>
+          </ul>
+        </div>
+        <div class="item-modal-actions">
+          <div class="form-group item-modal-quantity-form-group">
+            <label class="item-modal-quantity-label">Quantity:</label>
+            <input type="number" value="1" class="item-modal-quantity-input">
+          </div>
+          <button class="btn btn-primary item-modal-save-btn">Add to Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/extend}}

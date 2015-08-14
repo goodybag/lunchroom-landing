@@ -28,6 +28,8 @@
     .modal-photo-wrapper {
       width: 55.12%;
       line-height: 0;
+      // Sub-pixel calculations causing the image to bleed out of container
+      overflow: hidden;
 
       .modal-photo {
         max-width: 100%;
