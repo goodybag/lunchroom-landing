@@ -1,0 +1,34 @@
+@import "../themes.less";
+
+#components { #page-nav {
+  .init( @click-target-size: 10px ){
+    #themes > .get('default');
+
+    .page-nav {
+      list-style: none;
+      margin: 0;
+      padding: 20px 0;
+      margin-left: -@click-target-size;
+    }
+
+    .page-nav-item {
+      display: inline-block;
+      margin: 0;
+
+      ~ .page-nav-item {
+        margin-left: 12px;
+      }
+    }
+
+    .page-nav-item-link {
+      display: inline-block;
+      padding: @click-target-size;
+      text-decoration: none;
+
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }  
+}}
