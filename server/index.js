@@ -44,3 +44,8 @@ server.get('/pages/login', m.view('views/pages/login', {
 server.get('/pages/register', m.view('views/pages/register', {
   layout: 'views/layout'
 }));
+
+server.get('/pages/checkout', m.view('views/pages/checkout', {
+  layout: 'views/layout'
+, order:  data.order
+}));

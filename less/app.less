@@ -45,6 +45,7 @@
 @import "./components/item-modal.less";
 @import "./components/order-success.less";
 @import "./components/menu-share.less";
+@import "./components/page-nav.less";
 
 html {
   background-color:     @body-bg-color;
@@ -77,6 +78,7 @@ html, body {
 #components > #item-modal > .init();
 #components > #order-success > .init();
 #components > #menu-share > .init();
+#components > #page-nav > .init();
 
 .footer {
   margin-top: 50px;
@@ -142,5 +144,15 @@ html, body {
 
   .items-container {
     margin-top: 50px;
+  }
+}
+
+.page-checkout {
+  .page-nav-container {
+    margin-top: 40px;
+  }
+
+  .order-summary-container {
+    margin-top: 20px;
   }
 }
