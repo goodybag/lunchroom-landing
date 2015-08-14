@@ -2,6 +2,7 @@ var express = require('express');
 var hbs     = require('hbs');
 var config  = require('../config');
 var m       = require('./middleware');
+var data    = require('./data/dummy');
 
 var server  = module.exports = express();
 
@@ -30,3 +31,8 @@ server.get('/landing', m.view('views/landing-1', {
 server.use( '/', require('./routes/lunchrooms') );
 server.use( '/emails', require('./routes/emails') );
 server.use( '/admin', require('./routes/admin') );
+
+server.get('/pages/menu', m.view('views/pages/menu', {
+  layout: 'views/layout'
+, items:  data.items
+}));
