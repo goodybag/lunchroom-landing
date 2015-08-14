@@ -27,11 +27,11 @@ server.get('/landing', m.view('views/landing-1', {
   layout: 'views/landing-layout'
 }));
 
-server.get('/login', m.view('views/pages/login', {
+server.get('/pages/login', m.view('views/pages/login', {
   layout: 'views/layout'
 }));
 
-server.get('/register', m.view('views/pages/register', {
+server.get('/pages/register', m.view('views/pages/register', {
   layout: 'views/layout'
 }));
 
