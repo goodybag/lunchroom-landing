@@ -16,13 +16,22 @@ var scripts = {
 scripts.lint = scripts.public.concat(['*.js', 'test/*.js']);
 scripts.lint = scripts.lint.concat( scripts.server );
 
-gulp.task( 'compile-frontend-js', function(){
+gulp.task( 'compile-frontend-js-app', function(){
   return require('browserify')({
       debug: true
     })
     .add('./public/js/app.js')
     .bundle()
     .pipe( fs.createWriteStream('./public/dist/app.js') );
+});
+
+gulp.task( 'compile-frontend-js-lib', function(){
+  return require('browserify')({
+      debug: true
+    })
+    .add('./public/js/lib.js')
+    .bundle()
+    .pipe( fs.createWriteStream('./public/dist/lib.js') );
 });
 
 gulp.task( 'less', function(){
@@ -57,7 +66,7 @@ gulp.task( 'lint', function(){
 
 gulp.task( 'watch', function(){
   gulp.watch( scripts.lint, ['lint'] );
-  gulp.watch( scripts.public, [ 'alias-modules', 'compile-frontend-js'] );
+  gulp.watch( scripts.public, [ 'alias-modules', 'compile-frontend-js-app', 'compile-frontend-js-lib'] );
   gulp.watch( ['less/*.less', 'less/**/*.less'], ['less', 'less-landing', 'less-kitchen-sink'] );
   gulp.watch( ['less/components/*.less'], ['less', 'less-landing', 'less-kitchen-sink', 'less-emails'] );
   gulp.watch( ['less/app.less'], ['less', 'less-kitchen-sink'] );
@@ -105,10 +114,20 @@ gulp.task( 'less-modules', function(){
     .pipe( gulp.dest('./public/dist/img') );
 });
 
+gulp.task( 'copy-flags', function(){
+  return gulp.src('./node_modules/intl-tel-input/build/img/*')
+    .pipe( gulp.dest('./public/dist/img') );
+});
+
+gulp.task( 'copy-tel-input-utils', function(){
+  return gulp.src('./node_modules/intl-tel-input/lib/libphonenumber/build/utils.js')
+    .pipe( gulp.dest('./public/dist') );
+});
+
 gulp.task( 'build', [
   'lint', 'less', 'less-landing', 'less-kitchen-sink', 'less-emails', 'less-modules'
-, 'fonts', 'icon-font', 'alias-modules'
-, 'compile-frontend-js', 'create-tables'
+, 'copy-tel-input-utils', 'copy-flags', 'fonts', 'icon-font', 'alias-modules'
+, 'compile-frontend-js-lib', 'compile-frontend-js-app', 'create-tables'
 ]);
 
 gulp.task( 'default', [ 'build', 'server', 'watch' ] );

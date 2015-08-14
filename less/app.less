@@ -10,6 +10,18 @@
 @import "../node_modules/cater/less/variables.less";
 @import "../node_modules/cater/less/mixins.less";
 
+@import (less) "../node_modules/intl-tel-input/build/css/intlTelInput.css";
+
+.iti-flag {
+  background-image: url('/dist/img/flags.png');
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    background-image: url('/dist/img/flags@2x.png');
+  }
+}
+
+.intl-tel-input { width: 100%; }
+
 @import "./variables.less";
 @import "./mixins.less";
 
@@ -46,8 +58,10 @@
 @import "./components/order-success.less";
 @import "./components/menu-share.less";
 @import "./components/page-nav.less";
+@import "./components/warning-section.less";
 
 html {
+  display:              flex;
   background-color:     @body-bg-color;
   font-family:          @font-family-base;
   font-size:            @font-size-base;
@@ -56,6 +70,12 @@ html {
   color:                @color-primary-text;
   height:               100%;
   .font-smoothing;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 * {
@@ -79,8 +99,13 @@ html, body {
 #components > #order-success > .init();
 #components > #menu-share > .init();
 #components > #page-nav > .init();
+#components > #warning-section > .init();
+
+// Component Overrides
+///////////////////////
 
 .footer {
+  flex: 1;
   margin-top: 50px;
 }
 
@@ -154,5 +179,11 @@ html, body {
 
   .order-summary-container {
     margin-top: 20px;
+  }
+}
+
+.page-order-submitted {
+  .order-success {
+    margin-top: 70px;
   }
 }

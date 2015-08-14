@@ -49,3 +49,8 @@ server.get('/pages/checkout', m.view('views/pages/checkout', {
   layout: 'views/layout'
 , order:  data.order
 }));
+
+server.get('/pages/order-success', m.view('views/pages/order-success', {
+  layout: 'views/layout'
+, order:  data.order
+}));
