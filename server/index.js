@@ -36,3 +36,11 @@ server.get('/pages/menu', m.view('views/pages/menu', {
   layout: 'views/layout'
 , items:  data.items
 }));
+
+server.get('/pages/login', m.view('views/pages/login', {
+  layout: 'views/layout'
+}));
+
+server.get('/pages/register', m.view('views/pages/register', {
+  layout: 'views/layout'
+}));
