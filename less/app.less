@@ -102,3 +102,31 @@ html, body {
 .modal-backdrop.in {
   opacity: 0.6;
 }
+
+.page-login,
+.page-register {
+  .medium-container {
+    margin-top: 50px;
+  }
+
+  .form-vertical {
+    #grid > .column(4);
+    
+    + .supporting-graphic {
+      #grid > .column(4);
+
+      margin-top: 50px;
+      text-align: center;
+
+      @media screen and ( max-width: @breakpoint-mobile ){
+        display: none;
+      }
+    }
+  }
+}
+
+.register-form {
+  + .supporting-graphic {
+    margin-top: 50px;
+  }
+}
