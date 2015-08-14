@@ -42,7 +42,13 @@
     <div class="tiles item-tiles" component:section="items">
       {{#each items}}
         <div class="tile item-tile" component:section="items" component:view="default">
-          <div class="tile-cover" style="background-image: url('{{coverPhotoUrl}}');" component:prop="photoUrl" component:prop-target="style/background-image">
+          <div
+            class="tile-cover"
+            style="background-image: url('{{coverPhotoUrl}}');"
+            component:prop="photoUrl"
+            component:prop-target="style/background-image"
+            data-toggle="modal"
+            data-target="#item-modal">
           </div>
           <div class="tile-info">
             <h3 class="tile-title" component:prop="title">{{name}}</h3>
