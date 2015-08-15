@@ -35,6 +35,9 @@
 	    		"AppCheckout": {
 	    			"source": "/pages/checkout"
     			},
+	    		"AppCheckoutSuccess": {
+	    			"source": "/pages/order-success"
+    			},
 	    		"EmailMenu": {
 	    			"source": "/emails/menu"
     			},

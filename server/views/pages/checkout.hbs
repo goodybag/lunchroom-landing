@@ -29,10 +29,20 @@
 <div class="container page-nav-container" component:id="checkout-navbar">
   <ul class="page-nav">
     <li class="page-nav-item">
-      <a href="/pages/menu" class="page-nav-item-link">&lt; Back to menu</a>
+      <a href="/pages/menu" class="page-nav-item-link" component:elm="addItemsLink">&lt; Back to menu</a>
     </li>
   </ul>
 </div>
+
+<section class="page-section" id="section-warning-section" component:id="no-items">
+  <div class="container">
+    <div class="warning-section" component:id="warning-section">
+      <img src="/img/cupcake-shocked.png" alt="" class="warning-section-supporting-graphic">
+      <h2 class="warning-section-header">You have nothing in your cart!</h2>
+      <p><a href="#" component:elm="addItemsLink">Add items</a></p>
+    </div>
+  </div>
+</section>
 
 <div class="container checkout-info-container" component:id="checkout-form">
   <fieldset class="checkout-info form-vertical">

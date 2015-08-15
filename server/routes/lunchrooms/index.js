@@ -9,6 +9,7 @@ router.get( '/', function( req, res ){
   	'/pages/login',
   	'/pages/register',
   	'/pages/checkout',
+    '/pages/order-success',
   	'/emails/menu',
   	'/emails/lunch-arrival',
   	'/emails/receipt'
