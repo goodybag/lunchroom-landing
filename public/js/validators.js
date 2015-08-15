@@ -56,10 +56,12 @@ module.exports.createCheckoutValidator = function( $el, options ){
         var $input = $el.find('[name="phone"]');
         if ( $input.length === 0 ) return;
 
-        if ( $input.val().length === 0 ){
+        if ( $input.val().length === 0 ) return;
+
+        if ( !$input.intlTelInput('isValidNumber') ){
           return {
             field: 'phone'
-          , message: 'Phone is required'
+          , message: 'Invalid phone number'
           };
         }
       }
