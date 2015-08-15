@@ -10,4 +10,20 @@ $(function(){
   , utilsScript: '/dist/utils.js'
   , preventInvalidNumbers: true
   });
+
+  var checkoutValidator = validators.createCheckoutValidator(
+    $('#section-checkout-info-validation-test .checkout-info')
+  );
+
+  $('#section-checkout-info-validation-test .btn-validate').click( function( e ){
+    checkoutValidator.validate();
+  });
+
+  $('.checkout-info').each( function(){
+    var $el = $(this);
+
+    $el.find('[name="will_add_new_card"]').change( function( e ){
+      $el.find('.payment-method-wrapper').toggleClass( 'disabled', e.checked );
+    });
+  });
 });

@@ -45,7 +45,10 @@
 </section>
 
 <div class="container checkout-info-container" component:id="checkout-form">
-  <fieldset class="checkout-info form-vertical">
+  <fieldset
+    class="checkout-info form-vertical"
+    component:id="checkout-form"
+    copmonent:view="default">
     <div class="user-info">
       <h3 class="section-title">Your Info</h3>
       <div class="form-group">
@@ -58,15 +61,17 @@
       </div>
       <div class="form-group">
         <label for="">Phone Number</label>
-        <input name="phone" type="tel" class="form-control" component:elm="info[phone]">
+        <input type="tel" class="form-control" name="phone" component:elm="info[phone]">
       </div>
       <p class="checkout-info-note">We'll email/text you when your meal has arrived!</p>
     </div>
     <div class="payment-info">
       <h3 class="section-title">Payment Info</h3>
+      <div class="error-group" data-error-group="payment_method"></div>
+      <div class="payment-method-wrapper">
         <div class="form-group form-group-member-name">
           <label for="">Name on card</label>
-          <input type="text" class="form-control" name="card_member_name" component:elm="card[name]">
+          <input value="" type="text" class="form-control" name="card_member_name" component:elm="card[name]">
         </div>
         <div class="inline-form-group-list">
           <div class="form-group form-group-card-number">
@@ -82,6 +87,12 @@
             <input type="tel" class="form-control" placeholder="MM" name="card_expiration_month" component:elm="card[expire-month]">
             /
             <input type="tel" class="form-control" placeholder="YY" name="card_expiration_year" component:elm="card[expire-year]">
+          </div>
+          <div class="form-group form-group">
+            <label>
+              <input type="checkbox" name="save_card" checked>
+              Save card?
+            </label>
           </div>
         </div>
     </div>
