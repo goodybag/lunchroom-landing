@@ -8,6 +8,21 @@ var $     = require('jquery');
  *   var validator = validators.createCheckoutValidator( $('.checkout-form') );
  *
  *   validator.validate();
+ *
+ * Validators:
+ *
+ *  Validators are functions that return either `null` for no error,
+ *  or an error object. You can add new validators by adding a function
+ *  to the validators array.
+ *
+ * Error Objects:
+ *
+ *  {
+ *    // A single or list of form field names
+ *    field: string|string[]
+ *    // The error message associated
+ *    message: string
+ *  }
  * 
  * @param  {jQuery} $el     Context element
  * @param  {Object} options Options
