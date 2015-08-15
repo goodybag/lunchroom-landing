@@ -1,11 +1,13 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <link rel="stylesheet" href="/dist/landing-page.css">
+    <link rel="stylesheet" href="/dist/app.css">
     {{{block "css"}}}
   </head>
-  <body class="page {{{block "page"}}}">
-    {{{block "body"}}}
+  <body>
+    <div class="page {{{block "page"}}}" component:id="page">
+      {{{block "body"}}}
+    </div>
     <script src="/dist/lib.js"></script>
     <script src="/dist/app.js"></script>
     {{{block "scripts"}}}

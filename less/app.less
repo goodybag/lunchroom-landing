@@ -36,6 +36,10 @@
 @import "../node_modules/cater/less/components/popover.less";
 @import "../node_modules/cater/less/components/footer.less";
 @import "../node_modules/cater/less/components/gb-dropdown.less";
+@import "../node_modules/cater/less/components/marketing-points.less";
+@import "../node_modules/cater/less/components/logo-list.less";
+@import "../node_modules/cater/less/components/hero-unit.less";
+@import "../node_modules/cater/less/components/page-section.less";
 
 @import "../node_modules/gb-icon-font/index.less";
 
@@ -59,6 +63,10 @@
 @import "./components/menu-share.less";
 @import "./components/page-nav.less";
 @import "./components/warning-section.less";
+@import "./components/marketing-points.less";
+@import "./components/page-section.less";
+
+// @import "../node_modules/cater/less/typography.less";
 
 html {
   display:              flex;
@@ -134,12 +142,12 @@ html, body {
   opacity: 0.6;
 }
 
+.page-section {
+  text-align: left;
+}
+
 .page-login,
 .page-register {
-  .medium-container {
-    margin-top: 50px;
-  }
-
   .form-vertical {
     #grid > .column(4);
     
@@ -185,5 +193,91 @@ html, body {
 .page-order-submitted {
   .order-success {
     margin-top: 70px;
+  }
+}
+
+.page-landing {
+  .navbar {
+    position: absolute;
+  }
+
+  .section-dark {
+    background: @palette-gray-dark;
+    color: #fff;
+  }
+
+  .primary-section {
+    &:extend(.section-dark);
+  }
+
+  .hero-unit {
+    background: url('/img/photo_background.png');
+    background-size: cover;
+    .cta-form {
+      @cta-form-width: 600px;
+      width: @cta-form-width;
+      margin: 50px auto 40px;
+
+      @media screen and ( max-width: @cta-form-width ){
+        padding: 0;
+        margin-top: @gutter-width;
+        &,
+        .email-wrapper,
+        .submit-wrapper {
+          width: 100%!important;
+        }
+      }
+
+      > .form-group {
+        #grid > .row();
+      }
+    }
+
+    .email-wrapper,
+    .submit-wrapper {
+      float: left;
+      padding: 0 @gutter-width / 2;
+
+      > input,
+      > button {
+        width: 100%;
+      }
+    }
+
+    .email-wrapper {
+      width: 60%;
+    }
+
+    .submit-wrapper {
+      width: 40%;
+    }
+  }
+
+  .marketing-points p {
+    text-align: center;
+  }
+
+  #restaurants {
+    border-bottom: none;
+  }
+
+  #restaurants .logo-list {
+    margin-top: 80px;
+  }
+
+  .contact-us-form {
+    [name="message"] {
+      height: 132px;
+    }
+  }
+
+  .page-section {
+    text-align: center;
+  }
+}
+
+.page-kitchen-sink {
+  .page-section {
+    border: none;
   }
 }

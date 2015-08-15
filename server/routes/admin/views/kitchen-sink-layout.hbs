@@ -5,17 +5,20 @@
     <link rel="stylesheet" href="/dist/kitchen-sink.css">
     {{{block "css"}}}
   </head>
-  <body class="page {{{block "page"}}}" component:id="page">
+  <body>
 
-    <header class="navbar collapsed" component:id="header">
-      <div class="container">
-        <a href="/">
-          <img src="https://d3bqck8kwfkhx5.cloudfront.net/img/logo.png" alt="Goodybag.com" class="navbar-logo"/>
-        </a>
-      </div>
-    </header>
+    <div class="page {{{block "page"}}}" component:id="page">
+      <header class="navbar collapsed" component:id="header">
+        <div class="container">
+          <a href="/">
+            <img src="https://d3bqck8kwfkhx5.cloudfront.net/img/logo.png" alt="Goodybag.com" class="navbar-logo"/>
+          </a>
+        </div>
+      </header>
 
-    {{{block "body"}}}
+      {{{block "body"}}}
+
+    </div>
 
     <script src="/dist/lib.js"></script>
     <script src="/dist/app.js"></script>
