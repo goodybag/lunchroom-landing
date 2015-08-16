@@ -15,14 +15,14 @@
   </tr>
 </table>
 
-<table class="container">
+<table class="container" component:id="menu">
   <tr>
-    <td>
+    <td component:section="row">
       {{#each itemRows}}
-      <table class="row">
-        <tr>
+      <table class="row" component:section="row" component:view="default">
+        <tr component:section="column">
           {{#each this}}
-          <td class="wrapper{{#if @index}} last{{/if}}">
+          <td class="wrapper{{#if @index}} last{{/if}}" component:section="column" component:view="default">
             <table class="six columns">
               <tr>
                 <td>

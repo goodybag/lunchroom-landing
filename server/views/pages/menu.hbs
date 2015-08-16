@@ -90,7 +90,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" component:id="menu-signup">
   <div class="menu-subscribe">
     <div class="warning-section">
       <img src="/img/cupcake-happy.png" alt="" class="warning-section-supporting-graphic">
@@ -98,14 +98,14 @@
       <div class="form">
         <div class="form-group">
           <label>Email</label>
-          <input type="email" name="email">
+          <input type="email" name="email" component:prop="email">
         </div>
         <div class="form-group">
           <label>Phone</label>
-          <input type="tel" name="phone">
+          <input type="tel" name="phone" component:prop="phone">
         </div>
         <div class="form-group form-group-actions">
-          <button class="btn btn-primary">Sign up!</button>
+          <button class="btn btn-primary" component:elm="signupButton">Sign up!</button>
         </div>
       </div>
     </div>
