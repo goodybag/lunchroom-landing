@@ -38,10 +38,41 @@
   font-size: 13px;
 }
 
-.item-tile .btn-add {
+.item-tile .item-tile-actions {
   float: right;
   margin-top: -40px;
+}
+
+.item-tile .btn-remove,
+.item-tile .btn-add {
   #components > .btn-size( 36px, 12px, 1px, 1px, 14px );
+}
+
+.item-tile.is-in-cart .item-tile-quantity-wrapper {
+  display: block;
+}
+
+.item-tile .item-tile-quantity-wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  color: #FFF;
+  background-color: rgba(255, 116, 121, 0.91);
+  text-align: center;
+
+  .item-tile-quantity {
+    font-size: 60px;
+    margin-top: 50px;
+    line-height: 60px;
+  }
+}
+
+.item-tile .btn-add {
   padding-left: 30px;
   font-weight: 600;
 

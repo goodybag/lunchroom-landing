@@ -6,11 +6,13 @@ module.exports.items = [
   }
 , { name: 'Poop Taco Box'
   , price: 1200
+  , quantity: 2
   , dietTags: ['vegan', 'vegetarian']
   , coverPhotoUrl: 'https://www.filepicker.io/api/file/SZoK9zUvTPWXzmK81aGg/convert?w=400&h=195&fit=crop'
   }
 , { name: 'Pirata Dos Tacos'
   , price: 1090
+  , quantity: 1
   , dietTags: []
   , coverPhotoUrl: 'https://www.filepicker.io/api/file/SZoK9zUvTPWXzmK81aGg/convert?w=400&h=195&fit=crop'
   }
