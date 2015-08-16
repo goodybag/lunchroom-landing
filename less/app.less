@@ -165,13 +165,36 @@ html, body {
   }
 }
 
+.menu-provider-name {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 40px;
+
+  .no-tip-note {
+    float: right;
+    font-size: 0.7em;
+    opacity: 0.8;
+  }
+
+  @media screen and ( max-width: @breakpoint-mobile ){
+    font-size: 20px;
+    line-height: 26px;
+
+    .no-tip-note {
+      float: none;
+      display: block;
+    }
+  }
+}
+
 .page-menu {
   .navbar {
     border-bottom: none;
   }
 
   .items-container {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   @media screen and (max-width: @container-width) {
