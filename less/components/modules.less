@@ -1,9 +1,13 @@
 // TODO mixin-ify
 
+.modules {
+  display: inline-block;
+}
+
 .module {
-   display: inline-block;
-   font-size: 12px;
-   padding: 5px 20px;
+  display: inline-block;
+  font-size: 14px;
+  padding: 5px 34px;
 }
 .module-right {
   float: right;
@@ -13,4 +17,11 @@
 }
 .module small {
   display: block;
+  font-size: 1em;
+  font-weight: 700;
+
+  &.text-important {
+    // TODO: no harcoding, y'all
+    color: #EF4147;
+  }
 }
