@@ -65,6 +65,7 @@
 @import "./components/warning-section.less";
 @import "./components/marketing-points.less";
 @import "./components/page-section.less";
+@import "./components/menu-subscribe.less";
 
 // @import "../node_modules/cater/less/typography.less";
 
@@ -108,6 +109,7 @@ html, body {
 #components > #menu-share > .init();
 #components > #page-nav > .init();
 #components > #warning-section > .init();
+#components > #menu-subscribe > .init();
 
 // Component Overrides
 ///////////////////////
@@ -129,13 +131,6 @@ html, body {
 
 .btn-place-order {
   margin-top: 24px;
-}
-
-// Prevent margin collapsing
-@media screen and ( max-width: @breakpoint-tablet ){
-  .form-group {
-    margin: inherit;
-  }
 }
 
 .modal-backdrop.in {
