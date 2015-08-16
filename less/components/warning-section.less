@@ -25,6 +25,12 @@
         margin-top: -10px;
       }
 
+      @media screen and (min-width: @breakpoint-mobile) {
+        .warning-section-supporting-graphic {
+          padding-right: 20px;
+        }
+      }
+
       @media screen and (max-width: @breakpoint-mobile) {
         .warning-section-header {
           font-size: 20px;
@@ -32,6 +38,7 @@
         }
 
         .warning-section-supporting-graphic {
+          margin-left: -15px;
           margin-top: 20px;
           width: 80px;
         }

@@ -1,0 +1,31 @@
+////////////////////
+// Menu Subscribe //
+////////////////////
+
+@import "../themes.less";
+
+#components { #menu-subscribe {
+  .init(){
+    .menu-subscribe {
+      .warning-section-supporting-graphic {
+        margin-top: 10px;
+      }
+
+      @media screen and (min-width: @breakpoint-mobile) {
+        .form-group {
+          width: 180px;
+        }
+      }
+
+      @media screen and (max-width: @breakpoint-mobile) {
+        .form {
+          padding-top: 20px;
+        }
+
+        .form-group {
+          clear: left;
+        }
+      }
+    }
+  }
+}}

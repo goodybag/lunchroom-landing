@@ -42,6 +42,8 @@
 
   .form-group {
     display: block;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 
   .form-group.expiration {
@@ -80,7 +82,9 @@
   .form-group-card-number {
     #grid > .column(2);
     // Override dumb selector in cater forms.less
-    margin-top: 10px!important;
+    @media screen and ( min-width: @container-width ){
+      // margin-top: 10px!important;
+    }
   }
 
   .form-group-card-cvv {
