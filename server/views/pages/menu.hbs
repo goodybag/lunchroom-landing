@@ -50,7 +50,10 @@
   </h1>
   <div class="tiles item-tiles" component:section="items">
     {{#each items}}
-      <div class="tile item-tile" component:section="items" component:view="default">
+      <div
+        class="tile item-tile{{#if quantity}} is-in-cart{{/if}}"
+        component:section="items"
+        component:view="default">
         <div
           class="tile-cover"
           style="background-image: url('{{coverPhotoUrl}}');"
@@ -59,6 +62,10 @@
           component:elm="showDetailsLink"
           data-toggle="modal"
           data-target="#item-modal">
+          <div class="item-tile-quantity-wrapper">
+            <div class="item-tile-quantity">{{quantity}}</div>
+            in your cart
+          </div>
         </div>
         <div class="tile-info">
           <h3 class="tile-title" component:prop="title">{{name}}</h3>
@@ -68,12 +75,15 @@
             {{/each}}
           </ul>
           <div class="item-price" component:prop="price">${{dollars price}}</div>
-          <button
-            class="btn btn-default btn-add"
-            data-toggle="modal"
-            data-target="#item-modal"
-            component:elm="addButton"
-            component:view="orderable">Add</button>
+          <div class="item-tile-actions">
+            {{#if quantity}}
+            <button class="btn btn-default btn-remove">-</button>
+            {{/if}}
+            <button
+              class="btn btn-default btn-add"
+              component:elm="addButton"
+              component:view="orderable">Add</button>
+          </div>
         </div>
       </div>
     {{/each}}
