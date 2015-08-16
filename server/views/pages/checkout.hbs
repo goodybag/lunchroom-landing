@@ -34,6 +34,8 @@
   </ul>
 </div>
 
+
+
 <div class="container" component:id="no-items">
   <div class="warning-section" component:id="warning-section">
     <img src="/img/cupcake-shocked.png" alt="" class="warning-section-supporting-graphic">
@@ -42,6 +44,14 @@
   </div>
 </div>
 
+
+<div class="container" component:id="too-late">
+  <div class="warning-section" component:id="warning-section">
+    <img src="/img/cupcake-shocked.png" alt="" class="warning-section-supporting-graphic">
+    <h2 class="warning-section-header">Sorry, time’s up :(.</h2>
+    <p>You must place your order by <span component:prop="orderBy">10am</span>.</p>
+  </div>
+</div>
 
 
 <div class="container">
@@ -93,7 +103,7 @@
             <input type="tel" class="form-control" placeholder="YY" name="card_expiration_year" component:elm="card[expire-year]">
           </div>
         </div>
-        <div class="form-group form-group">
+        <div class="form-group form-group" component:view="show-save-option">
           <label>
             <input type="checkbox" name="save_card" checked>
             Save card?
