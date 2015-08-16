@@ -44,7 +44,9 @@
 
 
 
-<h2 class="section-header">Checkout Form (new user)</h2>
+<div class="container">
+  <h2 class="section-header">Checkout Form (new user)</h2>
+</div>
 
 <div class="container checkout-info-container" id="section-checkout-info" component:id="checkout-form-new">
   <fieldset
@@ -90,18 +92,20 @@
             /
             <input type="tel" class="form-control" placeholder="YY" name="card_expiration_year" component:elm="card[expire-year]">
           </div>
-          <div class="form-group form-group">
-            <label>
-              <input type="checkbox" name="save_card" checked>
-              Save card?
-            </label>
-          </div>
+        </div>
+        <div class="form-group form-group">
+          <label>
+            <input type="checkbox" name="save_card" checked>
+            Save card?
+          </label>
         </div>
     </div>
   </fieldset>
 </div>
 
-<h2 class="section-header">Checkout Form (existing user)</h2>
+<div class="container">
+  <h2 class="section-header">Checkout Form (existing user)</h2>
+</div>
 
 <div class="container checkout-info-container" id="section-checkout-info-existing-user" component:id="checkout-form-existing">
   <fieldset
@@ -170,9 +174,11 @@
   </fieldset>
 </div>
 
-<h2 class="section-header">Checkout Form (validation test)
-  <button class="btn btn-primary btn-validate">Validate</button>
-</h2>
+<div class="container">
+  <h2 class="section-header">Checkout Form (validation test)
+    <button class="btn btn-primary btn-validate">Validate</button>
+  </h2>
+</div>
 
 <div class="container checkout-info-container" id="section-checkout-info-validation-test">
   <fieldset
