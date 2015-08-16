@@ -48,8 +48,14 @@
   #components > .btn-size( 36px, 12px, 1px, 1px, 14px );
 }
 
-.item-tile.is-in-cart .item-tile-quantity-wrapper {
-  display: block;
+.item-tile.is-in-cart {
+  .item-tile-quantity-wrapper {
+    display: block;
+  }
+
+  .btn-remove {
+    display: inline-block;
+  }
 }
 
 .item-tile .item-tile-quantity-wrapper {
@@ -83,6 +89,10 @@
     top: 16px;
     font-size: 20px;
   }
+}
+
+.item-tile .btn-remove {
+  display: none;
 }
 
 @media screen and ( max-width: @breakpoint-mobile ){
