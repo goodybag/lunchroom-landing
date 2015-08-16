@@ -178,6 +178,30 @@ html, body {
   .items-container {
     margin-top: 50px;
   }
+
+  @media screen and (max-width: @container-width) {
+    .module-checkout {
+      z-index: 100;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding: 20px;
+
+      > .btn {
+        box-shadow: 0 0 12px rgba( 0,0,0,0.4 );
+      }
+    }
+  }
+
+  @media screen and (max-width: @breakpoint-mobile) {
+    .module-checkout {
+      width: 100%;
+
+      > .btn {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .page-checkout {

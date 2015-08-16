@@ -14,6 +14,42 @@
       display: table;
       width: 100%;
       padding-top: 48px;
+
+      .modules {
+        float: right;
+      }
+
+      @media screen and ( max-width: @container-width ){
+        padding-top: 12px;
+
+        .tabs {
+          float: left;
+          clear: left;
+          margin-left: -20px;
+          margin-bottom: -1px;
+        }
+
+        .modules {
+          float: left;
+          margin-bottom: 6px;
+
+          > :first-child {
+            padding-left: 12px;
+          }
+        }
+      }
+
+      @media screen and ( max-width: @breakpoint-mobile ){
+        .module {
+          display: block;
+          float: left;
+          width: 50%;
+          padding: 10px;
+          &:first-child {
+            padding-left: 10px;
+          }
+        }
+      }
     }
-  }  
+  }
 }}

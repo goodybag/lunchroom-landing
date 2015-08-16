@@ -10,14 +10,20 @@
 .tabs > a {
   display: inline-block;
   text-align: center;
-  padding: 7px 20px;
+  padding: 10px 24px 6px;
   text-decoration: none;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 18px;
+  line-height: 22px;
   font-weight: bold;
   border: 1px solid @palette-gray;
   border-bottom: none;
   color: @palette-gray;
+
+  @media screen and (max-width: @breakpoint-mobile) {
+    font-size: 14px;
+    padding: 6px 12px 2px;
+    line-height: 18px;
+  }
 }
 
 .tabs > a ~ a {
@@ -32,6 +38,6 @@
 
 .tabs > a small {
   display: block;
-  font-size: 12px;
+  font-size: 0.8em;
   font-weight: normal;
 }
