@@ -15,7 +15,7 @@ $(function(){
     $('#section-checkout-info-validation-test .checkout-info')
   );
 
-  $('#section-checkout-info-validation-test .btn-validate').click( function( e ){
+  $('.btn-validate').click( function( e ){
     checkoutValidator.validate();
   });
 

@@ -91,12 +91,14 @@
   // To ensure that the card number is fully displayed at
   // default breakpoint. This is very hacky, but it works.
   // <Override>
-  .form-group-card-number {
-    width: 177.666667px;
-  }
+  @media screen and (min-width: @container-width){
+    .form-group-card-number {
+      width: 177.666667px;
+    }
 
-  .form-group-card-cvv {
-    margin-left: 18px;
+    .form-group-card-cvv {
+      margin-left: 18px;
+    }
   }
   // </Override>
   
