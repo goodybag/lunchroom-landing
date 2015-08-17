@@ -50,7 +50,7 @@
 
 .item-tile.is-in-cart {
   .item-tile-quantity-wrapper {
-    display: block;
+    opacity: 1;
   }
 
   .btn-remove {
@@ -59,7 +59,7 @@
 }
 
 .item-tile .item-tile-quantity-wrapper {
-  display: none;
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -70,6 +70,9 @@
   color: #FFF;
   background-color: rgba(255, 116, 121, 0.91);
   text-align: center;
+
+  opacity: 0;
+  transition: opacity 0.3s linear;
 
   .item-tile-quantity {
     font-size: 60px;
@@ -101,8 +104,8 @@
     min-height: 268px;
   }
 }
-@media screen and ( min-width: @breakpoint-mobile ){
 
+@media screen and ( min-width: @breakpoint-mobile ){
   .item-tile .tile-title {
     white-space: nowrap;
     text-overflow: ellipsis;
