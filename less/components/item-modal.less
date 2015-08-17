@@ -3,6 +3,7 @@
 .init( @width: 780px ){
   .item-modal {
     .close {
+      display: none;
       position: absolute;
       top: 0;
       left: 0;
@@ -102,6 +103,10 @@
     }
 
     @media screen and ( max-width: @breakpoint-mobile ){
+      .close {
+        display: block;
+      }
+
       .modal-content {
         flex-direction: column;
       }
