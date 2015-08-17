@@ -99,11 +99,11 @@
       <div class="form">
         <div class="form-group">
           <label>Email</label>
-          <input type="email" name="email" component:prop="email">
+          <input type="email" name="email" component:elm="email">
         </div>
-        <div class="form-group">
+        <div class="form-group phone-form-group">
           <label>Phone</label>
-          <input type="tel" name="phone" component:prop="phone">
+          <input type="tel" name="phone" component:elm="phone">
         </div>
         <div class="form-group form-group-actions">
           <button class="btn btn-primary" component:elm="signupButton">Sign up!</button>
@@ -120,7 +120,7 @@
         <img
           class="modal-photo"
           src="https://www.filepicker.io/api/file/SZoK9zUvTPWXzmK81aGg/convert?w=430&h=400&fit=crop"
-          component:prop="photoUrl"
+          component:prop="modalPhotoUrl"
           component:prop-target="src">
       </div>
       <div class="modal-main-content">
