@@ -45,7 +45,7 @@
 </div>
 
 <div class="container items-container" component:id="menu">
-  <h1 class="menu-provider-name">Dos Batos Wood Fired Tacos
+  <h1 class="menu-provider-name"><span component:prop="restaurantTitle">Dos Batos Wood Fired Tacos</span>
     <span class="no-tip-note">No tips. Just a flat $2.99 fee</span>
   </h1>
   <div class="tiles item-tiles" component:section="items">
@@ -63,7 +63,7 @@
           data-toggle="modal"
           data-target="#item-modal">
           <div class="item-tile-quantity-wrapper">
-            <div class="item-tile-quantity">{{quantity}}</div>
+            <div class="item-tile-quantity" component:prop="quantity">{{quantity}}</div>
             in your cart
           </div>
         </div>
@@ -76,7 +76,10 @@
           </ul>
           <div class="item-price" component:prop="price">${{dollars price}}</div>
           <div class="item-tile-actions">
-            <button class="btn btn-default btn-remove">-</button>
+            <button
+              class="btn btn-default btn-remove"
+              component:elm="removeButton"
+              component:view="orderable">-</button>
             <button
               class="btn btn-default btn-add"
               component:elm="addButton"
