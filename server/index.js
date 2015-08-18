@@ -6,9 +6,12 @@ var data    = require('./data/dummy');
 
 var server  = module.exports = express();
 
+
 hbs.handlebars = require('handlebars');
 
 require('../lib/register-helpers')( hbs.handlebars );
+
+require('../lib/partials-registrar')(  __dirname + '/views/partials' );
 
 server.set( 'view engine', 'hbs' );
 server.set( 'views', __dirname );
