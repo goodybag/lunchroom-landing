@@ -1,32 +1,7 @@
 {{#extend "page"}}page-checkout{{/extend}}
 
 {{#extend "body"}}
-<div class="lunchroom-header">
-  <div class="container">
-    <div class="modules">
-      <div class="module">
-        Deliver to: <small component:prop="deliverTo">Bazaarvoice</small>
-      </div>
-      <div class="module">
-        Delivery Time: <small component:prop="deliveryTime">12:00-12:30 PM</small>
-      </div>
-      <div class="module">
-        Time left to order:
-        <small class="text-important" component:prop="timeLeftToOrder">1 hr 26min</small>
-      </div>
-      <div class="module module-right module-unpadded">
-        <a component:elm="checkoutButton" class="btn btn-primary" href="checkout">Checkout (<span component:prop="cartItemCount">1</span>)</a>
-      </div>
-    </div>
-    <div class="tabs" component:section="tabs">
-      <a component:section="tabs" component:view="active" class="active" href="#"><span component:prop="tabDay">Mon</span><small component:prop="tabDate">Jan 26</small></a>
-      <a component:section="tabs" component:view="default" href="#"><span component:prop="tabDay">Tues</span><small component:prop="tabDate">Jan 27</small></a>
-      <a href="#"><span component:prop="tabDay">Weds</span><small component:prop="tabDate">Jan 28</small></a>
-      <a href="#"><span component:prop="tabDay">Thurs</span><small component:prop="tabDate">Jan 29</small></a>
-      <a href="#"><span component:prop="tabDay">Fri</span><small component:prop="tabDate">Jan 30</small></a>
-    </div>
-  </div>
-</div>
+{{> header hideCheckout=true}}
 
 <div class="container page-nav-container" component:id="checkout-navbar">
   <ul class="page-nav">
@@ -35,7 +10,6 @@
     </li>
   </ul>
 </div>
-
 
 
 <div class="container" component:id="no-items">
