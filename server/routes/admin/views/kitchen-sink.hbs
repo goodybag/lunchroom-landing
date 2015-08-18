@@ -73,8 +73,9 @@
 <script>
   $(function(){
     $('#loading-indicator-demo').click(function(){
-      console.log('toggle');
-      $('.loading-indicator').toggleClass('show');
+      var $loadingIndicator = $('.loading-indicator');
+      $loadingIndicator.toggleClass('show');
+      setTimeout( $loadingIndicator.toggleClass.bind( $loadingIndicator, 'show'), 2000 );
     });
   });
 </script>
