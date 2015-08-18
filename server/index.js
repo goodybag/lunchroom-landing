@@ -6,12 +6,15 @@ var data    = require('./data/dummy');
 
 var server  = module.exports = express();
 
-
 hbs.handlebars = require('handlebars');
 
 require('../lib/register-helpers')( hbs.handlebars );
 
-require('../lib/partials-registrar')(  __dirname + '/views/partials' );
+var registerPartials = require('../lib/partials-registrar').bind(
+  null, __dirname + '/views/partials/'
+);
+
+registerPartials();
 
 server.set( 'view engine', 'hbs' );
 server.set( 'views', __dirname );
@@ -21,6 +24,11 @@ server.use( require('body-parser').json() );
 server.use( require('body-parser').urlencoded({ extended: true }) );
 
 server.use( express.static('public') );
+
+server.use( function( req, res, next ){
+  registerPartials();
+  return next();
+});
 
 server.use( function( req, res, next ){
   res.locals.config = config;

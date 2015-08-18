@@ -49,7 +49,13 @@
 </section>
 
 
-
+<section class="page-section" id="section-loading-indicator">
+  <div class="container">
+    <h2 class="section-title">Loading indicator
+      <button class="btn btn-primary" id="loading-indicator-demo">Start Loading</button>
+    </h2>
+  </div>
+</section>
 
 
 <footer class="footer" component:id="footer">
@@ -59,4 +65,17 @@
     <li><a href="https://www.goodybag.com/privacy">Privacy policy</a></li>
   </ul>
 </footer>
+
+{{> loading_indicator}}
+{{/extend}}
+
+{{#extend "scripts"}}
+<script>
+  $(function(){
+    $('#loading-indicator-demo').click(function(){
+      console.log('toggle');
+      $('.loading-indicator').toggleClass('show');
+    });
+  });
+</script>
 {{/extend}}
