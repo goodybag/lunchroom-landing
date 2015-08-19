@@ -31,6 +31,8 @@ $(function(){
         $el.find('.payment-method-wrapper').toggleClass( 'disabled', e.checked );
       });
     });
+
+    $('[data-toggle="tooltip"]').tooltip();
   }
 
   // Allow app to skip auto-attachment on load by setting
