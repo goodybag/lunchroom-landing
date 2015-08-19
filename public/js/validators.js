@@ -1,6 +1,10 @@
 var utils = require('utils');
 var $     = require('jquery');
 
+var regs = {
+  email: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$/i
+};
+
 /**
  * Creates an instance of CheckoutValidator
  *
@@ -42,8 +46,12 @@ module.exports.createCheckoutValidator = function( $el, options ){
     , 'card_expiration_month', 'card_expiration_year'
     ]
 
-  , validators: [
-      function name(){
+  , paymentMethodGroupValidators: [
+      'card_number', 'card_cvv', 'card_expiration'
+    ]
+
+  , validators: {
+      name: function name(){
         var $input = $el.find('[name="name"]');
         if ( $input.length === 0 ) return;
 
@@ -55,19 +63,28 @@ module.exports.createCheckoutValidator = function( $el, options ){
         }
       }
 
-    , function email(){
+    , email: function email(){
         var $input = $el.find('[name="email"]');
         if ( $input.length === 0 ) return;
 
-        if ( $input.val().length === 0 ){
+        var val = $input.val();
+
+        if ( val.length === 0 ){
           return {
             field: 'email'
           , message: 'Email is required'
           };
         }
+
+        if ( !regs.email.test( val ) ){
+          return {
+            field: 'email'
+          , message: 'Invalid email'
+          };
+        }
       }
 
-    , function phone(){
+    , phone: function phone(){
         var $input = $el.find('[name="phone"]');
         if ( $input.length === 0 ) return;
 
@@ -81,7 +98,7 @@ module.exports.createCheckoutValidator = function( $el, options ){
         }
       }
 
-    , function name_on_card(){
+    , card_member_name: function card_member_name(){
         if ( !this.willAddNewCard() ) return;
 
         var $input = $el.find('[name="card_member_name"]');
@@ -95,7 +112,7 @@ module.exports.createCheckoutValidator = function( $el, options ){
         }
       }
 
-    , function card_number(){
+    , card_number: function card_number(){
         if ( !this.willAddNewCard() ) return;
 
         var val = $el.find('[name="card_number"]').val();
@@ -108,7 +125,7 @@ module.exports.createCheckoutValidator = function( $el, options ){
         };
       }
 
-    , function card_cvc(){
+    , card_cvv: function card_cvv(){
         if ( !this.willAddNewCard() ) return;
 
         var val = $el.find('[name="card_cvv"]').val();
@@ -121,7 +138,7 @@ module.exports.createCheckoutValidator = function( $el, options ){
         };
       }
 
-    , function card_expiration(){
+    , card_expiration: function card_expiration(){
         if ( !this.willAddNewCard() ) return;
 
         var val = [
@@ -136,7 +153,7 @@ module.exports.createCheckoutValidator = function( $el, options ){
         , message: 'Invalid card expiry'
         };
       }
-    ]
+    }
 
   , getErrorElement: function( message ){
       return $('<div class="error-msg">' + message + '</div>');
@@ -145,11 +162,11 @@ module.exports.createCheckoutValidator = function( $el, options ){
     /**
      * Validates the checkout form
      */
-  ,  validate: function(){
-      this.clear();
-      this.displayErrors( this.getErrors() );
-      return this;
-    }
+  // ,  validate: function(){
+  //     this.clear();
+  //     this.displayErrors( this.getErrors() );
+  //     return this;
+  //   }
 
     /**
      * Given an array of errors, shows them in the DOM
@@ -165,9 +182,10 @@ module.exports.createCheckoutValidator = function( $el, options ){
      * @return {Array} Errors list
      */
   , getErrors: function(){
-      return this.validators
-        .map( function( validator ){
-          return validator.call( this );
+      return Object
+        .keys( this.validators )
+        .map( function( k ){
+          return this.validators[ k ].call( this );
         }.bind( this ))
         .filter( function( error ){
           return !!error;
@@ -177,9 +195,26 @@ module.exports.createCheckoutValidator = function( $el, options ){
     /**
      * Clears errors in the $el
      */
-  , clear: function(){
-      $el.find('.error').removeClass('error');
-      $el.find('.error-msg').remove();
+  , clear: function( field ){
+      var $context = $el;
+
+      if ( field && this.isFieldInPaymentMethodGroup( field ) ){
+        $el.find('[data-error-group="payment_method"]').html('');
+      }
+
+      if ( field ){
+        $context = this.getFormGroupForField( field );
+        $context.removeClass('error');
+      } else {
+        $context.find('.error').removeClass('error');
+      }
+
+      $context.find('.error-msg').remove();
+      $context
+        .find('.state-success, .state-error')
+        .removeClass('state-success')
+        .removeClass('state-error');
+
       return this;
     }
 
@@ -188,7 +223,7 @@ module.exports.createCheckoutValidator = function( $el, options ){
      * @param  {Object} error The error object
      */
   , displayError: function( error ){
-      if ( !error.field || !error.message ) return;
+      if ( !error || !error.field || !error.message ) return;
 
       var $error = this.getErrorElement( error.message );
 
@@ -196,21 +231,11 @@ module.exports.createCheckoutValidator = function( $el, options ){
         error.field = [ error.field ];
       }
 
-      var fieldFinder = error.field
-        .map( function( field ){
-          return '[name="' + field + '"]';
-        })
-        .join(', ');
-
-      var $formGroup = $el
-        .find( fieldFinder )
-        .closest('.form-group')
-        .addClass('error');
+      var $formGroup = this.getFormGroupForField( error.field );
+      $formGroup.addClass('error');
 
       if ( error.message ){
-        var fieldPMIntersection = utils.intersection( this.fieldsThatGoInPaymentMethodErrorGroup, error.field );
-
-        if ( fieldPMIntersection.length === error.field.length ){
+        if ( this.isFieldInPaymentMethodGroup( error.field ) ){
           $el.find('[data-error-group="payment_method"]').append( $error );
 
           if ( error.field === 'payment_method' ){
@@ -223,7 +248,67 @@ module.exports.createCheckoutValidator = function( $el, options ){
     }
 
   , willAddNewCard: function(){
-      return $('[name="will_add_new_card"]:checked').length > 0;
+      return $el.find('[name="will_add_new_card"]:checked').length > 0;
+    }
+
+  , getFormGroupForField: function( field ){
+      var fieldFinder = ( Array.isArray( field ) ? field : [ field ] )
+        .map( function( name ){
+          return '[name="' + name + '"]';
+        })
+        .join(', ');
+
+      return $el
+        .find( fieldFinder )
+        .closest('.form-group');
+    }
+
+  , validate: function( field ){
+      if ( !field ){
+        var validate = this.validate.bind( this );
+        return $el.find('[name]').each( function(){
+          if ( this.disabled ) return;
+          validate( this.name );
+        });
+      }
+
+      if ( this.isFieldInPaymentMethodGroup( field ) ){
+        this.displayError( )
+        return this;
+      }
+
+      if ( !(field in this.validators) ){
+        return this;
+      }
+
+      var error = this.validators[ field ].call( this );
+      var $formGroup = this.getFormGroupForField( field );
+      var $indicator = $formGroup.find('.form-group-indicator');
+
+      this.clear( field );
+
+      if ( !$indicator.length ){
+        $indicator = $('<div class="form-group-indicator" />');
+        $formGroup.find('[name]').before( $indicator );
+      }
+
+      setTimeout(function(){
+        if ( error ){
+          $indicator.addClass('state-error');
+          this.displayError( error );
+        } else {
+          $indicator.addClass('state-success');
+          $formGroup.removeClass('error');
+        }
+      }.bind( this ), 0);
+
+      return this;
+    }
+
+  , isFieldInPaymentMethodGroup: function( field ){
+      return utils.intersection(
+        this.fieldsThatGoInPaymentMethodErrorGroup, Array.isArray( field ) ? field : [ field ]
+      ).length > 0;
     }
   });
 };
