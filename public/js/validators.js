@@ -46,9 +46,15 @@ module.exports.createCheckoutValidator = function( $el, options ){
     , 'card_expiration_month', 'card_expiration_year'
     ]
 
-  , paymentMethodGroupValidators: [
-      'card_number', 'card_cvv', 'card_expiration'
-    ]
+  , groups: {
+      payment_method: {
+        validators: [ 'card_number', 'card_cvv', 'card_expiration' ]
+      , fields: [
+          'payment_method', 'card_number', 'card_cvv'
+        , 'card_expiration_month', 'card_expiration_year'
+        ]
+      }
+    }
 
   , validators: {
       name: function name(){
@@ -155,8 +161,11 @@ module.exports.createCheckoutValidator = function( $el, options ){
       }
     }
 
-  , getErrorElement: function( message ){
-      return $('<div class="error-msg">' + message + '</div>');
+  , getErrorElement: function( error ){
+      var $el = $('<div class="error-msg" />');
+      $el.attr( 'data-field', error.field );
+      $el.html( error.message );
+      return $el;
     }
 
     /**
@@ -198,8 +207,8 @@ module.exports.createCheckoutValidator = function( $el, options ){
   , clear: function( field ){
       var $context = $el;
 
-      if ( field && this.isFieldInPaymentMethodGroup( field ) ){
-        $el.find('[data-error-group="payment_method"]').html('');
+      if ( field && this.fieldInGroup( 'payment_method', field ) ){
+        $el.find('.error-msg[data-field="' + field + '"]').remove();
       }
 
       if ( field ){
@@ -225,7 +234,7 @@ module.exports.createCheckoutValidator = function( $el, options ){
   , displayError: function( error ){
       if ( !error || !error.field || !error.message ) return;
 
-      var $error = this.getErrorElement( error.message );
+      var $error = this.getErrorElement( error );
 
       if ( !Array.isArray( error.field ) ){
         error.field = [ error.field ];
@@ -235,8 +244,12 @@ module.exports.createCheckoutValidator = function( $el, options ){
       $formGroup.addClass('error');
 
       if ( error.message ){
-        if ( this.isFieldInPaymentMethodGroup( error.field ) ){
-          $el.find('[data-error-group="payment_method"]').append( $error );
+        if ( this.fieldInGroup( 'payment_method', error.field ) ){
+          var $group = $el.find('[data-error-group="payment_method"]');
+
+          if ( $group.find('[data-field="' + error.field + '"]').length === 0 ){
+            $group.append( $error );
+          }
 
           if ( error.field === 'payment_method' ){
             $el.find('.payment-method-wrapper .form-group').addClass('error');
@@ -265,23 +278,47 @@ module.exports.createCheckoutValidator = function( $el, options ){
 
   , validate: function( field ){
       if ( !field ){
-        var validate = this.validate.bind( this );
-        return $el.find('[name]').each( function(){
-          if ( this.disabled ) return;
-          validate( this.name );
-        });
+        this.clear();
+
+        return Object
+          .keys( this.validators )
+          .map( function( v ){
+            return this.validators[ v ].call( this );
+          }.bind( this ))
+          .filter( function( error ){
+            return !!error;
+          })
+          .forEach( this.displayError.bind( this ) );
+
+        // var validate = this.validate.bind( this );
+
+        // return $el.find('[name]').each( function(){
+        //   if ( this.disabled ) return;
+        //   validate( this.name );
+        // });
       }
 
-      if ( this.isFieldInPaymentMethodGroup( field ) ){
-        this.displayError( )
-        return this;
-      }
+      // if ( this.fieldInGroup( 'payment_method', field ) ){
+      //   this.displayError( );
+      //   return this;
+      // }
 
       if ( !(field in this.validators) ){
         return this;
       }
 
       var error = this.validators[ field ].call( this );
+
+      if ( this.fieldInGroup( 'payment_method', field ) ){
+        console.log('field is in payment_metod group');
+        if ( !error ){
+          console.log('clearing field', field);
+          return this.clear( field );
+        }
+
+        return this.displayError( error );
+      }
+
       var $formGroup = this.getFormGroupForField( field );
       var $indicator = $formGroup.find('.form-group-indicator');
 
@@ -305,9 +342,13 @@ module.exports.createCheckoutValidator = function( $el, options ){
       return this;
     }
 
-  , isFieldInPaymentMethodGroup: function( field ){
+  , setFieldSuccessFailState: function( field, state ){
+
+    }
+
+  , fieldInGroup: function( group, field ){
       return utils.intersection(
-        this.fieldsThatGoInPaymentMethodErrorGroup, Array.isArray( field ) ? field : [ field ]
+        this.groups[ group ].fields, Array.isArray( field ) ? field : [ field ]
       ).length > 0;
     }
   });

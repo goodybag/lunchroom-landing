@@ -42,7 +42,7 @@
 }
 
 .form-group-indicator {
-  @size: 25px;
+  @size: 20px;
 
   position: absolute;
   z-index: 1;
@@ -50,27 +50,33 @@
   width: @size;
   height: @size;
   border-radius: @size / 4;
-  border: solid 2px rgba( 0, 0, 0, 0.25 );
   color: #fff;
   text-align: center;
-  line-height: @size;
-  margin-top: 7px;
+
+  // TODO: Factor this positioning into calculations
+  margin-top: 10px;
+  // TODO: Figure out why just @size isn't enough line-height
+  // when you're not using a border
+  line-height: @size + 3;
 
   opacity: 0;
   transform: scale(0);
-  // transition: all 0.18s ease-out;
   .bouncy-transition();
 
-  // web 2.0 gloss effect wooooooo
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background-color: rgba( 255, 255, 255, 0.2 );
-    border-radius: @size;
+
+  &.glossy {
+    border: solid 2px rgba( 0, 0, 0, 0.25 );
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background-color: rgba( 255, 255, 255, 0.2 );
+      border-radius: @size;
+    }
   }
 
   &[class*="state-"] {

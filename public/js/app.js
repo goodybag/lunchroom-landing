@@ -26,6 +26,12 @@ $(function(){
 
     $('#section-checkout-info-validation-test input').blur( function( e ){
       if ( ['checkbox', 'radio'].indexOf( e.target.type ) > -1 ) return;
+
+      if ( e.target.name === 'card_expiration_month' ) return;
+      if ( e.target.name === 'card_expiration_year' ){
+        return checkoutValidator.validate('card_expiration');
+      }
+
       checkoutValidator.validate( e.target.name );
     });
 
