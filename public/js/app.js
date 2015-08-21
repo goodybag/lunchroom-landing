@@ -24,11 +24,24 @@ $(function(){
       checkoutValidator.validate();
     });
 
+    $('#section-checkout-info-validation-test input').blur( function( e ){
+      if ( ['checkbox', 'radio'].indexOf( e.target.type ) > -1 ) return;
+
+      if ( e.target.name === 'card_expiration_month' ) return;
+      if ( e.target.name === 'card_expiration_year' ){
+        return checkoutValidator.validate('card_expiration');
+      }
+
+      checkoutValidator.validate( e.target.name );
+    });
+
     $('.checkout-info').each( function(){
       var $el = $(this);
 
       $el.find('[name="will_add_new_card"]').change( function( e ){
-        $el.find('.payment-method-wrapper').toggleClass( 'disabled', e.checked );
+        var $wrapper = $el.find('.payment-method-wrapper');
+        $wrapper.toggleClass( 'disabled', !e.target.checked );
+        $wrapper.find('input').attr( 'disabled', !e.target.checked ? 'disabled' : null );
       });
     });
 
