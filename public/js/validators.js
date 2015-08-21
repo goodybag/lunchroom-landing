@@ -279,29 +279,8 @@ module.exports.createCheckoutValidator = function( $el, options ){
   , validate: function( field ){
       if ( !field ){
         this.clear();
-
-        return Object
-          .keys( this.validators )
-          .map( function( v ){
-            return this.validators[ v ].call( this );
-          }.bind( this ))
-          .filter( function( error ){
-            return !!error;
-          })
-          .forEach( this.displayError.bind( this ) );
-
-        // var validate = this.validate.bind( this );
-
-        // return $el.find('[name]').each( function(){
-        //   if ( this.disabled ) return;
-        //   validate( this.name );
-        // });
+        return this.getErrors().forEach( this.displayError.bind( this ) );
       }
-
-      // if ( this.fieldInGroup( 'payment_method', field ) ){
-      //   this.displayError( );
-      //   return this;
-      // }
 
       if ( !(field in this.validators) ){
         return this;
@@ -310,9 +289,7 @@ module.exports.createCheckoutValidator = function( $el, options ){
       var error = this.validators[ field ].call( this );
 
       if ( this.fieldInGroup( 'payment_method', field ) ){
-        console.log('field is in payment_metod group');
         if ( !error ){
-          console.log('clearing field', field);
           return this.clear( field );
         }
 
@@ -340,10 +317,6 @@ module.exports.createCheckoutValidator = function( $el, options ){
       }.bind( this ), 0);
 
       return this;
-    }
-
-  , setFieldSuccessFailState: function( field, state ){
-
     }
 
   , fieldInGroup: function( group, field ){
