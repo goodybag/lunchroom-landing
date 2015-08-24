@@ -8,14 +8,44 @@
       text-align: center;
 
       .success-img {
+        display: inline-block;
         max-width: 100%;
         margin-bottom: 24px;
+
+        @media screen and ( min-width: @breakpoint-mobile ){
+          // Make the centering feel more balanced
+          margin-right: 32px;
+        }
       }
 
       .order-success-note {
         margin: 20px 0;
         font-size: 20px;
         font-weight: 300;
+      }
+
+      .complete-registration {
+        margin-top: 80px;
+
+        .form-group {
+          text-align: left;
+        }
+
+        @media screen and ( max-width: @breakpoint-mobile ){
+          .complete-registration-title {
+            font-size: 1em;
+          }
+        }
+
+        @media screen and ( min-width: @breakpoint-mobile ){
+          .form-group {
+            width: 180px;
+          }
+
+          .form-group-actions {
+            width: auto;
+          }
+        }
       }
 
       .menu-share {
