@@ -1,6 +1,8 @@
 {{#extend "page"}}page-order-submitted{{/extend}}
 
 {{#extend "body"}}
+
+
 <div class="container order-success" component:id="order-success">
   <img src="/img/success.png" alt="" class="success-img">
 
@@ -9,6 +11,10 @@
   <p class="order-success-note">Your meal will be delivered <strong component:prop="deliveryLocation">in the Bazaarvoice Lobby</strong>.</p>
 
   <p class="order-success-note">We'll send you an email and text you when it arrives.</p>
+</div>
+
+
+<div class="container order-success" component:id="create-account">
 
   <div class="complete-registration">
     <h2 class="complete-registration-title">Create an account and save time</h2>
@@ -71,10 +77,15 @@
     <h2 class="complete-registration-title">Account created!</h2>
   </div>
 
+</div>
+
+
+<div class="container order-success" component:id="share-menu-link">
   <div class="menu-share">
     <h4 class="menu-share-title">Share this link</h4>
     <p class="menu-share-followup">with coworkers to let them view the menu and place their own order!</p>
     <input class="menu-share-input" type="text" value="http://lunchroom.goodybag.com/bazaarvoice" component:elm="shareUrl">
   </div>
 </div>
+
 {{/extend}}
