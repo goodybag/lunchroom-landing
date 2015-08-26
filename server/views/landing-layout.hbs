@@ -2,15 +2,15 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/app.css">
+    <link rel="stylesheet" href="/dist/app.css" component:bundle="app.css">
     {{{block "css"}}}
   </head>
   <body>
     <div class="page {{{block "page"}}}" component:id="page">
       {{{block "body"}}}
     </div>
-    <script src="/dist/lib.js"></script>
-    <script src="/dist/app.js"></script>
+    <script src="/dist/lib.js" component:bundle="lib.js"></script>
+    <script src="/dist/app.js" component:bundle="app.js"></script>
     {{{block "scripts"}}}
   </body>
 </html>
