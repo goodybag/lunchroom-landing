@@ -1,0 +1,114 @@
+{
+    "components": {
+        "footer": {
+            "attributes": {
+                "class": "footer"
+            },
+            "exportPath": "{{__DIRNAME__}}/AppLogin/footer.htm",
+            "exportPaths": {
+                "cjs.jsx": "{{__DIRNAME__}}/AppLogin/footer.cjs.jsx",
+                "htm": "{{__DIRNAME__}}/AppLogin/footer.htm"
+            },
+            "innerHTML": "\n        <ul class=\"nav footer-nav\">\n          <li><a href=\"#\" data-toggle=\"modal\" data-target=\"#contact-us-modal\">Contact Us</a></li>\n          <li><a href=\"https://www.goodybag.com/legal\">Terms of service</a></li>\n          <li><a href=\"https://www.goodybag.com/privacy\">Privacy policy</a></li>\n        </ul>\n\n        <div class=\"loading-indicator\" component:id=\"loading-indicator\">\n          <div class=\"loading-indicator-graphic\">\n            <img src=\"/lunchroom-landing~1/resources/assets/img~cupcake-happy-9574e8b.png\">\n          </div>\n          <div class=\"loading-indicator-text\">Loading...</div>\n        </div>\n        <div class=\"modal fade\" id=\"contact-us-modal\">\n          <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n              <div class=\"modal-header\">\n                <h3 class=\"modal-title\">Contact Us</h3>\n              </div>\n              <form action=\"#\" class=\"form form-vertical contact-us-form\" id=\"contact-us-form\">\n                <div class=\"modal-body\">\n                  <div class=\"form-group\">\n                    <label for=\"name-input\">Name</label>\n                    <input type=\"text\" name=\"name\" component:elm=\"name\">\n                  </div>\n                  <div class=\"form-group\">\n                    <label for=\"name-input\">Email</label>\n                    <input type=\"email\" name=\"email\" component:elm=\"email\">\n                  </div>\n                  <div class=\"form-group\">\n                    <label for=\"message-input\">Message</label>\n                    <textarea rows=\"6\" type=\"text\" name=\"message\" component:elm=\"message\"></textarea>\n                  </div>\n                </div>\n                <div class=\"modal-footer\">\n                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n                  <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n                </div>\n              </form>\n            </div>\n          </div>\n        </div>\n      ",
+            "originalInnerHTML": "\n        <ul class=\"nav footer-nav\">\n          <li><a href=\"#\" data-toggle=\"modal\" data-target=\"#contact-us-modal\">Contact Us</a></li>\n          <li><a href=\"https://www.goodybag.com/legal\">Terms of service</a></li>\n          <li><a href=\"https://www.goodybag.com/privacy\">Privacy policy</a></li>\n        </ul>\n\n        <div class=\"loading-indicator\" component:id=\"loading-indicator\">\n          <div class=\"loading-indicator-graphic\">\n            <img src=\"/img/cupcake-happy.png\">\n          </div>\n          <div class=\"loading-indicator-text\">Loading...</div>\n        </div>\n        <div class=\"modal fade\" id=\"contact-us-modal\">\n          <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n              <div class=\"modal-header\">\n                <h3 class=\"modal-title\">Contact Us</h3>\n              </div>\n              <form action=\"#\" class=\"form form-vertical contact-us-form\" id=\"contact-us-form\">\n                <div class=\"modal-body\">\n                  <div class=\"form-group\">\n                    <label for=\"name-input\">Name</label>\n                    <input type=\"text\" name=\"name\" component:elm=\"name\">\n                  </div>\n                  <div class=\"form-group\">\n                    <label for=\"name-input\">Email</label>\n                    <input type=\"email\" name=\"email\" component:elm=\"email\">\n                  </div>\n                  <div class=\"form-group\">\n                    <label for=\"message-input\">Message</label>\n                    <textarea rows=\"6\" type=\"text\" name=\"message\" component:elm=\"message\"></textarea>\n                  </div>\n                </div>\n                <div class=\"modal-footer\">\n                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n                  <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n                </div>\n              </form>\n            </div>\n          </div>\n        </div>\n      ",
+            "tag": "FOOTER"
+        },
+        "header": {
+            "attributes": {
+                "class": "navbar collapsed"
+            },
+            "exportPath": "{{__DIRNAME__}}/AppLogin/header.htm",
+            "exportPaths": {
+                "cjs.jsx": "{{__DIRNAME__}}/AppLogin/header.cjs.jsx",
+                "htm": "{{__DIRNAME__}}/AppLogin/header.htm"
+            },
+            "innerHTML": "\n        <div class=\"container\">\n          <a href=\"/\">\n            <img src=\"https://d3bqck8kwfkhx5.cloudfront.net/img/logo.png\" alt=\"Goodybag.com\" class=\"navbar-logo\">\n          </a>\n          <ul class=\"nav\">\n            <li><a href=\"/pages/register\" component:elm=\"signupLink\">Sign Up</a></li>\n            <li><a href=\"/pages/login\" component:elm=\"loginLink\">Login</a></li>\n          </ul>\n        </div>\n      ",
+            "originalInnerHTML": "\n        <div class=\"container\">\n          <a href=\"/\">\n            <img src=\"https://d3bqck8kwfkhx5.cloudfront.net/img/logo.png\" alt=\"Goodybag.com\" class=\"navbar-logo\">\n          </a>\n          <ul class=\"nav\">\n            <li><a href=\"/pages/register\" component:elm=\"signupLink\">Sign Up</a></li>\n            <li><a href=\"/pages/login\" component:elm=\"loginLink\">Login</a></li>\n          </ul>\n        </div>\n      ",
+            "tag": "HEADER"
+        },
+        "loading-indicator": {
+            "attributes": {
+                "class": "loading-indicator"
+            },
+            "exportPath": "{{__DIRNAME__}}/AppLogin/loading-indicator.htm",
+            "exportPaths": {
+                "cjs.jsx": "{{__DIRNAME__}}/AppLogin/loading-indicator.cjs.jsx",
+                "htm": "{{__DIRNAME__}}/AppLogin/loading-indicator.htm"
+            },
+            "innerHTML": "\n          <div class=\"loading-indicator-graphic\">\n            <img src=\"/lunchroom-landing~1/resources/assets/img~cupcake-happy-9574e8b.png\">\n          </div>\n          <div class=\"loading-indicator-text\">Loading...</div>\n        ",
+            "originalInnerHTML": "\n          <div class=\"loading-indicator-graphic\">\n            <img src=\"/img/cupcake-happy.png\">\n          </div>\n          <div class=\"loading-indicator-text\">Loading...</div>\n        ",
+            "tag": "DIV"
+        },
+        "login": {
+            "attributes": {
+                "class": "page-section-standalone"
+            },
+            "exportPath": "{{__DIRNAME__}}/AppLogin/login.htm",
+            "exportPaths": {
+                "cjs.jsx": "{{__DIRNAME__}}/AppLogin/login.cjs.jsx",
+                "htm": "{{__DIRNAME__}}/AppLogin/login.htm"
+            },
+            "innerHTML": "\n  <div class=\"medium-container\">\n    <form id=\"login-form\" class=\"login-form form-vertical\" action=\"/login\" method=\"POST\">\n      <h2 class=\"page-title\">Login</h2>\n      <div class=\"errors\">\n      </div>\n      <div class=\"form-group\">\n        <label for=\"login-email\">Email</label>\n        <input type=\"email\" name=\"email\" id=\"login-email\">\n      </div>\n      \n      <div class=\"form-group\">\n        <label for=\"login-password\">Password</label>\n        <input type=\"password\" name=\"password\" id=\"login-password\">\n      </div>\n      \n      <div class=\"form-group form-group-submit\">\n        <button class=\"btn btn-primary btn-submit btn-large\">Login</button>\n      </div>\n      <p class=\"login-footnote\">Don't have an account? <a href=\"/register\">Sign up</a></p>\n    </form>\n    <div class=\"supporting-graphic\">\n      <img src=\"https://d3bqck8kwfkhx5.cloudfront.net/img/login-takeout.png\">\n    </div>\n  </div>\n",
+            "originalInnerHTML": "\n  <div class=\"medium-container\">\n    <form id=\"login-form\" class=\"login-form form-vertical\" action=\"/login\" method=\"POST\">\n      <h2 class=\"page-title\">Login</h2>\n      <div class=\"errors\">\n      </div>\n      <div class=\"form-group\">\n        <label for=\"login-email\">Email</label>\n        <input type=\"email\" name=\"email\" id=\"login-email\">\n      </div>\n      \n      <div class=\"form-group\">\n        <label for=\"login-password\">Password</label>\n        <input type=\"password\" name=\"password\" id=\"login-password\">\n      </div>\n      \n      <div class=\"form-group form-group-submit\">\n        <button class=\"btn btn-primary btn-submit btn-large\">Login</button>\n      </div>\n      <p class=\"login-footnote\">Don't have an account? <a href=\"/register\">Sign up</a></p>\n    </form>\n    <div class=\"supporting-graphic\">\n      <img src=\"https://d3bqck8kwfkhx5.cloudfront.net/img/login-takeout.png\">\n    </div>\n  </div>\n",
+            "tag": "DIV"
+        },
+        "page": {
+            "attributes": {
+                "class": "page page-login"
+            },
+            "exportPath": "{{__DIRNAME__}}/AppLogin/page.htm",
+            "exportPaths": {
+                "cjs.jsx": "{{__DIRNAME__}}/AppLogin/page.cjs.jsx",
+                "htm": "{{__DIRNAME__}}/AppLogin/page.htm"
+            },
+            "innerHTML": "\n      <header class=\"navbar collapsed\" component:id=\"header\">\n        <div class=\"container\">\n          <a href=\"/\">\n            <img src=\"https://d3bqck8kwfkhx5.cloudfront.net/img/logo.png\" alt=\"Goodybag.com\" class=\"navbar-logo\">\n          </a>\n          <ul class=\"nav\">\n            <li><a href=\"/pages/register\" component:elm=\"signupLink\">Sign Up</a></li>\n            <li><a href=\"/pages/login\" component:elm=\"loginLink\">Login</a></li>\n          </ul>\n        </div>\n      </header>\n      \n      <div class=\"page-section-standalone\" component:id=\"login\">\n  <div class=\"medium-container\">\n    <form id=\"login-form\" class=\"login-form form-vertical\" action=\"/login\" method=\"POST\">\n      <h2 class=\"page-title\">Login</h2>\n      <div class=\"errors\">\n      </div>\n      <div class=\"form-group\">\n        <label for=\"login-email\">Email</label>\n        <input type=\"email\" name=\"email\" id=\"login-email\">\n      </div>\n      \n      <div class=\"form-group\">\n        <label for=\"login-password\">Password</label>\n        <input type=\"password\" name=\"password\" id=\"login-password\">\n      </div>\n      \n      <div class=\"form-group form-group-submit\">\n        <button class=\"btn btn-primary btn-submit btn-large\">Login</button>\n      </div>\n      <p class=\"login-footnote\">Don't have an account? <a href=\"/register\">Sign up</a></p>\n    </form>\n    <div class=\"supporting-graphic\">\n      <img src=\"https://d3bqck8kwfkhx5.cloudfront.net/img/login-takeout.png\">\n    </div>\n  </div>\n</div>\n\n      \n      <footer class=\"footer\" component:id=\"footer\">\n        <ul class=\"nav footer-nav\">\n          <li><a href=\"#\" data-toggle=\"modal\" data-target=\"#contact-us-modal\">Contact Us</a></li>\n          <li><a href=\"https://www.goodybag.com/legal\">Terms of service</a></li>\n          <li><a href=\"https://www.goodybag.com/privacy\">Privacy policy</a></li>\n        </ul>\n\n        <div class=\"loading-indicator\" component:id=\"loading-indicator\">\n          <div class=\"loading-indicator-graphic\">\n            <img src=\"/lunchroom-landing~1/resources/assets/img~cupcake-happy-9574e8b.png\">\n          </div>\n          <div class=\"loading-indicator-text\">Loading...</div>\n        </div>\n        <div class=\"modal fade\" id=\"contact-us-modal\">\n          <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n              <div class=\"modal-header\">\n                <h3 class=\"modal-title\">Contact Us</h3>\n              </div>\n              <form action=\"#\" class=\"form form-vertical contact-us-form\" id=\"contact-us-form\">\n                <div class=\"modal-body\">\n                  <div class=\"form-group\">\n                    <label for=\"name-input\">Name</label>\n                    <input type=\"text\" name=\"name\" component:elm=\"name\">\n                  </div>\n                  <div class=\"form-group\">\n                    <label for=\"name-input\">Email</label>\n                    <input type=\"email\" name=\"email\" component:elm=\"email\">\n                  </div>\n                  <div class=\"form-group\">\n                    <label for=\"message-input\">Message</label>\n                    <textarea rows=\"6\" type=\"text\" name=\"message\" component:elm=\"message\"></textarea>\n                  </div>\n                </div>\n                <div class=\"modal-footer\">\n                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n                  <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n                </div>\n              </form>\n            </div>\n          </div>\n        </div>\n      </footer>\n    ",
+            "originalInnerHTML": "\n      <header class=\"navbar collapsed\" component:id=\"header\">\n        <div class=\"container\">\n          <a href=\"/\">\n            <img src=\"https://d3bqck8kwfkhx5.cloudfront.net/img/logo.png\" alt=\"Goodybag.com\" class=\"navbar-logo\">\n          </a>\n          <ul class=\"nav\">\n            <li><a href=\"/pages/register\" component:elm=\"signupLink\">Sign Up</a></li>\n            <li><a href=\"/pages/login\" component:elm=\"loginLink\">Login</a></li>\n          </ul>\n        </div>\n      </header>\n      \n      <div class=\"page-section-standalone\" component:id=\"login\">\n  <div class=\"medium-container\">\n    <form id=\"login-form\" class=\"login-form form-vertical\" action=\"/login\" method=\"POST\">\n      <h2 class=\"page-title\">Login</h2>\n      <div class=\"errors\">\n      </div>\n      <div class=\"form-group\">\n        <label for=\"login-email\">Email</label>\n        <input type=\"email\" name=\"email\" id=\"login-email\">\n      </div>\n      \n      <div class=\"form-group\">\n        <label for=\"login-password\">Password</label>\n        <input type=\"password\" name=\"password\" id=\"login-password\">\n      </div>\n      \n      <div class=\"form-group form-group-submit\">\n        <button class=\"btn btn-primary btn-submit btn-large\">Login</button>\n      </div>\n      <p class=\"login-footnote\">Don't have an account? <a href=\"/register\">Sign up</a></p>\n    </form>\n    <div class=\"supporting-graphic\">\n      <img src=\"https://d3bqck8kwfkhx5.cloudfront.net/img/login-takeout.png\">\n    </div>\n  </div>\n</div>\n\n      \n      <footer class=\"footer\" component:id=\"footer\">\n        <ul class=\"nav footer-nav\">\n          <li><a href=\"#\" data-toggle=\"modal\" data-target=\"#contact-us-modal\">Contact Us</a></li>\n          <li><a href=\"https://www.goodybag.com/legal\">Terms of service</a></li>\n          <li><a href=\"https://www.goodybag.com/privacy\">Privacy policy</a></li>\n        </ul>\n\n        <div class=\"loading-indicator\" component:id=\"loading-indicator\">\n          <div class=\"loading-indicator-graphic\">\n            <img src=\"/img/cupcake-happy.png\">\n          </div>\n          <div class=\"loading-indicator-text\">Loading...</div>\n        </div>\n        <div class=\"modal fade\" id=\"contact-us-modal\">\n          <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n              <div class=\"modal-header\">\n                <h3 class=\"modal-title\">Contact Us</h3>\n              </div>\n              <form action=\"#\" class=\"form form-vertical contact-us-form\" id=\"contact-us-form\">\n                <div class=\"modal-body\">\n                  <div class=\"form-group\">\n                    <label for=\"name-input\">Name</label>\n                    <input type=\"text\" name=\"name\" component:elm=\"name\">\n                  </div>\n                  <div class=\"form-group\">\n                    <label for=\"name-input\">Email</label>\n                    <input type=\"email\" name=\"email\" component:elm=\"email\">\n                  </div>\n                  <div class=\"form-group\">\n                    <label for=\"message-input\">Message</label>\n                    <textarea rows=\"6\" type=\"text\" name=\"message\" component:elm=\"message\"></textarea>\n                  </div>\n                </div>\n                <div class=\"modal-footer\">\n                  <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n                  <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n                </div>\n              </form>\n            </div>\n          </div>\n        </div>\n      </footer>\n    ",
+            "tag": "DIV"
+        }
+    },
+    "resources": [
+        {
+            "attributes": {
+                "component:bundle": "app.css",
+                "href": "/lunchroom-landing~1/resources/ad9f552fd255c5d348748ac8ad8600cdf91e3413.css",
+                "rel": "stylesheet"
+            },
+            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/ad9f552fd255c5d348748ac8ad8600cdf91e3413.css",
+            "tag": "LINK"
+        },
+        {
+            "attributes": {
+                "component:bundle": "lib.js",
+                "src": "/lunchroom-landing~1/resources/dist~lib-faba62f.js"
+            },
+            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/dist~lib-faba62f.js",
+            "tag": "SCRIPT"
+        },
+        {
+            "attributes": {
+                "component:bundle": "app.js",
+                "src": "/lunchroom-landing~1/resources/dist~app-2cbe9af.js"
+            },
+            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/dist~app-2cbe9af.js",
+            "tag": "SCRIPT"
+        },
+        {
+            "attributes": {
+                "component:bundle": "utils.js",
+                "src": "/lunchroom-landing~1/resources/dist~utils-ec3c1fa.js"
+            },
+            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/dist~utils-ec3c1fa.js",
+            "tag": "SCRIPT"
+        },
+        {
+            "attributes": {
+                "src": "/lunchroom-landing~1/resources/assets/img~cupcake-happy-9574e8b.png"
+            },
+            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~cupcake-happy-9574e8b.png",
+            "tag": "IMG"
+        }
+    ],
+    "schemas": {
+        "DOCTYPE": "HTML"
+    }
+}

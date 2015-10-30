@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="/lunchroom-landing~1/resources/c2c33c6a5ddf146804e1d148753890edf9a87e2f.css">
+  </head>
+  <body>
+    <section class="page-section" id="section-lunchroom-header">
+
+  <div class="lunchroom-header">
+    <div class="container">
+      <div class="modules">
+        <div class="module">
+          Deliver to: <small component:prop="deliverTo">Bazaarvoice</small>
+        </div>
+        <div class="module">
+          Delivery Time: <small component:prop="deliveryTime">12:00-12:30 PM</small>
+        </div>
+        <div class="module">
+          Time left to order:
+          <small class="text-important" component:prop="timeLeftToOrder">1 hr 26min</small>
+        </div>
+        <div class="module module-right module-unpadded">
+          <a component:elm="checkoutButton" class="btn btn-primary" href="checkout">Checkout (<span component:prop="cartItemCount">1</span>)</a>
+        </div>
+      </div>
+      <div class="tabs" component:section="tabs">
+        <a component:section="tabs" component:view="active" class="active" href="#"><span component:prop="tabDay">Mon</span><small component:prop="tabDate">Jan 26</small></a>
+        <a component:section="tabs" component:view="default" href="#"><span component:prop="tabDay">Tues</span><small component:prop="tabDate">Jan 27</small></a>
+        <a href="#"><span component:prop="tabDay">Weds</span><small component:prop="tabDate">Jan 28</small></a>
+        <a href="#"><span component:prop="tabDay">Thurs</span><small component:prop="tabDate">Jan 29</small></a>
+        <a href="#"><span component:prop="tabDay">Fri</span><small component:prop="tabDate">Jan 30</small></a>
+      </div>
+    </div>
+  </div>
+
+    </section>
+  </body>
+    <script src="/lunchroom-landing~1/resources/dist~lib-faba62f.js"></script>
+    <script src="/lunchroom-landing~1/resources/dist~app-2cbe9af.js"></script>
+</html>
