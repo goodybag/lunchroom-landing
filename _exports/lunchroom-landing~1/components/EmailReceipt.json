@@ -1,6 +1,7 @@
 {
     "components": {
         "email": {
+            "anchors": {},
             "attributes": {
                 "style": "color: #434a54; font-family: Avenir, Helvetica, Arial, sans-serif;",
                 "xmlns": "http://www.w3.org/1999/xhtml"

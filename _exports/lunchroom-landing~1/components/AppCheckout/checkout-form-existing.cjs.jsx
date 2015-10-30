@@ -4,7 +4,7 @@ module.exports = function (Context) {
   return (
     <div className="container checkout-info-container" id="section-checkout-info-existing-user">
 
-  <fieldset className="checkout-info form-vertical" data-component-id="checkout-form-existing" data-component-view="existing-user">
+  <fieldset className="checkout-info form-vertical hidden" data-component-id="checkout-form-existing" data-component-view="existing-user">
     <div className="user-info">
       <h3 className="section-title">Your Info</h3>
       <div className="form-group">

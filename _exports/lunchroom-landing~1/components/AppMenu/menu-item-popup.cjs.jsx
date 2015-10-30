@@ -19,12 +19,11 @@ module.exports = function (Context) {
           </h3>
           <p className="item-modal-description" data-component-prop="description">Mexican sandwich with top sirloin steak, bell peppers, mushrooms, and onions. Topped with queso, avocado, tomatoes, and Mexican mayo dressing.</p>
           <ul className="diet-tags" data-component-section="diet-tags">
-            <li className="diet-tag diet-tag-spicy" data-component-section="diet-tags" data-component-view="default"></li>
+            <li className="diet-tag diet-tag-spicy hidden" data-component-section="diet-tags" data-component-view="default"></li>
           </ul>
         </div>
         <div className="item-modal-actions">
-          <button className="btn btn-primary
-            item-modal-save-btn" data-component-elm="addButton" data-component-view="orderable">Add to Order</button>
+          <button className="btn btn-primary             item-modal-save-btn hidden" data-component-elm="addButton" data-component-view="orderable">Add to Order</button>
         </div>
       </div>
     </div>
