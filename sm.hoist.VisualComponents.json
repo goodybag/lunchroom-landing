@@ -49,8 +49,8 @@
     			}
 	    	},
 	    	"target": {
-	    		"id": "lunchroom-landing~0",
-	    		"path": "{{__DIRNAME__}}/.sm.hoisted"
+	    		"id": "lunchroom-landing~1",
+	    		"path": "{{__DIRNAME__}}/_exports"
 	    	}
 	    }
 	}
