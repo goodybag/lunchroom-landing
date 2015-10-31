@@ -17,9 +17,9 @@ __build__
 
 ```
 # Build
-npm run-script build
+npm run build
 
 # Preview
-npm run-script build-show
+npm run build-show
 open http://localhost:3012/
 ```
