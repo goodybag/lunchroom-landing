@@ -7,6 +7,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/Landing/footer.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/Landing/footer.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/Landing/footer.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/Landing/footer.htm"
             },
@@ -21,6 +22,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/Landing/page.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/Landing/page.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/Landing/page.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/Landing/page.htm"
             },
@@ -36,6 +38,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/Landing/subscribe.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/Landing/subscribe.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/Landing/subscribe.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/Landing/subscribe.htm"
             },
@@ -51,6 +54,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/Landing/subscription.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/Landing/subscription.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/Landing/subscription.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/Landing/subscription.htm"
             },
@@ -66,7 +70,7 @@
                 "href": "/lunchroom-landing~1/resources/ad9f552fd255c5d348748ac8ad8600cdf91e3413.css",
                 "rel": "stylesheet"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/ad9f552fd255c5d348748ac8ad8600cdf91e3413.css",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/ad9f552fd255c5d348748ac8ad8600cdf91e3413.css",
             "tag": "LINK"
         },
         {
@@ -74,7 +78,7 @@
                 "data-component-bundle": "lib.js",
                 "src": "/lunchroom-landing~1/resources/dist~lib-faba62f.js"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/dist~lib-faba62f.js",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/dist~lib-faba62f.js",
             "tag": "SCRIPT"
         },
         {
@@ -82,7 +86,7 @@
                 "data-component-bundle": "app.js",
                 "src": "/lunchroom-landing~1/resources/dist~app-2cbe9af.js"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/dist~app-2cbe9af.js",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/dist~app-2cbe9af.js",
             "tag": "SCRIPT"
         },
         {
@@ -91,7 +95,7 @@
                 "class": "navbar-logo",
                 "src": "/lunchroom-landing~1/resources/assets/img~logo_goodybag_white-14f9e4c.png"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~logo_goodybag_white-14f9e4c.png",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/assets/img~logo_goodybag_white-14f9e4c.png",
             "tag": "IMG"
         },
         {
@@ -99,7 +103,7 @@
                 "alt": "Restaurant rotation",
                 "src": "/lunchroom-landing~1/resources/assets/img~icons_step1-7706235.png"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~icons_step1-7706235.png",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/assets/img~icons_step1-7706235.png",
             "tag": "IMG"
         },
         {
@@ -107,7 +111,7 @@
                 "alt": "Order deadline",
                 "src": "/lunchroom-landing~1/resources/assets/img~icons_step2-c733bfa.png"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~icons_step2-c733bfa.png",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/assets/img~icons_step2-c733bfa.png",
             "tag": "IMG"
         },
         {
@@ -115,7 +119,7 @@
                 "alt": "Delivery notification",
                 "src": "/lunchroom-landing~1/resources/assets/img~icons_step3-e7ec2cb.png"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~icons_step3-e7ec2cb.png",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/assets/img~icons_step3-e7ec2cb.png",
             "tag": "IMG"
         },
         {
@@ -124,7 +128,7 @@
                 "class": "section-screenshot",
                 "src": "/lunchroom-landing~1/resources/assets/img~browsers_3mockups-de6a12d.png"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~browsers_3mockups-de6a12d.png",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/assets/img~browsers_3mockups-de6a12d.png",
             "tag": "IMG"
         },
         {
@@ -132,7 +136,7 @@
                 "alt": "Trudy's",
                 "src": "/lunchroom-landing~1/resources/assets/img~logo_trudys-d2b99e0.png"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~logo_trudys-d2b99e0.png",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/assets/img~logo_trudys-d2b99e0.png",
             "tag": "IMG"
         },
         {
@@ -140,7 +144,7 @@
                 "alt": "Micklethwait",
                 "src": "/lunchroom-landing~1/resources/assets/img~logo_micklethwait-b31ccde.png"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~logo_micklethwait-b31ccde.png",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/assets/img~logo_micklethwait-b31ccde.png",
             "tag": "IMG"
         },
         {
@@ -148,7 +152,7 @@
                 "alt": "Torchy's Tacos",
                 "src": "/lunchroom-landing~1/resources/assets/img~logo_torchys-9bde0e3.png"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~logo_torchys-9bde0e3.png",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/assets/img~logo_torchys-9bde0e3.png",
             "tag": "IMG"
         },
         {
@@ -156,7 +160,7 @@
                 "alt": "Zoe's Kitchen",
                 "src": "/lunchroom-landing~1/resources/assets/img~logo_zoes-9a626ef.png"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~logo_zoes-9a626ef.png",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/assets/img~logo_zoes-9a626ef.png",
             "tag": "IMG"
         },
         {
@@ -164,7 +168,7 @@
                 "alt": "Madam Mam's",
                 "src": "/lunchroom-landing~1/resources/assets/img~logo_madammams-addef91.png"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~logo_madammams-addef91.png",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/assets/img~logo_madammams-addef91.png",
             "tag": "IMG"
         }
     ],

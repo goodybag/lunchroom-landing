@@ -7,6 +7,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/AppCheckoutSuccess/create-account.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/AppCheckoutSuccess/create-account.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/AppCheckoutSuccess/create-account.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/AppCheckoutSuccess/create-account.htm"
             },
@@ -21,6 +22,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/AppCheckoutSuccess/footer.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/AppCheckoutSuccess/footer.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/AppCheckoutSuccess/footer.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/AppCheckoutSuccess/footer.htm"
             },
@@ -35,6 +37,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/AppCheckoutSuccess/header.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/AppCheckoutSuccess/header.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/AppCheckoutSuccess/header.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/AppCheckoutSuccess/header.htm"
             },
@@ -49,6 +52,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/AppCheckoutSuccess/loading-indicator.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/AppCheckoutSuccess/loading-indicator.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/AppCheckoutSuccess/loading-indicator.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/AppCheckoutSuccess/loading-indicator.htm"
             },
@@ -63,6 +67,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/AppCheckoutSuccess/order-success.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/AppCheckoutSuccess/order-success.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/AppCheckoutSuccess/order-success.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/AppCheckoutSuccess/order-success.htm"
             },
@@ -77,6 +82,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/AppCheckoutSuccess/page.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/AppCheckoutSuccess/page.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/AppCheckoutSuccess/page.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/AppCheckoutSuccess/page.htm"
             },
@@ -91,6 +97,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/AppCheckoutSuccess/share-menu-link.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/AppCheckoutSuccess/share-menu-link.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/AppCheckoutSuccess/share-menu-link.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/AppCheckoutSuccess/share-menu-link.htm"
             },
@@ -106,7 +113,7 @@
                 "href": "/lunchroom-landing~1/resources/ad9f552fd255c5d348748ac8ad8600cdf91e3413.css",
                 "rel": "stylesheet"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/ad9f552fd255c5d348748ac8ad8600cdf91e3413.css",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/ad9f552fd255c5d348748ac8ad8600cdf91e3413.css",
             "tag": "LINK"
         },
         {
@@ -114,7 +121,7 @@
                 "data-component-bundle": "lib.js",
                 "src": "/lunchroom-landing~1/resources/dist~lib-faba62f.js"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/dist~lib-faba62f.js",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/dist~lib-faba62f.js",
             "tag": "SCRIPT"
         },
         {
@@ -122,7 +129,7 @@
                 "data-component-bundle": "app.js",
                 "src": "/lunchroom-landing~1/resources/dist~app-2cbe9af.js"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/dist~app-2cbe9af.js",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/dist~app-2cbe9af.js",
             "tag": "SCRIPT"
         },
         {
@@ -130,7 +137,7 @@
                 "data-component-bundle": "utils.js",
                 "src": "/lunchroom-landing~1/resources/dist~utils-ec3c1fa.js"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/dist~utils-ec3c1fa.js",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/dist~utils-ec3c1fa.js",
             "tag": "SCRIPT"
         },
         {
@@ -139,14 +146,14 @@
                 "class": "success-img",
                 "src": "/lunchroom-landing~1/resources/assets/img~success-d84e5c8.png"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~success-d84e5c8.png",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/assets/img~success-d84e5c8.png",
             "tag": "IMG"
         },
         {
             "attributes": {
                 "src": "/lunchroom-landing~1/resources/assets/img~cupcake-happy-9574e8b.png"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~cupcake-happy-9574e8b.png",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/assets/img~cupcake-happy-9574e8b.png",
             "tag": "IMG"
         }
     ],

@@ -1,0 +1,17 @@
+module.exports = {
+getLayout: function () {
+return {
+buildVTree: function (h, ch) {
+return h("section#section-lunchroom-header.page-section", [ "\n\n  ", h("div.lunchroom-header", [ "\n    ", h("div.container", [ "\n      ", h("div.modules", [ "\n        ", h("div.module", [ "\n          Deliver to: ", h("small", {"dataset":{}}, ch({"property":"deliverTo"}, function () { return [ "Bazaarvoice" ]; })), "\n        " ]), "\n        ", h("div.module", [ "\n          Delivery Time: ", h("small", {"dataset":{}}, ch({"property":"deliveryTime"}, function () { return [ "12:00-12:30 PM" ]; })), "\n        " ]), "\n        ", h("div.module", [ "\n          Time left to order:\n          ", h("small.text-important", {"dataset":{}}, ch({"property":"timeLeftToOrder"}, function () { return [ "1 hr 26min" ]; })), "\n        " ]), "\n        ", h("div.module.module-right.module-unpadded", [ "\n          ", h("a.btn.btn-primary", {"attributes":{"href":"checkout"},"dataset":{"componentElm":"checkoutButton"}}, [ "Checkout (", h("span", {"dataset":{}}, ch({"property":"cartItemCount"}, function () { return [ "1" ]; })), ")" ]), "\n        " ]), "\n      " ]), "\n      ", h("div.tabs", {"dataset":{}}, ch({"section":"tabs"}, function () { return [ "\n        ", ch({"section":"tabs","view":"active"}, function () { return h("a.active.hidden", {"attributes":{"href":"#"},"dataset":{}}, [ h("span", {"dataset":{}}, ch({"property":"tabDay"}, function () { return [ "Mon" ]; })), h("small", {"dataset":{}}, ch({"property":"tabDate"}, function () { return [ "Jan 26" ]; })) ]); }), "\n        ", ch({"section":"tabs","view":"default"}, function () { return h("a.hidden", {"attributes":{"href":"#"},"dataset":{}}, [ h("span", {"dataset":{}}, ch({"property":"tabDay"}, function () { return [ "Tues" ]; })), h("small", {"dataset":{}}, ch({"property":"tabDate"}, function () { return [ "Jan 27" ]; })) ]); }), "\n        ", h("a", {"attributes":{"href":"#"}}, [ h("span", {"dataset":{}}, ch({"property":"tabDay"}, function () { return [ "Weds" ]; })), h("small", {"dataset":{}}, ch({"property":"tabDate"}, function () { return [ "Jan 28" ]; })) ]), "\n        ", h("a", {"attributes":{"href":"#"}}, [ h("span", {"dataset":{}}, ch({"property":"tabDay"}, function () { return [ "Thurs" ]; })), h("small", {"dataset":{}}, ch({"property":"tabDate"}, function () { return [ "Jan 29" ]; })) ]), "\n        ", h("a", {"attributes":{"href":"#"}}, [ h("span", {"dataset":{}}, ch({"property":"tabDay"}, function () { return [ "Fri" ]; })), h("small", {"dataset":{}}, ch({"property":"tabDate"}, function () { return [ "Jan 30" ]; })) ]), "\n      " ]; })), "\n    " ]), "\n  " ]), "\n\n    " ]);
+}
+};
+},
+getComponents: function () {
+return {
+  };
+},
+getScripts: function () {
+var scripts = {};
+return scripts;
+}
+};

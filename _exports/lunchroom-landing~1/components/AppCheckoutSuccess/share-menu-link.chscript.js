@@ -1,0 +1,17 @@
+module.exports = {
+getLayout: function () {
+return {
+buildVTree: function (h, ch) {
+return h("div.container.order-success", [ "\n\n  ", h("div.menu-share", [ "\n    ", h("h4.menu-share-title", [ "Share this link" ]), "\n    ", h("p.menu-share-followup", [ "with coworkers to let them view the menu and place their own order!" ]), "\n    ", h("input.menu-share-input", {"attributes":{"type":"text","value":"http://lunchroom.goodybag.com/bazaarvoice"},"dataset":{"componentElm":"shareUrl"}}), "\n  " ]), "\n\n    " ]);
+}
+};
+},
+getComponents: function () {
+return {
+  };
+},
+getScripts: function () {
+var scripts = {};
+return scripts;
+}
+};

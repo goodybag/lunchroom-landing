@@ -53,10 +53,6 @@
                 "too-late": {
                     "fsHtmlPath": "{{__DIRNAME__}}/components/AppCheckout/too-late.htm",
                     "uriHtmlPath": "/lunchroom-landing~1/components/AppCheckout/too-late.htm"
-                },
-                "warning-section": {
-                    "fsHtmlPath": "{{__DIRNAME__}}/components/AppCheckout/warning-section.htm",
-                    "uriHtmlPath": "/lunchroom-landing~1/components/AppCheckout/warning-section.htm"
                 }
             },
             "componentsDescriptorPath": "{{__DIRNAME__}}/components/AppCheckout.json",
@@ -295,10 +291,6 @@
                 "too-late": {
                     "fsHtmlPath": "{{__DIRNAME__}}/components/AppMenu/too-late.htm",
                     "uriHtmlPath": "/lunchroom-landing~1/components/AppMenu/too-late.htm"
-                },
-                "warning-section": {
-                    "fsHtmlPath": "{{__DIRNAME__}}/components/AppMenu/warning-section.htm",
-                    "uriHtmlPath": "/lunchroom-landing~1/components/AppMenu/warning-section.htm"
                 }
             },
             "componentsDescriptorPath": "{{__DIRNAME__}}/components/AppMenu.json",

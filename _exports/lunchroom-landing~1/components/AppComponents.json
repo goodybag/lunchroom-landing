@@ -7,6 +7,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/AppComponents/footer.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/AppComponents/footer.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/AppComponents/footer.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/AppComponents/footer.htm"
             },
@@ -21,6 +22,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/AppComponents/header.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/AppComponents/header.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/AppComponents/header.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/AppComponents/header.htm"
             },
@@ -35,6 +37,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/AppComponents/loading-indicator.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/AppComponents/loading-indicator.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/AppComponents/loading-indicator.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/AppComponents/loading-indicator.htm"
             },
@@ -50,6 +53,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/AppComponents/navbar.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/AppComponents/navbar.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/AppComponents/navbar.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/AppComponents/navbar.htm"
             },
@@ -64,6 +68,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/AppComponents/page.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/AppComponents/page.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/AppComponents/page.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/AppComponents/page.htm"
             },
@@ -79,6 +84,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/AppComponents/share.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/AppComponents/share.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/AppComponents/share.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/AppComponents/share.htm"
             },
@@ -93,28 +99,28 @@
                 "href": "/lunchroom-landing~1/resources/c2c33c6a5ddf146804e1d148753890edf9a87e2f.css",
                 "rel": "stylesheet"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/c2c33c6a5ddf146804e1d148753890edf9a87e2f.css",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/c2c33c6a5ddf146804e1d148753890edf9a87e2f.css",
             "tag": "LINK"
         },
         {
             "attributes": {
                 "src": "/lunchroom-landing~1/resources/dist~lib-faba62f.js"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/dist~lib-faba62f.js",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/dist~lib-faba62f.js",
             "tag": "SCRIPT"
         },
         {
             "attributes": {
                 "src": "/lunchroom-landing~1/resources/dist~app-2cbe9af.js"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/dist~app-2cbe9af.js",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/dist~app-2cbe9af.js",
             "tag": "SCRIPT"
         },
         {
             "attributes": {
                 "src": "/lunchroom-landing~1/resources/assets/img~cupcake-happy-9574e8b.png"
             },
-            "exportPath": "/freedom/com.goodybag.lunchroom/Skin/app.design/_exports/lunchroom-landing~1/resources/assets/img~cupcake-happy-9574e8b.png",
+            "exportPath": "/freedom/com.goodybag.lunchroom/stack.lunchroom/Skin.Design/_exports/lunchroom-landing~1/resources/assets/img~cupcake-happy-9574e8b.png",
             "tag": "IMG"
         }
     ],

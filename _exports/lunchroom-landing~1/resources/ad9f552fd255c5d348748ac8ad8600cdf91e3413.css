@@ -1994,11 +1994,11 @@ body {
   max-height: 58px;
   max-width: 138px;
   font-family: 'Aleo', Georgia, serif;
-  font-size: 46px;
+  font-size: 25px;
   line-height: 58px;
   color: #ffffff;
-  padding-top: 8px;
-  padding-bottom: 4px;
+  padding-top: 18.5px;
+  padding-bottom: 14.5px;
 }
 
 .navbar-caption {
@@ -2058,7 +2058,7 @@ body {
   margin-right: 12px;
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 620px) {
   .navbar .gb-points {
     position: absolute;
     right: 60px;
@@ -2160,7 +2160,7 @@ body {
   }
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 620px) {
   body {
     padding-top: 42.5px;
   }
@@ -2201,10 +2201,10 @@ body {
   .navbar .navbar-logo {
     max-width: 98px;
     max-height: 43.5px;
-    font-size: 23px;
+    font-size: 12.5px;
     line-height: 43.5px;
-    padding-top: 12.25px;
-    padding-bottom: 8.25px;
+    padding-top: 14.25px;
+    padding-bottom: 10.25px;
   }
 
   .navbar .login-form {
@@ -2502,6 +2502,10 @@ body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 
+.tile-cover:not(:last-child) {
+  border-bottom: 1px solid #aab2bd;
+}
+
 @media (min-width: 786px) {
   .tile {
     width: 48%;
@@ -2638,7 +2642,7 @@ body {
   background-color: #ffffff;
 }
 
-@media (max-width: 786px) {
+@media (max-width: 620px) {
   .nav .popover-modal {
     -webkit-transform: scale(1);
     transform: scale(1);

@@ -8,6 +8,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/EmailMenu/email.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/EmailMenu/email.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/EmailMenu/email.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/EmailMenu/email.htm"
             },
@@ -23,6 +24,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/EmailMenu/menu.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/EmailMenu/menu.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/EmailMenu/menu.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/EmailMenu/menu.htm"
             },

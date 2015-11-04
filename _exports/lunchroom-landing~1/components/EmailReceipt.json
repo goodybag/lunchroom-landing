@@ -8,6 +8,7 @@
             },
             "exportPath": "{{__DIRNAME__}}/EmailReceipt/email.htm",
             "exportPaths": {
+                "cjs.chscript": "{{__DIRNAME__}}/EmailReceipt/email.chscript.js",
                 "cjs.jsx": "{{__DIRNAME__}}/EmailReceipt/email.cjs.jsx",
                 "htm": "{{__DIRNAME__}}/EmailReceipt/email.htm"
             },

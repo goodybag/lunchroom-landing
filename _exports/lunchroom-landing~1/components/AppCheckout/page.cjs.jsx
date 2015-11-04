@@ -48,7 +48,7 @@ module.exports = function (Context) {
 </div>
 
 <div className="container" data-component-id="no-items">
-  <div className="warning-section" data-component-id="warning-section">
+  <div className="warning-section">
     <img src="/lunchroom-landing~1/resources/assets/img~cupcake-shocked-9c195d3.png" alt="" className="warning-section-supporting-graphic"/>
     <h2 className="warning-section-header">You have nothing in your cart!</h2>
     <p><a href="#" data-component-elm="addItemsLink">Add items</a></p>
@@ -56,7 +56,7 @@ module.exports = function (Context) {
 </div>
 
 <div className="container" data-component-id="too-late">
-  <div className="warning-section" data-component-id="warning-section">
+  <div className="warning-section">
     <img src="/lunchroom-landing~1/resources/assets/img~cupcake-shocked-9c195d3.png" alt="" className="warning-section-supporting-graphic"/>
     <h2 className="warning-section-header">Sorry, time’s up :(.</h2>
     <p>You must place your order by <span data-component-prop="orderBy">10am</span>.</p>
@@ -69,7 +69,7 @@ module.exports = function (Context) {
 </div>
 
 <div className="container checkout-info-container" id="section-checkout-info" data-component-id="checkout-form-new">
-  <fieldset className="checkout-info form-vertical hidden" data-component-id="checkout-form-new" data-component-view="default">
+  <fieldset className="checkout-info form-vertical hidden" data-component-view="default">
     <div className="user-info">
       <h3 className="section-title">Your Info</h3>
       <div className="form-group">
@@ -127,7 +127,7 @@ module.exports = function (Context) {
 </div>
 
 <div className="container checkout-info-container" id="section-checkout-info-existing-user" data-component-id="checkout-form-existing">
-  <fieldset className="checkout-info form-vertical hidden" data-component-id="checkout-form-existing" data-component-view="existing-user">
+  <fieldset className="checkout-info form-vertical hidden" data-component-view="existing-user">
     <div className="user-info">
       <h3 className="section-title">Your Info</h3>
       <div className="form-group">
@@ -263,7 +263,7 @@ module.exports = function (Context) {
 
 
 <div className="container checkout-info-container" data-component-id="checkout-form">
-  <fieldset className="checkout-info form-vertical hidden" data-component-id="checkout-form" data-component-view="default">
+  <fieldset className="checkout-info form-vertical hidden" data-component-view="default">
     <div className="user-info">
       <h3 className="section-title">Your Info</h3>
       <div className="form-group">
