@@ -37,13 +37,15 @@
       <div
         class="tile item-tile{{#if quantity}} is-in-cart{{/if}}"
         component:section="items"
+        data-id="\{\{id\}\}"
         component:view="default">
         <div
           class="tile-cover"
           style="background-image: url('{{photo_url}}/convert?w=400&h=195&fit=crop');"
           component:prop="photoUrl"
           component:prop-target="style/background-image"
-          component:elm="showDetailsLink"
+          component:action="showDetails"
+          data-id="\{\{id\}\}"
           data-toggle="modal"
           data-target="#item-modal">
           <div class="item-tile-quantity-wrapper">
@@ -55,17 +57,19 @@
           <h3 class="tile-title" component:prop="title">{{name}}</h3>
           <ul class="diet-tags" component:section="diet-tags">
             {{#each dietTags}}
-              <li class="diet-tag diet-tag-{{this}}" component:section="diet-tags" component:view="default"></li>
+              <li class="diet-tag diet-tag-{{this}}" data-tag="\{\{tag\}\}" component:section="diet-tags" component:view="default"></li>
             {{/each}}
           </ul>
           <div class="item-price" component:prop="price">${{dollars price}}</div>
           <div class="item-tile-actions">
             <button
               class="btn btn-default btn-remove"
-              component:elm="removeButton"
+              data-id="\{\{item_id\}\}"
+              component:action="remove"
               component:view="orderable">-</button><button
               class="btn btn-default btn-add"
-              component:elm="addButton"
+              data-id="\{\{item_id\}\}"
+              component:action="add"
               component:view="orderable">Add</button>
           </div>
         </div>
@@ -82,14 +86,14 @@
       <div class="form">
         <div class="form-group">
           <label>Email</label>
-          <input type="email" name="email" component:elm="email">
+          <input type="email" name="email" component:prop="email">
         </div>
         <div class="form-group phone-form-group">
           <label>Phone</label>
-          <input type="tel" name="phone" component:elm="phone">
+          <input type="tel" name="phone" component:prop="phone">
         </div>
         <div class="form-group form-group-actions">
-          <button class="btn btn-primary" component:elm="signupButton">Sign up!</button>
+          <button class="btn btn-primary" component:action="signup">Sign up!</button>
         </div>
       </div>
     </div>
@@ -129,9 +133,9 @@
             <input type="number" value="1" class="item-modal-quantity-input">
           </div> --}}
           <button
-            class="btn btn-primary
-            item-modal-save-btn"
-            component:elm="addButton"
+            class="btn btn-primary item-modal-save-btn"
+            data-id="\{\{item_id\}\}"
+            component:action="add"
             component:view="orderable">Add to Order</button>
         </div>
       </div>

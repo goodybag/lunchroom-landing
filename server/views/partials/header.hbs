@@ -13,16 +13,16 @@
       </div>
       {{#unless hideCheckout}}
       <div class="module module-right module-unpadded module-checkout">
-        <a component:elm="checkoutButton" component:view="offer-checkout" class="btn btn-primary" href="checkout">Checkout (<span component:prop="cartItemCount">1</span>)</a>
+        <a component:elm="checkoutButton" component:view="offer-checkout" class="btn btn-primary" href="checkout" data-component-action="checkout">Checkout (<span component:prop="cartItemCount">1</span>)</a>
       </div>
       {{/unless}}
     </div>
     <div class="tabs" component:section="tabs">
-      <a component:section="tabs" component:view="active" class="active" href="#"><span component:prop="tabDay">Mon</span><small component:prop="tabDate">Jan 26</small></a>
-      <a component:section="tabs" component:view="default" href="#"><span component:prop="tabDay">Tues</span><small component:prop="tabDate">Jan 27</small></a>
-      <a href="#"><span component:prop="tabDay">Weds</span><small component:prop="tabDate">Jan 28</small></a>
-      <a href="#"><span component:prop="tabDay">Thurs</span><small component:prop="tabDate">Jan 29</small></a>
-      <a href="#"><span component:prop="tabDay">Fri</span><small component:prop="tabDate">Jan 30</small></a>
+      <a component:section="tabs" component:view="active" class="active" href="#" data-id="\{\{id\}\}" data-component-action="selectDay"><span component:prop="tabDay">Mon</span><small component:prop="tabDate">Jan 26</small></a>
+      <a component:section="tabs" component:view="default" href="#" data-id="\{\{id\}\}" data-component-action="selectDay"><span component:prop="tabDay">Tues</span><small component:prop="tabDate">Jan 27</small></a>
+      <a href="#"><span>Weds</span><small>Jan 28</small></a>
+      <a href="#"><span>Thurs</span><small>Jan 29</small></a>
+      <a href="#"><span>Fri</span><small>Jan 30</small></a>
     </div>
   </div>
 </div>
