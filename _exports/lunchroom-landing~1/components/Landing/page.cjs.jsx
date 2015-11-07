@@ -26,10 +26,10 @@ module.exports = function (Context) {
     <form action="#" className="cta-form form" data-component-id="subscribe">
       <div className="form-group">
         <div className="email-wrapper">
-          <input type="email" name="email" data-component-elm="email"/>
+          <input type="email" name="email" value="\{\{email\}\}"/>
         </div>
         <div className="submit-wrapper">
-          <button className="btn btn-primary" data-component-elm="subscribeButton">Get notified</button>
+          <button className="btn btn-primary" data-component-action="subscribe">Get notified</button>
         </div>
       </div>
       <p className="form-explanation">Enter your email to receive daily menus when we launch!</p>
@@ -96,15 +96,15 @@ module.exports = function (Context) {
           <div className="modal-body">
             <div className="form-group">
               <label for="name-input">Name</label>
-              <input type="text" name="name" data-component-elm="name"/>
+              <input type="text" name="name" data-component-prop="name"/>
             </div>
             <div className="form-group">
               <label for="name-input">Email</label>
-              <input type="email" name="email" data-component-elm="email"/>
+              <input type="email" name="email" data-component-prop="email"/>
             </div>
             <div className="form-group">
               <label for="message-input">Message</label>
-              <textarea rows="6" type="text" name="message" data-component-elm="message"></textarea>
+              <textarea rows="6" type="text" name="message" data-component-prop="message"></textarea>
             </div>
           </div>
           <div className="modal-footer">

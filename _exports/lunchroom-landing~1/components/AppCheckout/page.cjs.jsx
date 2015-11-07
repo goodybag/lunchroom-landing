@@ -10,8 +10,8 @@ module.exports = function (Context) {
             <img src="https://d3bqck8kwfkhx5.cloudfront.net/img/logo.png" alt="Goodybag.com" className="navbar-logo"/>
           </a>
           <ul className="nav">
-            <li><a href="/pages/register" data-component-elm="signupLink">Sign Up</a></li>
-            <li><a href="/pages/login" data-component-elm="loginLink">Login</a></li>
+            <li><a href="/pages/register" data-component-action="signup">Sign Up</a></li>
+            <li><a href="/pages/login" data-component-action="login">Login</a></li>
           </ul>
         </div>
       </header>
@@ -19,23 +19,23 @@ module.exports = function (Context) {
       <div className="lunchroom-header" data-component-id="navbar">
   <div className="container">
     <div className="modules">
-      <div className="module hidden" data-component-view="menuAvailable" data-toggle="tooltip" title="" data-original-title="We text you when your food arrives">
+      <div className="module" data-component-view="menuAvailable" data-toggle="tooltip" title="" data-original-title="We text you when your food arrives">
         Deliver to: <small data-component-prop="deliverTo">Bazaarvoice</small>
       </div>
-      <div className="module hidden" data-component-view="menuAvailable" data-toggle="tooltip" title="" data-original-title="We text you when your food arrives">
+      <div className="module" data-component-view="menuAvailable" data-toggle="tooltip" title="" data-original-title="We text you when your food arrives">
         Delivery Time: <small data-component-prop="deliveryTime">12:00-12:30 PM</small>
       </div>
-      <div className="module" data-component-view="orderCountdown" data-component-view-visibility="hidden" style={{"visibility":"hidden"}}>
+      <div className="module" data-component-view="orderCountdown" data-component-view-visibility="hidden">
         Time left to order:
         <small className="text-important" data-component-prop="timeLeftToOrder">1 hr 26min</small>
       </div>
     </div>
     <div className="tabs" data-component-section="tabs">
-      <a data-component-section="tabs" data-component-view="active" className="active hidden" href="#"><span data-component-prop="tabDay">Mon</span><small data-component-prop="tabDate">Jan 26</small></a>
-      <a data-component-section="tabs" data-component-view="default" href="#" className="hidden"><span data-component-prop="tabDay">Tues</span><small data-component-prop="tabDate">Jan 27</small></a>
-      <a href="#"><span data-component-prop="tabDay">Weds</span><small data-component-prop="tabDate">Jan 28</small></a>
-      <a href="#"><span data-component-prop="tabDay">Thurs</span><small data-component-prop="tabDate">Jan 29</small></a>
-      <a href="#"><span data-component-prop="tabDay">Fri</span><small data-component-prop="tabDate">Jan 30</small></a>
+      <a data-component-section="tabs" data-component-view="active" className="active" href="#" data-id="\{\{id\}\}" data-component-action="selectDay"><span data-component-prop="tabDay">Mon</span><small data-component-prop="tabDate">Jan 26</small></a>
+      <a data-component-section="tabs" data-component-view="default" href="#" data-id="\{\{id\}\}" data-component-action="selectDay"><span data-component-prop="tabDay">Tues</span><small data-component-prop="tabDate">Jan 27</small></a>
+      <a href="#"><span>Weds</span><small>Jan 28</small></a>
+      <a href="#"><span>Thurs</span><small>Jan 29</small></a>
+      <a href="#"><span>Fri</span><small>Jan 30</small></a>
     </div>
   </div>
 </div>
@@ -69,7 +69,7 @@ module.exports = function (Context) {
 </div>
 
 <div className="container checkout-info-container" id="section-checkout-info" data-component-id="checkout-form-new">
-  <fieldset className="checkout-info form-vertical hidden" data-component-view="default">
+  <fieldset className="checkout-info form-vertical" data-component-view="default">
     <div className="user-info">
       <h3 className="section-title">Your Info</h3>
       <div className="form-group">
@@ -112,7 +112,7 @@ module.exports = function (Context) {
             <input type="tel" className="form-control" placeholder="YY" name="card_expiration_year" data-component-elm="card[expire-year]"/>
           </div>
         </div>
-        <div className="form-group form-group hidden" data-component-view="show-save-option">
+        <div className="form-group form-group" data-component-view="show-save-option">
           <label>
             <input type="checkbox" name="will_add_new_card" checked=""/>
             Save card?
@@ -127,7 +127,7 @@ module.exports = function (Context) {
 </div>
 
 <div className="container checkout-info-container" id="section-checkout-info-existing-user" data-component-id="checkout-form-existing">
-  <fieldset className="checkout-info form-vertical hidden" data-component-view="existing-user">
+  <fieldset className="checkout-info form-vertical" data-component-view="existing-user">
     <div className="user-info">
       <h3 className="section-title">Your Info</h3>
       <div className="form-group">
@@ -263,7 +263,7 @@ module.exports = function (Context) {
 
 
 <div className="container checkout-info-container" data-component-id="checkout-form">
-  <fieldset className="checkout-info form-vertical hidden" data-component-view="default">
+  <fieldset className="checkout-info form-vertical" data-component-view="default">
     <div className="user-info">
       <h3 className="section-title">Your Info</h3>
       <div className="form-group">
@@ -318,7 +318,7 @@ module.exports = function (Context) {
 
   <div data-component-section="days">
 
-    <div data-component-section="days" data-component-view="default" className="hidden">
+    <div data-component-section="days" data-component-view="default">
 
       <div className="order-reviewer">
         <h3 className="order-reviewer-header"><span data-component-prop="dayLabel">Today's</span> order
@@ -326,7 +326,7 @@ module.exports = function (Context) {
         </h3>
 
         <div className="order-reviewer-items" data-component-section="items">
-            <div className="order-reviewer-item hidden" data-component-section="items" data-component-view="default">
+            <div className="order-reviewer-item" data-component-section="items" data-component-view="default">
               <div className="order-reviewer-item-col photo-col">
                 <img src="https://www.filepicker.io/api/file/SZoK9zUvTPWXzmK81aGg/convert?w=352&amp;h=210&amp;fit=crop" alt="Pirata Dos Tacos" data-component-prop="photo" data-component-prop-target="src"/>
               </div>
@@ -347,7 +347,7 @@ module.exports = function (Context) {
                 $10.90
               </div>
             </div>
-            <div className="order-reviewer-item hidden" data-component-section="items" data-component-view="default">
+            <div className="order-reviewer-item" data-component-section="items" data-component-view="default">
               <div className="order-reviewer-item-col photo-col">
                 <img src="https://www.filepicker.io/api/file/SZoK9zUvTPWXzmK81aGg/convert?w=352&amp;h=210&amp;fit=crop" alt="Poop Taco Box" data-component-prop="photo" data-component-prop-target="src"/>
               </div>
@@ -374,7 +374,7 @@ module.exports = function (Context) {
 
     </div>
 
-    <div data-component-section="days" data-component-view="too-late" className="hidden">
+    <div data-component-section="days" data-component-view="too-late">
 
       <div className="order-reviewer">
         <h3 className="order-reviewer-header"><span data-component-prop="dayLabel">Today's</span> order</h3>
@@ -389,7 +389,7 @@ module.exports = function (Context) {
   </div>
 
 
-  <div className="order-reviewer hidden" data-component-view="hidden">
+  <div className="order-reviewer" data-component-view="hidden">
     <h3 className="order-reviewer-header">Thursday's order
       <a href="#" className="order-reviewer-item-add-link">Add items</a>
     </h3>
@@ -441,7 +441,7 @@ module.exports = function (Context) {
   </div>
 
 
-  <div className="order-reviewer hidden" data-component-view="hidden">
+  <div className="order-reviewer" data-component-view="hidden">
     <h3 className="order-reviewer-header">Friday's order
       <a href="#" className="order-reviewer-item-add-link">Add items</a>
     </h3>
@@ -542,15 +542,15 @@ module.exports = function (Context) {
                 <div className="modal-body">
                   <div className="form-group">
                     <label for="name-input">Name</label>
-                    <input type="text" name="name" data-component-elm="name"/>
+                    <input type="text" name="name" data-component-prop="name"/>
                   </div>
                   <div className="form-group">
                     <label for="name-input">Email</label>
-                    <input type="email" name="email" data-component-elm="email"/>
+                    <input type="email" name="email" data-component-prop="email"/>
                   </div>
                   <div className="form-group">
                     <label for="message-input">Message</label>
-                    <textarea rows="6" type="text" name="message" data-component-elm="message"></textarea>
+                    <textarea rows="6" type="text" name="message" data-component-prop="message"></textarea>
                   </div>
                 </div>
                 <div className="modal-footer">

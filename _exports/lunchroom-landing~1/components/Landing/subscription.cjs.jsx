@@ -10,10 +10,10 @@ module.exports = function (Context) {
     <form action="#" className="cta-form form" data-component-id="subscribe">
       <div className="form-group">
         <div className="email-wrapper">
-          <input type="email" name="email" data-component-elm="email"/>
+          <input type="email" name="email" value="\{\{email\}\}"/>
         </div>
         <div className="submit-wrapper">
-          <button className="btn btn-primary" data-component-elm="subscribeButton">Get notified</button>
+          <button className="btn btn-primary" data-component-action="subscribe">Get notified</button>
         </div>
       </div>
       <p className="form-explanation">Enter your email to receive daily menus when we launch!</p>

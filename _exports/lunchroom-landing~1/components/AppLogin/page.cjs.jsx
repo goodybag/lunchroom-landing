@@ -10,8 +10,8 @@ module.exports = function (Context) {
             <img src="https://d3bqck8kwfkhx5.cloudfront.net/img/logo.png" alt="Goodybag.com" className="navbar-logo"/>
           </a>
           <ul className="nav">
-            <li><a href="/pages/register" data-component-elm="signupLink">Sign Up</a></li>
-            <li><a href="/pages/login" data-component-elm="loginLink">Login</a></li>
+            <li><a href="/pages/register" data-component-action="signup">Sign Up</a></li>
+            <li><a href="/pages/login" data-component-action="login">Login</a></li>
           </ul>
         </div>
       </header>
@@ -67,15 +67,15 @@ module.exports = function (Context) {
                 <div className="modal-body">
                   <div className="form-group">
                     <label for="name-input">Name</label>
-                    <input type="text" name="name" data-component-elm="name"/>
+                    <input type="text" name="name" data-component-prop="name"/>
                   </div>
                   <div className="form-group">
                     <label for="name-input">Email</label>
-                    <input type="email" name="email" data-component-elm="email"/>
+                    <input type="email" name="email" data-component-prop="email"/>
                   </div>
                   <div className="form-group">
                     <label for="message-input">Message</label>
-                    <textarea rows="6" type="text" name="message" data-component-elm="message"></textarea>
+                    <textarea rows="6" type="text" name="message" data-component-prop="message"></textarea>
                   </div>
                 </div>
                 <div className="modal-footer">

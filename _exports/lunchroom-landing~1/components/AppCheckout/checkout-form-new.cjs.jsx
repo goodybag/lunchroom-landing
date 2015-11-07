@@ -4,7 +4,7 @@ module.exports = function (Context) {
   return (
     <div className="container checkout-info-container" id="section-checkout-info">
 
-  <fieldset className="checkout-info form-vertical hidden" data-component-view="default">
+  <fieldset className="checkout-info form-vertical" data-component-view="default">
     <div className="user-info">
       <h3 className="section-title">Your Info</h3>
       <div className="form-group">
@@ -47,7 +47,7 @@ module.exports = function (Context) {
             <input type="tel" className="form-control" placeholder="YY" name="card_expiration_year" data-component-elm="card[expire-year]"/>
           </div>
         </div>
-        <div className="form-group form-group hidden" data-component-view="show-save-option">
+        <div className="form-group form-group" data-component-view="show-save-option">
           <label>
             <input type="checkbox" name="will_add_new_card" checked=""/>
             Save card?

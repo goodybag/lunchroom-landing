@@ -20,15 +20,15 @@ module.exports = function (Context) {
           <div className="modal-body">
             <div className="form-group">
               <label for="name-input">Name</label>
-              <input type="text" name="name" data-component-elm="name"/>
+              <input type="text" name="name" data-component-prop="name"/>
             </div>
             <div className="form-group">
               <label for="name-input">Email</label>
-              <input type="email" name="email" data-component-elm="email"/>
+              <input type="email" name="email" data-component-prop="email"/>
             </div>
             <div className="form-group">
               <label for="message-input">Message</label>
-              <textarea rows="6" type="text" name="message" data-component-elm="message"></textarea>
+              <textarea rows="6" type="text" name="message" data-component-prop="message"></textarea>
             </div>
           </div>
           <div className="modal-footer">

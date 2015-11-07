@@ -28,10 +28,10 @@
     <form action="#" class="cta-form form" data-component-id="subscribe">
       <div class="form-group">
         <div class="email-wrapper">
-          <input type="email" name="email" data-component-elm="email">
+          <input type="email" name="email" value="\{\{email\}\}">
         </div>
         <div class="submit-wrapper">
-          <button class="btn btn-primary" data-component-elm="subscribeButton">Get notified</button>
+          <button class="btn btn-primary" data-component-action="subscribe">Get notified</button>
         </div>
       </div>
       <p class="form-explanation">Enter your email to receive daily menus when we launch!</p>
@@ -98,15 +98,15 @@
           <div class="modal-body">
             <div class="form-group">
               <label for="name-input">Name</label>
-              <input type="text" name="name" data-component-elm="name">
+              <input type="text" name="name" data-component-prop="name">
             </div>
             <div class="form-group">
               <label for="name-input">Email</label>
-              <input type="email" name="email" data-component-elm="email">
+              <input type="email" name="email" data-component-prop="email">
             </div>
             <div class="form-group">
               <label for="message-input">Message</label>
-              <textarea rows="6" type="text" name="message" data-component-elm="message"></textarea>
+              <textarea rows="6" type="text" name="message" data-component-prop="message"></textarea>
             </div>
           </div>
           <div class="modal-footer">

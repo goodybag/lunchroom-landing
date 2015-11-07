@@ -12,8 +12,8 @@
             <img src="https://d3bqck8kwfkhx5.cloudfront.net/img/logo.png" alt="Goodybag.com" class="navbar-logo">
           </a>
           <ul class="nav">
-            <li><a href="/pages/register" data-component-elm="signupLink">Sign Up</a></li>
-            <li><a href="/pages/login" data-component-elm="loginLink">Login</a></li>
+            <li><a href="/pages/register" data-component-action="signup">Sign Up</a></li>
+            <li><a href="/pages/login" data-component-action="login">Login</a></li>
           </ul>
         </div>
       </header>
@@ -21,23 +21,23 @@
       <div class="lunchroom-header" data-component-id="navbar">
   <div class="container">
     <div class="modules">
-      <div class="module hidden" data-component-view="menuAvailable" data-toggle="tooltip" title="" data-original-title="We text you when your food arrives">
+      <div class="module" data-component-view="menuAvailable" data-toggle="tooltip" title="" data-original-title="We text you when your food arrives">
         Deliver to: <small data-component-prop="deliverTo">Bazaarvoice</small>
       </div>
-      <div class="module hidden" data-component-view="menuAvailable" data-toggle="tooltip" title="" data-original-title="We text you when your food arrives">
+      <div class="module" data-component-view="menuAvailable" data-toggle="tooltip" title="" data-original-title="We text you when your food arrives">
         Delivery Time: <small data-component-prop="deliveryTime">12:00-12:30 PM</small>
       </div>
-      <div class="module" data-component-view="orderCountdown" data-component-view-visibility="hidden" style="visibility: hidden;">
+      <div class="module" data-component-view="orderCountdown" data-component-view-visibility="hidden">
         Time left to order:
         <small class="text-important" data-component-prop="timeLeftToOrder">1 hr 26min</small>
       </div>
     </div>
     <div class="tabs" data-component-section="tabs">
-      <a data-component-section="tabs" data-component-view="active" class="active hidden" href="#"><span data-component-prop="tabDay">Mon</span><small data-component-prop="tabDate">Jan 26</small></a>
-      <a data-component-section="tabs" data-component-view="default" href="#" class="hidden"><span data-component-prop="tabDay">Tues</span><small data-component-prop="tabDate">Jan 27</small></a>
-      <a href="#"><span data-component-prop="tabDay">Weds</span><small data-component-prop="tabDate">Jan 28</small></a>
-      <a href="#"><span data-component-prop="tabDay">Thurs</span><small data-component-prop="tabDate">Jan 29</small></a>
-      <a href="#"><span data-component-prop="tabDay">Fri</span><small data-component-prop="tabDate">Jan 30</small></a>
+      <a data-component-section="tabs" data-component-view="active" class="active" href="#" data-id="\{\{id\}\}" data-component-action="selectDay"><span data-component-prop="tabDay">Mon</span><small data-component-prop="tabDate">Jan 26</small></a>
+      <a data-component-section="tabs" data-component-view="default" href="#" data-id="\{\{id\}\}" data-component-action="selectDay"><span data-component-prop="tabDay">Tues</span><small data-component-prop="tabDate">Jan 27</small></a>
+      <a href="#"><span>Weds</span><small>Jan 28</small></a>
+      <a href="#"><span>Thurs</span><small>Jan 29</small></a>
+      <a href="#"><span>Fri</span><small>Jan 30</small></a>
     </div>
   </div>
 </div>
@@ -71,7 +71,7 @@
 </div>
 
 <div class="container checkout-info-container" id="section-checkout-info" data-component-id="checkout-form-new">
-  <fieldset class="checkout-info form-vertical hidden" data-component-view="default">
+  <fieldset class="checkout-info form-vertical" data-component-view="default">
     <div class="user-info">
       <h3 class="section-title">Your Info</h3>
       <div class="form-group">
@@ -114,7 +114,7 @@
             <input type="tel" class="form-control" placeholder="YY" name="card_expiration_year" data-component-elm="card[expire-year]">
           </div>
         </div>
-        <div class="form-group form-group hidden" data-component-view="show-save-option">
+        <div class="form-group form-group" data-component-view="show-save-option">
           <label>
             <input type="checkbox" name="will_add_new_card" checked="">
             Save card?
@@ -129,7 +129,7 @@
 </div>
 
 <div class="container checkout-info-container" id="section-checkout-info-existing-user" data-component-id="checkout-form-existing">
-  <fieldset class="checkout-info form-vertical hidden" data-component-view="existing-user">
+  <fieldset class="checkout-info form-vertical" data-component-view="existing-user">
     <div class="user-info">
       <h3 class="section-title">Your Info</h3>
       <div class="form-group">
@@ -265,7 +265,7 @@
 
 
 <div class="container checkout-info-container" data-component-id="checkout-form">
-  <fieldset class="checkout-info form-vertical hidden" data-component-view="default">
+  <fieldset class="checkout-info form-vertical" data-component-view="default">
     <div class="user-info">
       <h3 class="section-title">Your Info</h3>
       <div class="form-group">
@@ -320,7 +320,7 @@
 
   <div data-component-section="days">
 
-    <div data-component-section="days" data-component-view="default" class="hidden">
+    <div data-component-section="days" data-component-view="default">
 
       <div class="order-reviewer">
         <h3 class="order-reviewer-header"><span data-component-prop="dayLabel">Today's</span> order
@@ -328,7 +328,7 @@
         </h3>
 
         <div class="order-reviewer-items" data-component-section="items">
-            <div class="order-reviewer-item hidden" data-component-section="items" data-component-view="default">
+            <div class="order-reviewer-item" data-component-section="items" data-component-view="default">
               <div class="order-reviewer-item-col photo-col">
                 <img src="https://www.filepicker.io/api/file/SZoK9zUvTPWXzmK81aGg/convert?w=352&amp;h=210&amp;fit=crop" alt="Pirata Dos Tacos" data-component-prop="photo" data-component-prop-target="src">
               </div>
@@ -349,7 +349,7 @@
                 $10.90
               </div>
             </div>
-            <div class="order-reviewer-item hidden" data-component-section="items" data-component-view="default">
+            <div class="order-reviewer-item" data-component-section="items" data-component-view="default">
               <div class="order-reviewer-item-col photo-col">
                 <img src="https://www.filepicker.io/api/file/SZoK9zUvTPWXzmK81aGg/convert?w=352&amp;h=210&amp;fit=crop" alt="Poop Taco Box" data-component-prop="photo" data-component-prop-target="src">
               </div>
@@ -376,7 +376,7 @@
 
     </div>
 
-    <div data-component-section="days" data-component-view="too-late" class="hidden">
+    <div data-component-section="days" data-component-view="too-late">
 
       <div class="order-reviewer">
         <h3 class="order-reviewer-header"><span data-component-prop="dayLabel">Today's</span> order</h3>
@@ -391,7 +391,7 @@
   </div>
 
 
-  <div class="order-reviewer hidden" data-component-view="hidden">
+  <div class="order-reviewer" data-component-view="hidden">
     <h3 class="order-reviewer-header">Thursday's order
       <a href="#" class="order-reviewer-item-add-link">Add items</a>
     </h3>
@@ -443,7 +443,7 @@
   </div>
 
 
-  <div class="order-reviewer hidden" data-component-view="hidden">
+  <div class="order-reviewer" data-component-view="hidden">
     <h3 class="order-reviewer-header">Friday's order
       <a href="#" class="order-reviewer-item-add-link">Add items</a>
     </h3>
@@ -544,15 +544,15 @@
                 <div class="modal-body">
                   <div class="form-group">
                     <label for="name-input">Name</label>
-                    <input type="text" name="name" data-component-elm="name">
+                    <input type="text" name="name" data-component-prop="name">
                   </div>
                   <div class="form-group">
                     <label for="name-input">Email</label>
-                    <input type="email" name="email" data-component-elm="email">
+                    <input type="email" name="email" data-component-prop="email">
                   </div>
                   <div class="form-group">
                     <label for="message-input">Message</label>
-                    <textarea rows="6" type="text" name="message" data-component-elm="message"></textarea>
+                    <textarea rows="6" type="text" name="message" data-component-prop="message"></textarea>
                   </div>
                 </div>
                 <div class="modal-footer">

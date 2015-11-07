@@ -7,7 +7,7 @@ module.exports = function (Context) {
 
   <div data-component-section="days">
 
-    <div data-component-section="days" data-component-view="default" className="hidden">
+    <div data-component-section="days" data-component-view="default">
 
       <div className="order-reviewer">
         <h3 className="order-reviewer-header"><span data-component-prop="dayLabel">Today's</span> order
@@ -15,7 +15,7 @@ module.exports = function (Context) {
         </h3>
 
         <div className="order-reviewer-items" data-component-section="items">
-            <div className="order-reviewer-item hidden" data-component-section="items" data-component-view="default">
+            <div className="order-reviewer-item" data-component-section="items" data-component-view="default">
               <div className="order-reviewer-item-col photo-col">
                 <img src="https://www.filepicker.io/api/file/SZoK9zUvTPWXzmK81aGg/convert?w=352&amp;h=210&amp;fit=crop" alt="Pirata Dos Tacos" data-component-prop="photo" data-component-prop-target="src"/>
               </div>
@@ -36,7 +36,7 @@ module.exports = function (Context) {
                 $10.90
               </div>
             </div>
-            <div className="order-reviewer-item hidden" data-component-section="items" data-component-view="default">
+            <div className="order-reviewer-item" data-component-section="items" data-component-view="default">
               <div className="order-reviewer-item-col photo-col">
                 <img src="https://www.filepicker.io/api/file/SZoK9zUvTPWXzmK81aGg/convert?w=352&amp;h=210&amp;fit=crop" alt="Poop Taco Box" data-component-prop="photo" data-component-prop-target="src"/>
               </div>
@@ -63,7 +63,7 @@ module.exports = function (Context) {
 
     </div>
 
-    <div data-component-section="days" data-component-view="too-late" className="hidden">
+    <div data-component-section="days" data-component-view="too-late">
 
       <div className="order-reviewer">
         <h3 className="order-reviewer-header"><span data-component-prop="dayLabel">Today's</span> order</h3>
@@ -78,7 +78,7 @@ module.exports = function (Context) {
   </div>
 
 
-  <div className="order-reviewer hidden" data-component-view="hidden">
+  <div className="order-reviewer" data-component-view="hidden">
     <h3 className="order-reviewer-header">Thursday's order
       <a href="#" className="order-reviewer-item-add-link">Add items</a>
     </h3>
@@ -130,7 +130,7 @@ module.exports = function (Context) {
   </div>
 
 
-  <div className="order-reviewer hidden" data-component-view="hidden">
+  <div className="order-reviewer" data-component-view="hidden">
     <h3 className="order-reviewer-header">Friday's order
       <a href="#" className="order-reviewer-item-add-link">Add items</a>
     </h3>
