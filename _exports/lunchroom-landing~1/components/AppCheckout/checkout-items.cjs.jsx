@@ -11,7 +11,7 @@ module.exports = function (Context) {
 
       <div className="order-reviewer">
         <h3 className="order-reviewer-header"><span data-component-prop="dayLabel">Today's</span> order
-          <a href="#" className="order-reviewer-item-add-link" data-component-elm="addItemsLink">Add items</a>
+          <a href="#" className="order-reviewer-item-add-link" data-component-action="addItems">Add items</a>
         </h3>
 
         <div className="order-reviewer-items" data-component-section="items">
@@ -25,7 +25,7 @@ module.exports = function (Context) {
                     <h4 className="order-reviewer-item-title" data-component-prop="title">Pirata Dos Tacos</h4>
                   </div>
                   <ul className="order-reviewer-item-actions">
-                    <li className="action"><a href="#" data-component-elm="removeLink">remove</a></li>
+                    <li className="action"><a href="#" data-component-elm="removeLink" data-component-action="removeOne" data-id="\{\{id\}\}">remove</a></li>
                   </ul>
                 </div>
               </div>
@@ -46,7 +46,7 @@ module.exports = function (Context) {
                     <h4 className="order-reviewer-item-title" data-component-prop="title">Poop Taco Box</h4>
                   </div>
                   <ul className="order-reviewer-item-actions">
-                    <li className="action"><a href="#" data-component-elm="removeLink">remove</a></li>
+                    <li className="action"><a href="#" data-component-elm="removeLink" data-component-action="removeOne" data-id="\{\{id\}\}">remove</a></li>
                   </ul>
                 </div>
               </div>

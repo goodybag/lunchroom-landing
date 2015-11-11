@@ -7,7 +7,7 @@ module.exports = function (Context) {
   <div className="warning-section">
     <img src="/lunchroom-landing~1/resources/assets/img~cupcake-shocked-9c195d3.png" alt="" className="warning-section-supporting-graphic"/>
     <h2 className="warning-section-header">You have nothing in your cart!</h2>
-    <p><a href="#" data-component-elm="addItemsLink">Add items</a></p>
+    <p><a href="#" data-component-action="addItems">Add items</a></p>
   </div>
 
     </div>

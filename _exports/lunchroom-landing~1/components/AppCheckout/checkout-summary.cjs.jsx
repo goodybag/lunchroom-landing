@@ -23,7 +23,7 @@ module.exports = function (Context) {
         <div className="order-summary-col order-summary-value" data-component-prop="total">$12.37</div>
       </div>
     </div>
-    <button className="btn btn-primary btn-place-order" data-component-elm="placeOrderButton">Place Order</button>
+    <button className="btn btn-primary btn-place-order" data-component-action="placeOrder">Place Order</button>
   </div>
 
     </div>
