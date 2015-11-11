@@ -15,7 +15,7 @@
   <div class="warning-section">
     <img src="/img/cupcake-shocked.png" alt="" class="warning-section-supporting-graphic">
     <h2 class="warning-section-header">You have nothing in your cart!</h2>
-    <p><a href="#" component:elm="addItemsLink">Add items</a></p>
+    <p><a href="#" component:action="addItems">Add items</a></p>
   </div>
 </div>
 
@@ -41,16 +41,16 @@
       <div class="form-group">
         <label for="">Name</label>
         <div class="form-group-indicator"></div>
-        <input type="text" class="form-control" name="name" component:elm="info[name]">
+        <input type="text" class="form-control" name="name" component:prop="info[name]" component:prop:target="value">
       </div>
       <div class="form-group">
         <label for="">Email</label>
         <div class="form-group-indicator"></div>
-        <input type="email" class="form-control" name="email" component:elm="info[email]">
+        <input type="email" class="form-control" name="email" component:prop="info[email]" component:prop:target="value">
       </div>
       <div class="form-group">
         <label for="">Phone Number</label>
-        <input type="tel" class="form-control" name="phone" component:elm="info[phone]">
+        <input type="tel" class="form-control" name="phone" component:prop="info[phone]" component:prop:target="value">
       </div>
       <p class="checkout-info-note">We'll email/text you when your meal has arrived!</p>
     </div>
@@ -60,25 +60,25 @@
       <div class="payment-method-wrapper">
         <div class="form-group form-group-member-name">
           <label for="">Name on card</label>
-          <input type="text" class="form-control" name="card_member_name" component:elm="card[name]">
+          <input type="text" class="form-control" name="card_member_name" component:prop="card[name]" component:prop:target="value">
         </div>
         <div class="inline-form-group-list">
           <div class="form-group form-group-card-number">
             <label for="">Card number</label>
-            <input type="tel" class="form-control" name="card_number" component:elm="card[number]">
+            <input type="tel" class="form-control" name="card_number" component:prop="card[number]" component:prop:target="value">
           </div>
           <div class="form-group form-group-card-cvv">
             <label for="">CVV</label>
-            <input type="tel" class="form-control" name="card_cvv" component:elm="card[cvc]">
+            <input type="tel" class="form-control" name="card_cvv" component:prop="card[cvc]" component:prop:target="value">
           </div>
           <div class="form-group form-group-expiration">
             <label for="">Expiration date</label>
-            <input type="tel" class="form-control" placeholder="MM" name="card_expiration_month" component:elm="card[expire-month]">
+            <input type="tel" class="form-control" placeholder="MM" name="card_expiration_month" component:prop="card[expire-month]" component:prop:target="value">
             <span class="control-separator">/</span>
-            <input type="tel" class="form-control" placeholder="YY" name="card_expiration_year" component:elm="card[expire-year]">
+            <input type="tel" class="form-control" placeholder="YY" name="card_expiration_year" component:prop="card[expire-year]" component:prop:target="value">
           </div>
         </div>
-        <div class="form-group form-group" component:view="show-save-option">
+        <div class="form-group form-group invisible">
           <label>
             <input type="checkbox" name="will_add_new_card" checked>
             Save card?
@@ -319,7 +319,7 @@
 
       <div class="order-reviewer">
         <h3 class="order-reviewer-header"><span component:prop="dayLabel">Today's</span> order
-          <a href="#" class="order-reviewer-item-add-link" component:elm="addItemsLink">Add items</a>
+          <a href="#" class="order-reviewer-item-add-link" component:action="addItems">Add items</a>
         </h3>
 
         <div class="order-reviewer-items" component:section="items">
@@ -334,7 +334,7 @@
                     <h4 class="order-reviewer-item-title" component:prop="title">{{this.name}}</h4>
                   </div>
                   <ul class="order-reviewer-item-actions">
-                    <li class="action"><a href="#" component:elm="removeLink">remove</a></li>
+                    <li class="action"><a href="#" component:elm="removeLink" component:action="removeOne" data-id="\{\{id\}\}">remove</a></li>
                   </ul>
                 </div>
               </div>
@@ -490,7 +490,7 @@
         <div class="order-summary-col order-summary-value" component:prop="total">$12.37</div>
       </div>
     </div>
-    <button class="btn btn-primary btn-place-order" component:elm="placeOrderButton">Place Order</button>
+    <button class="btn btn-primary btn-place-order" component:action="placeOrder">Place Order</button>
   </div>
 </div>
 {{/extend}}
