@@ -19,15 +19,22 @@
 <section class="page-section hero-unit primary-section" id="email-signup-cta" component:id="subscription">
   <div class="container">
     <h1 class="section-header">Get your lunch delivered every day.</h1>
-    <p>Your choice of meal brought to you at work. Starts August 17th, 2015.</p>
-    <form action="#" class="cta-form form" component:id="subscribe">
+    <p>Your choice of meal brought to you at work.</p>
+    <form action="#" class="cta-form form">
       <div class="form-group">
-        <div class="email-wrapper">
-          <input type="email" name="email" value="\{\{email\}\}">
+
+        <div component:view="form">
+          <div class="email-wrapper">
+            <input type="email" name="email" component:prop="email" component:prop:target="email">
+          </div>
+          <div class="submit-wrapper">
+            <button class="btn btn-primary" component:action="subscribe">Get notified</button>
+          </div>
         </div>
-        <div class="submit-wrapper">
-          <button class="btn btn-primary" data-component-action="subscribe">Get notified</button>
+        <div component:view="sent">
+          <p class="form-explanation">Check your email to confirm your subscription!</p>
         </div>
+
       </div>
       <p class="form-explanation">Enter your email to receive daily menus when we launch!</p>
     </form>
