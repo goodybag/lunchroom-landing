@@ -7,12 +7,19 @@
     <form action="#" class="cta-form form">
 
       <div class="form-group">
-        <div class="email-wrapper">
-          <input type="email" name="email" value="\{\{email\}\}">
+
+        <div data-component-view="form">
+          <div class="email-wrapper">
+            <input type="email" name="email" data-component-prop="email" data-component-prop-target="email">
+          </div>
+          <div class="submit-wrapper">
+            <button class="btn btn-primary" data:component:action="subscribe">Get notified</button>
+          </div>
         </div>
-        <div class="submit-wrapper">
-          <button class="btn btn-primary" data-component-action="subscribe">Get notified</button>
+        <div data-component-view="sent">
+          <p class="form-explanation">Check your email to confirm your subscription!</p>
         </div>
+
       </div>
       <p class="form-explanation">Enter your email to receive daily menus when we launch!</p>
     

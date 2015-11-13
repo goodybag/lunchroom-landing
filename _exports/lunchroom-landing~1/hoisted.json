@@ -416,10 +416,6 @@
                     "fsHtmlPath": "{{__DIRNAME__}}/components/Landing/page.htm",
                     "uriHtmlPath": "/lunchroom-landing~1/components/Landing/page.htm"
                 },
-                "subscribe": {
-                    "fsHtmlPath": "{{__DIRNAME__}}/components/Landing/subscribe.htm",
-                    "uriHtmlPath": "/lunchroom-landing~1/components/Landing/subscribe.htm"
-                },
                 "subscription": {
                     "fsHtmlPath": "{{__DIRNAME__}}/components/Landing/subscription.htm",
                     "uriHtmlPath": "/lunchroom-landing~1/components/Landing/subscription.htm"
