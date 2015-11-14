@@ -25,7 +25,7 @@ return ch({}, function () { return h("div.container.order-success", {"dataset":{
 }
 ,"share-menu-link": {
 buildVTree: function (h, ch) {
-return ch({}, function () { return h("div.container.order-success", {"dataset":{}}, ch({"id":"share-menu-link"}, function () { return [ "\n  ", h("div.menu-share", [ "\n    ", h("h4.menu-share-title", [ "Share this link" ]), "\n    ", h("p.menu-share-followup", [ "with coworkers to let them view the menu and place their own order!" ]), "\n    ", h("input.menu-share-input", {"attributes":{"type":"text","value":"http://lunchroom.goodybag.com/bazaarvoice"},"dataset":{"componentElm":"shareUrl"}}), "\n  " ]), "\n" ]; })); });
+return ch({}, function () { return h("div.container.order-success", {"dataset":{}}, ch({"id":"share-menu-link"}, function () { return [ "\n  ", h("div.menu-share", [ "\n    ", h("h4.menu-share-title", [ "Share this link" ]), "\n    ", h("p.menu-share-followup", [ "with coworkers to let them view the menu and place their own order!" ]), "\n    ", h("input.menu-share-input", {"attributes":{"type":"text","value":"{{shareUrl}}"},"dataset":{"componentProp":"shareUrl"}}, ch({"property":"shareUrl","propertyTarget":"value"}, function () { return ; })), "\n  " ]), "\n" ]; })); });
 }
 }
 ,"loading-indicator": {
