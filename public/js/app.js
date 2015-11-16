@@ -9,8 +9,9 @@ $(function(){
       config.initSkinDev = true;
     }
 
-    config.intlTelUtilsScriptPath = config.intlTelUtilsScriptPath || "/dist/utils.js";
-
+    if (typeof config.intlTelUtilsScriptPath === "undefined") {
+      config.intlTelUtilsScriptPath = config.intlTelUtilsScriptPath || "/dist/utils.js";
+    }
 
     function initGeneric (consumerApi, withinElement) {
 
@@ -62,8 +63,18 @@ $(function(){
 
 
     var consumerApi = {
-      validators: validators,
+      validators: window.validators,
       monitors: {
+        createSignupMonitor: function (formElement) {
+
+          // TODO: Validate email as well.
+
+          $('[name="phone"]', formElement).intlTelInput({
+            autoFormat: true
+          , utilsScript: config.intlTelUtilsScriptPath
+          , preventInvalidNumbers: true
+          });
+        },
         createCheckoutMonitor: function (formElement) {
 
           var checkoutValidator = consumerApi.validators.createCheckoutValidator(

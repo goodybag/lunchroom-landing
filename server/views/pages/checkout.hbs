@@ -475,11 +475,11 @@
     <div class="order-summary">
       <div class="order-summary-item">
         <div class="order-summary-col order-summary-key">Subtotal</div>
-        <div class="order-summary-col order-summary-value" component:prop="subtotal">$8.80</div>
+        <div class="order-summary-col order-summary-value" component:prop="format.amount">$8.80</div>
       </div>
       <div class="order-summary-item">
         <div class="order-summary-col order-summary-key">Tax</div>
-        <div class="order-summary-col order-summary-value" component:prop="taxAmount">$0.73</div>
+        <div class="order-summary-col order-summary-value" component:prop="format.taxAmount">$0.73</div>
       </div>
       <div class="order-summary-item">
         <div class="order-summary-col order-summary-key">Tip</div>
@@ -487,7 +487,7 @@
       </div>
       <div class="order-summary-item order-summary-item-total">
         <div class="order-summary-col order-summary-key">Total</div>
-        <div class="order-summary-col order-summary-value" component:prop="total">$12.37</div>
+        <div class="order-summary-col order-summary-value" component:prop="format.total">$12.37</div>
       </div>
     </div>
     <button class="btn btn-primary btn-place-order" component:action="placeOrder">Place Order</button>
