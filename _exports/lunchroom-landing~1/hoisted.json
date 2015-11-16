@@ -71,9 +71,9 @@
                 },
                 {
                     "bundle": "app.js",
-                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-2cbe9af.js",
+                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-cc4770e.js",
                     "type": "js",
-                    "uriPath": "/lunchroom-landing~1/resources/dist~app-2cbe9af.js"
+                    "uriPath": "/lunchroom-landing~1/resources/dist~app-cc4770e.js"
                 },
                 {
                     "bundle": "utils.js",
@@ -130,9 +130,9 @@
                 },
                 {
                     "bundle": "app.js",
-                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-2cbe9af.js",
+                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-cc4770e.js",
                     "type": "js",
-                    "uriPath": "/lunchroom-landing~1/resources/dist~app-2cbe9af.js"
+                    "uriPath": "/lunchroom-landing~1/resources/dist~app-cc4770e.js"
                 },
                 {
                     "bundle": "utils.js",
@@ -185,9 +185,9 @@
                 },
                 {
                     "bundle": "",
-                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-2cbe9af.js",
+                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-cc4770e.js",
                     "type": "js",
-                    "uriPath": "/lunchroom-landing~1/resources/dist~app-2cbe9af.js"
+                    "uriPath": "/lunchroom-landing~1/resources/dist~app-cc4770e.js"
                 }
             ]
         },
@@ -230,9 +230,9 @@
                 },
                 {
                     "bundle": "app.js",
-                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-2cbe9af.js",
+                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-cc4770e.js",
                     "type": "js",
-                    "uriPath": "/lunchroom-landing~1/resources/dist~app-2cbe9af.js"
+                    "uriPath": "/lunchroom-landing~1/resources/dist~app-cc4770e.js"
                 },
                 {
                     "bundle": "utils.js",
@@ -309,9 +309,9 @@
                 },
                 {
                     "bundle": "app.js",
-                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-2cbe9af.js",
+                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-cc4770e.js",
                     "type": "js",
-                    "uriPath": "/lunchroom-landing~1/resources/dist~app-2cbe9af.js"
+                    "uriPath": "/lunchroom-landing~1/resources/dist~app-cc4770e.js"
                 },
                 {
                     "bundle": "utils.js",
@@ -360,9 +360,9 @@
                 },
                 {
                     "bundle": "app.js",
-                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-2cbe9af.js",
+                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-cc4770e.js",
                     "type": "js",
-                    "uriPath": "/lunchroom-landing~1/resources/dist~app-2cbe9af.js"
+                    "uriPath": "/lunchroom-landing~1/resources/dist~app-cc4770e.js"
                 },
                 {
                     "bundle": "utils.js",
@@ -437,9 +437,9 @@
                 },
                 {
                     "bundle": "app.js",
-                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-2cbe9af.js",
+                    "fsPath": "{{__DIRNAME__}}/resources/dist~app-cc4770e.js",
                     "type": "js",
-                    "uriPath": "/lunchroom-landing~1/resources/dist~app-2cbe9af.js"
+                    "uriPath": "/lunchroom-landing~1/resources/dist~app-cc4770e.js"
                 }
             ]
         }
