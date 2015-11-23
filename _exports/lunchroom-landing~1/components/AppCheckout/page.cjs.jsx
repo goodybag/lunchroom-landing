@@ -42,7 +42,7 @@ module.exports = function (Context) {
 <div className="container page-nav-container" data-component-id="checkout-navbar">
   <ul className="page-nav">
     <li className="page-nav-item">
-      <a href="/pages/menu" className="page-nav-item-link" data-component-elm="addItemsLink">&lt; Back to menu</a>
+      <a href="/pages/menu" className="page-nav-item-link" data-component-action="addItems">&lt; Back to menu</a>
     </li>
   </ul>
 </div>

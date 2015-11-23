@@ -1,6 +1,8 @@
 module.exports = {
+id: ":4a7328b7a6121bd3bb14f87e8347223167009883",
 getLayout: function () {
 return {
+id: ":4a7328b7a6121bd3bb14f87e8347223167009883",
 buildVTree: function (h, ch) {
 return ch({}, function () { return h("div.loading-indicator", [ "\n\n  ", h("div.loading-indicator-graphic", [ "\n    ", h("img", {"attributes":{"src":"/lunchroom-landing~1/resources/assets/img~cupcake-happy-9574e8b.png"}}), "\n  " ]), "\n  ", h("div.loading-indicator-text", [ "Loading..." ]), "\n\n    " ]); });
 }

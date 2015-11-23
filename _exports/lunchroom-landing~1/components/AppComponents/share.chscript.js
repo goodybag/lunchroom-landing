@@ -1,6 +1,8 @@
 module.exports = {
+id: ":f14ccbb850aa5e852044ddbdee1d923d6a1bd0f7",
 getLayout: function () {
 return {
+id: ":f14ccbb850aa5e852044ddbdee1d923d6a1bd0f7",
 buildVTree: function (h, ch) {
 return ch({}, function () { return h("section#section-item-tiles.page-section", [ "\n\n  ", h("div.container", [ "\n    ", h("div.panel-wrapper", {"style":{"max-width":"620px"}}, [ "\n      ", h("div.panel.panel-dark.panel-share-link", [ "\n        ", h("p.panel-text", [ "\n          ", h("strong", [ "Share this link" ]), " with coworkers to let them view the menu and place their own order!\n        " ]), /*
         */, h("input.panel-input.form-control", {"attributes":{"type":"text","value":"https://lunchroom.goodybag.com/bazaar-voice"}}), "\n      " ]), "\n    " ]), "\n  " ]), "\n\n    " ]); });
