@@ -18,7 +18,7 @@ module.exports.items = [
   }
 , { name: 'Poop Taco Box but this one is a really long title'
   , price: 1200
-  , dietTags: ['gluten-free', 'spicy']
+  , dietTags: ['dairy-free', 'gluten-free', 'spicy', 'kosher', 'halal', 'nuts']
   , photo_url: 'https://www.filepicker.io/api/file/SZoK9zUvTPWXzmK81aGg'
   }
 , { name: 'Poop Taco Box'
